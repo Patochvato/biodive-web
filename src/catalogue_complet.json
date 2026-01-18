@@ -75,9 +75,9 @@
       "QUESTION": "Quelle est la mauvaise réponse sur la squille multicolore,- A. elle a la vision la plus performante du monde animal,- B. la femelle est plus grosse que le mâle,- C",
       "REPONSE": "elle peut briser la carapace d'un crabe,- D. elle lance un marteau sur ses proies à une vitesse de 80km/h.",
       "EXPLICATIONS": "Réponse B",
-      "@images": "",
-      "TYPE": "B:\\OneDrive\\BIOdive jeux\\images\\f8.jpg",
-      "CATEGORIE": "CHOIX",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f8.jpg",
+      "TYPE": "",
+      "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
@@ -152,7 +152,7 @@
     },
     {
       "ID": "faune_16",
-      "QUESTION": "Je suis noir et rejette de longs filaments blancs pour me défendre. Je suis",
+      "QUESTION": "Je suis noir et rejette de longs filaments blancs pour me défendre. Je suis ?",
       "REPONSE": "L'holoturie ou concombre de mer.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f16.jpg",
@@ -162,7 +162,7 @@
     },
     {
       "ID": "faune_17",
-      "QUESTION": "Constructeur infatiguable de récifs, mes formes sont extravagantes. ,- Mes couleurs variées deviennent phosphorescentes lorsque l'on m'éclaire dans la nuit. ,-Je peux être de feu, sinueux, jaune ou encore solitaire. ,-Je suis",
+      "QUESTION": "Constructeur infatiguable de récifs, mes formes sont extravagantes. ,- Mes couleurs variées deviennent phosphorescentes lorsque l'on m'éclaire dans la nuit. ,-Je peux être de feu, sinueux, jaune ou encore solitaire. ,-Je suis ?",
       "REPONSE": "Le corail.",
       "EXPLICATIONS": "",
       "@images": "",
@@ -194,7 +194,7 @@
       "ID": "faune_20",
       "QUESTION": "Dans une plongée classique, les bouteilles sont remplies avec de l'oxygène.",
       "REPONSE": "FAUX",
-      "EXPLICATIONS": "Les bouteille sont remplies avec l'air que l'on respire. composé d'azote (79%) et d'oxygène (21%). On peut changer le taux d'oxygène à 32 ou 36%, on parle alors de nitrox. Mais c'est une toute autre histoire",
+      "EXPLICATIONS": "Les bouteille sont remplies avec l'air que l'on respire. composé d'azote (79%) et d'oxygène (21%). On peut changer le taux d'oxygène à 32 ou 36%, on parle alors de nitrox. Mais c'est une toute autre histoire !",
       "@images": "",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "plongée",
@@ -226,8 +226,8 @@
       "REPONSE": "Le blanchissement",
       "EXPLICATIONS": "Un corail blanchi n'est pas un corail mort",
       "@images": "seulement sans zooxanthelles, les apports énergétique se voient fortement réduits. Si ces conditions de stress perdurent les coraux meurent. 1 à 2° de plus suffissent.",
-      "TYPE": "",
-      "CATEGORIE": "QUESTION",
+      "TYPE": "QUESTION",
+      "CATEGORIE": "environnement",
       "POINTS": "40"
     },
     {
@@ -245,8 +245,8 @@
       "QUESTION": "Cétacés et tortues marines sont protégés",
       "REPONSE": "à la Réunion, le non respect de la charte d'approche peut entraîner une amande pouvant atteindre 750,00 euros. ",
       "EXPLICATIONS": "VRAI",
-      "@images": "Suite à un arrêté préfectoral du 12 juin 2019, la charte définit différentes zones d'approche dans lesquelles sont précisés les paramètres à respecter :  vitesses des bateaux, durée de stationnement, comportement des observateurs",
-      "TYPE": "",
+      "@images": "Suite à un arrêté préfectoral du 12 juin 2019, la charte définit différentes zones d'approche dans lesquelles sont précisés les paramètres à respecter :  vitesses des bateaux, durée de stationnement, comportement des observateurs?",
+      "TYPE": "QUESTION",
       "CATEGORIE": "VRAI OU FAUX",
       "POINTS": "20"
     },
@@ -255,7 +255,7 @@
       "QUESTION": "Acanthaster est une grande étoile de mer qui peut atteindre 80 cm de diamètre. C'est un redoutable prédateur du corail. D'après vous, elle mange par an,- A. 6 m2,- B. 9 m2,- C. 10 m2,- D. 13 m2.",
       "REPONSE": "Réponse A",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f24.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f26.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -282,7 +282,7 @@
     },
     {
       "ID": "faune_29",
-      "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale. ,- Je suis",
+      "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale. ,- Je suis?",
       "REPONSE": "Un hippocampe.",
       "EXPLICATIONS": "Une fois les oeufs pondus, le mâle les féconde avec son sperme. L'incubation dure environ 2 à 3 semaines, Il mettra au monde entre 5 et 1 800 « bébés » hippocampe.",
       "@images": "",
@@ -315,7 +315,7 @@
       "QUESTION": "La murène ruban change de coloration lorsqu'elle change de sexe. Le juvénile est noir et mesure au max 65 cm. Le mâle est d'un bleu vif avec les mâchoires jaunes. Lorsqu'il se transforme en femelle après avoir atteint 95 cm, son corps devient jaune et frôle les 120 cm. Sa tête dépasse de son trou dans le sable pour chasser. En pleine eau, elle se déplace en ondulant comme un ruban.",
       "REPONSE": "",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f24.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f32.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -362,7 +362,7 @@
     },
     {
       "ID": "faune_37",
-      "QUESTION": "Je suis une forme géométrique, je peux être géographe, on me trouve au fond de l'oeil, finalement on me déguste aussi glacé. Je suis",
+      "QUESTION": "Je suis une forme géométrique, je peux être géographe, on me trouve au fond de l'oeil, finalement on me déguste aussi glacé. Je suis?",
       "REPONSE": "Un cône.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f37.jpg",
@@ -372,9 +372,9 @@
     },
     {
       "ID": "faune_38",
-      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine, je suis également l'un des plus anciens équipements de plongée, je protège aussi le fromage. Je suis",
+      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine, je suis également l'un des plus anciens équipements de plongée, je protège aussi le fromage. Je suis?",
       "REPONSE": "Une cloche.",
-      "EXPLICATIONS": "Vers 1870, lors de la construction de l'église de Sainte Rose, deux cloches avaient été commandées. On raconte que, l'une d'elles serait tombée d'un canot de débarquement dans la Marine. Lorsque vous regardez dans le clocher de l'église, vous ne voyez qu'une cloche Mystère",
+      "EXPLICATIONS": "Vers 1870, lors de la construction de l'église de Sainte Rose, deux cloches avaient été commandées. On raconte que, l'une d'elles serait tombée d'un canot de débarquement dans la Marine. Lorsque vous regardez dans le clocher de l'église, vous ne voyez qu'une cloche? Mystère",
       "@images": "",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "légende",
@@ -432,7 +432,7 @@
     },
     {
       "ID": "faune_44",
-      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante. ,- Je suis",
+      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante. ,- Je suis?",
       "REPONSE": "Une éponge.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f44.jpg",
@@ -485,14 +485,14 @@
       "QUESTION": "Le plastique premier maillon de la chaine alimentaire ? Mais que dire des microparticules qui sont devenues un des derniers maillons.",
       "REPONSE": "BONUS",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f49.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f49b.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "environnement",
       "POINTS": "40"
     },
     {
       "ID": "faune_50",
-      "QUESTION": "Avec mon bec, mes deux bras, mes deux oreilles, et mes deux pattes, je repose immobile sur des fonds marins, témoin d'un commerce maritime passé. Je suis",
+      "QUESTION": "Avec mon bec, mes deux bras, mes deux oreilles, et mes deux pattes, je repose immobile sur des fonds marins, témoin d'un commerce maritime passé. Je suis?",
       "REPONSE": "Une ancre.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f50.jpg",
@@ -522,20 +522,20 @@
     },
     {
       "ID": "faune_53",
-      "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs. Je suis",
+      "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs. Je suis?",
       "REPONSE": "Un poisson scorpion feuille.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f47.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f53.jpg",
       "TYPE": "DEVINETTE",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
       "ID": "faune_54",
-      "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..) dans mes mailles serrées qui ondulent le long des tombants. Je suis",
+      "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..) dans mes mailles serrées qui ondulent le long des tombants. Je suis?",
       "REPONSE": "Une gorgone.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f47.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f54.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -545,7 +545,7 @@
       "QUESTION": "Avec un tel nom, on pourrait croire que je sème et récolte, mais je reste planté là avec mes congénères et nous nous balançons dans le courant comme des fleurs de canne balayées par le vent.",
       "REPONSE": "Une anguille jardinière ou hétérocongre tacheté.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f47.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f55.jpg",
       "TYPE": "DEVINETTE",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -555,14 +555,14 @@
       "QUESTION": "A 5 miles des côtes réunionnaises, les pentes dépassent les 1000 mètres. La pêche de fond est donc réduite. Pour pallier à cette difficulté, une trentaine de D.C.P. ont été déployés tout autour de la Réunion afin de développer la pêche de grands pélagiques. Mais que signifie l'abréviation D.C.P. ?",
       "REPONSE": "Dispositif de Concentration de Poissons.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f47.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f56.jpg",
       "TYPE": "QUESTION",
       "CATEGORIE": "pêche",
       "POINTS": "40"
     },
     {
       "ID": "faune_57",
-      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication impliquant une intervention médicale pour détresse respiratoire et troubles cardio-vasculaires. Je suis",
+      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication impliquant une intervention médicale pour détresse respiratoire et troubles cardio-vasculaires. Je suis?",
       "REPONSE": "Un poisson coffre.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f57.jpg",
@@ -605,7 +605,7 @@
       "QUESTION": "Monsieur et Madame L'mar dans ma nasse ont une fille, comment se nomme-t-elle ?",
       "REPONSE": "Jéssica, J'ai 6 calmars dans ma nasse.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f58.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f61.jpg",
       "TYPE": "M. et Mme",
       "CATEGORIE": "humour",
       "POINTS": "20"
@@ -615,7 +615,7 @@
       "QUESTION": "En 4 étapes, comment passer du mot GIN à une espèce de poisson noir et blanc ?  Vous ajoutez une lettre à chaque étape dont voici le synonyme,- 1. bénéfice,- 2. semence,- 3. recette,- 4. poisson.",
       "REPONSE": "Départ : GIN - 1  : GAIN - 2  : GRAIN - 3  : GRATIN - 4  : GATERIN",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f58.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f62.jpg",
       "TYPE": "MOT EN ESCALIER",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -623,16 +623,16 @@
     {
       "ID": "faune_63",
       "QUESTION": "Mon premier est une note de musique,- Mon second est une note de musique,- Mon troisième sert à attacher,- Mon tout est un personnage de légende",
-      "REPONSE": "1 Si - 2 Ré - 3 nud. Mon tout est une SIRENE.",
+      "REPONSE": "1 Si - 2 Ré - 3 nœud. Mon tout est une SIRENE.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f58.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f63.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "légende",
       "POINTS": "20"
     },
     {
       "ID": "faune_64",
-      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage.  ,-Je suis",
+      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage.  ,-Je suis?",
       "REPONSE": "Une porcelaine.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f64.jpg",
@@ -662,8 +662,8 @@
     },
     {
       "ID": "faune_67",
-      "QUESTION": "Bavards, les poissons ne prennent la parole que dans certaines situations, défendre leur territoire, se reproduire, signaler un danger, ou se localiser dans un banc. Pas moins de six types de cris ont été recensés chez la demoiselle, un record ! ,-Eric Parmentier université de Liège dans Sciences et Vie n° 1134 (mars 2012)",
-      "REPONSE": "",
+      "QUESTION": "Bavards, les poissons ne prennent la parole que dans certaines situations, défendre leur territoire, se reproduire, signaler un danger, ou se localiser dans un banc. ",
+      "REPONSE": "Pas moins de six types de cris ont été recensés chez la demoiselle, un record ! ,-Eric Parmentier université de Liège dans Sciences et Vie n° 1134 (mars 2012)",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f67.jpg",
       "TYPE": "BONUS",
@@ -672,8 +672,8 @@
     },
     {
       "ID": "faune_68",
-      "QUESTION": "Citer le nom dun animal marin qui pour grandir doit quitter son squelette.",
-      "REPONSE": "Crevette, crabe, langouste, squille",
+      "QUESTION": "Citer le nom d'un animal marin qui pour grandir doit quitter son squelette.",
+      "REPONSE": "Crevette, crabe, langouste, squille, homard, etc..",
       "EXPLICATIONS": "Les crustacés ont un exosquelette inextensible, la carapace. Ces mues périodiques permettent à ces animaux de grandir en taille (mue de croissance), d'acquérir de nouveaux organes, voire de changer de forme (mue de métamorphose).",
       "@images": "",
       "TYPE": "QUESTION",
@@ -685,14 +685,14 @@
       "QUESTION": "Un clown qui joue de la trompette et de la flûte cherche un violoniste pour l'accompagner",
       "REPONSE": "le violoniste est un crabe, les trois autres sont des poissons.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f69.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f65.jpg",
       "TYPE": "TROUVER L'INTRUS",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
       "ID": "faune_70",
-      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe avec un grand nombre de juvéniles à l'embouchure des rivières avant de les remonter. Héla souvent, je termine en cari ! Je suis",
+      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe avec un grand nombre de juvéniles à l'embouchure des rivières avant de les remonter. Héla souvent, je termine en cari ! Je suis?",
       "REPONSE": "Un bichique, ou bisik (en créole).",
       "EXPLICATIONS": "Le bisik est en voie d'extinction, car trop péché, braconné. Cet alvin a peu de chance de devenir l'adulte cabot bouche ronde qui lui aussi est en train de disparaitre des rivières réunionnaises.",
       "@images": "",
@@ -723,7 +723,7 @@
     {
       "ID": "faune_73",
       "QUESTION": "Quel est le mois préféré des poissons ?",
-      "REPONSE": "Le mois d'avril.",
+      "REPONSE": "Avril  poisson d'avril.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f73.png",
       "TYPE": "DEVINETTE",
@@ -785,7 +785,7 @@
       "QUESTION": "L'oreille interne des poissons est située en arrière des yeux de chaque côté du cerveau. Elle renferme les otolithes dont la densité est proche de celle des os. Elles ont l'aspect d'une petite pierre blanche. Les déplacements du poisson provoquent une «réaction» des otolithes, dont l'inertie varie en fonction de la direction et de la vitesse du déplacement. Ces oreilles internes ont une fonction d'équilibre et d'audition.",
       "REPONSE": "",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\oreilles interne.png",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f79.png",
       "TYPE": "BONUS",
       "CATEGORIE": "biologie",
       "POINTS": "20"
@@ -916,7 +916,7 @@
       "ID": "action_10",
       "DESCRIPTION": "Alors que c'est interdit, vous ramassez un coquillage.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "réglementation",
       "EFFET": "mettez une carte de 20 pts sur le club de plongée.",
       "VALEUR": "-20",
@@ -926,7 +926,7 @@
       "ID": "action_11",
       "DESCRIPTION": "Nous sommes en alerte cyclonique orange, les sorties en mer sont interdites. Comme le temps est agréable vous décidez de vous mettre à l'eau.",
       "CATEGORIE": "Réglementation",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "réglementation",
       "EFFET": "mettez une carte de 40 pts sur le club de plongée.",
       "VALEUR": "-40",
@@ -956,7 +956,7 @@
       "ID": "action_14",
       "DESCRIPTION": "Vous ramenez une tortue prise dans un emballage plastique.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "tortue",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+40",
@@ -966,17 +966,17 @@
       "ID": "action_15",
       "DESCRIPTION": "Vous participez au nettoyage de la Marine qui a lieu chaque année dans le cadre des journées mondiales de l'océan.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "Marine",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+60",
-      "EXPLICATIONS": "Chaque année, les usagers de la mer, la commune et les habitants s'organisent pour le grand nettoyage des fonds de la Marine, du port et des abords. Batteries, vélos, pneus, plombs de pêche, toutes sortes de déchets plastiques sont retirés de l'océan. Hélas tous les ans il faut recommencer."
+      "EXPLICATIONS": "Chaque année, les usagers de la mer, la commune et les habitants s'organisent pour le grand nettoyage des fonds de la Marine, du port et des abords. Batteries, vélos, pneus, plombs de pêche, toutes sortes de déchets plastiques? sont retirés de l'océan. Hélas tous les ans il faut recommencer."
     },
     {
       "ID": "action_16",
       "DESCRIPTION": "Des pêcheurs ont une avarie sur le moteur de leur canot, vous les remorquez.",
       "CATEGORIE": "Réglementation",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "réglementation",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+20",
@@ -986,7 +986,7 @@
       "ID": "action_17",
       "DESCRIPTION": "Vous débarrassez les coraux des fils et des plombs de pêche.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+40",
@@ -1006,7 +1006,7 @@
       "ID": "action_19",
       "DESCRIPTION": "De retour de plongée, vous signalez au laboratoire de la faune sous-marine la présence d'acanthasters.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "acanthaster",
       "EFFET": "avancez jusqu'à la prochaine case jaune.",
       "VALEUR": "+3",
@@ -1060,13 +1060,13 @@
       "TYPE": "Bio Dive",
       "EFFET": "gardez cette carte tout le long de la partie.",
       "VALEUR": "cammera",
-      "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme, les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais"
+      "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme, les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais?"
     },
     {
       "ID": "action_25",
       "DESCRIPTION": "Chaque fois que vous plongez, vous emportez un filet afin de ramasser tous les déchets plastiques que vous rencontrez.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "environnement",
       "EFFET": "avancez jusqu'à la prochaine case jaune.",
       "VALEUR": "+3",
@@ -1076,11 +1076,11 @@
       "ID": "action_26",
       "DESCRIPTION": "En tant que plongeur, vous ne dérangez pas les animaux que vous apercevez, soit pour mieux les photographier ou mieux les observer.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "faune",
       "EFFET": "avancez jusqu'à la prochaine case jaune.",
       "VALEUR": "+3",
-      "EXPLICATIONS": "Vous n'appréciez pas particulièrement que vos invités touchent à tout, déplacer des objets Sous l'océan c'est pareil. Considérez que les habitants des fonds marins vous invitent."
+      "EXPLICATIONS": "Vous n'appréciez pas particulièrement que vos invités touchent à tout, déplacer des objets? Sous l'océan c'est pareil. Considérez que les habitants des fonds marins vous invitent."
     },
     {
       "ID": "action_27",
@@ -1186,7 +1186,7 @@
       "ID": "action_37",
       "DESCRIPTION": "Pour préserver la biodiversité marine, vous créez une association. Son objectif : informer sur les conséquences dues aux agissement des humains.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "Bio Dive",
       "EFFET": "demandez une carte faune de 60 pts au joueur de votre choix.",
       "VALEUR": "+60",
@@ -1196,7 +1196,7 @@
       "ID": "action_38",
       "DESCRIPTION": "Lors d'une plongée encadrée, vous remarquez des langoustes. Quelques jours plus tard, vous vous équipez pour aller sur les sites repérés et pêcher tous ces crustacés.",
       "CATEGORIE": "Réglementation",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "législation",
       "EFFET": "reculez jusqu'à la case rouge la plus proche.",
       "VALEUR": "-6",
@@ -1206,7 +1206,7 @@
       "ID": "action_39",
       "DESCRIPTION": "« Le meilleur déchet est celui qui n'existe pas », vous décidez de réduire ceux-ci en utilisant une gourde en métal, ou encore en refusant les sachets plastiques.",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "protection",
       "EFFET": "si vous le souhaitez, vous pouvez relancer ou non un ou deux dés.",
       "VALEUR": "+6",
@@ -1214,9 +1214,9 @@
     },
     {
       "ID": "action_40",
-      "DESCRIPTION": "Quand vous quittez une pièce, vous éteignez la lumière, la climatisation et lorsque vous vous lavez les dents vous fermez le robinet, ",
+      "DESCRIPTION": "Quand vous quittez une pièce, vous éteignez la lumière, la climatisation et lorsque vous vous lavez les dents vous fermez le robinet, ?",
       "CATEGORIE": "Environnement",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "Bio Dive",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+60",

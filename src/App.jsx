@@ -96,7 +96,8 @@ function App() {
   }
 };
 
-  const finirTour = (points = 0) => {
+  
+const finirTour = (points = 0) => {
   let pointsFinal = parseInt(points, 10) || 0;
 
   // 1. CALCUL DES BONUS
