@@ -38,10 +38,10 @@ const CarteAction = ({ carte, onContinuer }) => {
       margin: 'auto'
     },
     header: { backgroundColor: '#ef6c00', color: 'white', padding: '15px', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase' },
-    content: { padding: '20px', textAlign: 'center' },
+    content: { padding: '20px 20px 10px', textAlign: 'center' },
     icone: { width: '60px', height: '60px', marginBottom: '15px' }, // Style pour l'image
     description: { fontSize: '1.1em', fontStyle: 'italic', color: '#444', marginBottom: '15px' },
-    effetBox: { backgroundColor: '#ffe0b2', padding: '15px', borderRadius: '8px', border: '1px dashed #ef6c00' },
+    effetBox: { backgroundColor: '#ffe0b2', padding: '10px', borderRadius: '8px', border: '1px dashed #ef6c00' },
     btn: { width: '100%', padding: '15px', backgroundColor: '#ef6c00', color: 'white', border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '15px' }
   };
 
