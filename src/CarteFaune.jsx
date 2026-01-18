@@ -38,8 +38,8 @@ const CarteFaune = ({ carte, onReponse }) => {
       fontWeight: 'bold'
     },
     pointsBadge: { backgroundColor: 'white', color: montrerReponse ? '#2e7d32' : '#0288d1', padding: '2px 8px', borderRadius: '10px' },
-    imageContainer: { width: '100%', textAlign: 'center', padding: '15px 0' },
-    image: { maxWidth: '100%', maxHeight: '200px', objectFit: 'contain', borderRadius: '10px' },
+    imageContainer: { width: '100%', textAlign: 'center', padding: '5px 0' },
+    image: { maxWidth: '100%', maxHeight: '150px', objectFit: 'contain', borderRadius: '10px' },
     content: { padding: '10px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' },
     question: { fontSize: '1rem', color: '#333' },
     explicationTexte: { fontSize: '0.95rem', marginTop: '15px', fontStyle: 'italic', color: '#444' },

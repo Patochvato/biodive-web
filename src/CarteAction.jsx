@@ -15,47 +15,62 @@ const obtenirIcone = (action) => {
     return icones[categorie] || "biodive.png";
 };
 
+// ... (haut du fichier inchangé : import et fonction obtenirIcone)
+
 const CarteAction = ({ carte, onContinuer }) => {
   if (!carte) return null;
 
-  // 2. Préparation de l'image
-  const nomFichier = obtenirIcone(carte);
-  // Cette ligne crée le lien vers ton dossier assets/images
-  const cheminImage = new URL(`../public/images/${nomFichier}`, import.meta.url).href;
+  const pointsAction = parseInt(carte.VALEUR, 10) || 0;
+  const nomIcone = obtenirIcone(carte);
+  const cheminImage = new URL(`../public/images/${nomIcone}`, import.meta.url).href;
 
   const styles = {
     carte: { 
       width: '100%',
-      maxWidth: '350px', 
-      maxHeight: '85vh', 
-      overflowY: 'auto', 
+      maxWidth: '400px',
       backgroundColor: '#fff3e0', 
       borderRadius: '15px', 
       boxShadow: '0 8px 16px rgba(0,0,0,0.2)', 
       border: '3px solid #ef6c00',
       display: 'flex',
       flexDirection: 'column',
-      margin: 'auto'
+      overflow: 'hidden' // Important pour que le header suive l'arrondi
     },
-    header: { backgroundColor: '#ef6c00', color: 'white', padding: '15px', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase' },
-    content: { padding: '20px 20px 10px', textAlign: 'center' },
-    icone: { width: '60px', height: '60px', marginBottom: '15px' }, // Style pour l'image
-    description: { fontSize: '1.1em', fontStyle: 'italic', color: '#444', marginBottom: '15px' },
-    effetBox: { backgroundColor: '#ffe0b2', padding: '10px', borderRadius: '8px', border: '1px dashed #ef6c00' },
-    btn: { width: '100%', padding: '15px', backgroundColor: '#ef6c00', color: 'white', border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '15px' }
+    header: { 
+      backgroundColor: '#ef6c00', 
+      color: 'white', 
+      padding: '12px 15px', 
+      display: 'flex',
+      justifyContent: 'space-between', // Aligne le titre à gauche et les points à droite
+      alignItems: 'center', 
+      fontWeight: 'bold', 
+      textTransform: 'uppercase' 
+    },
+    pointsBadge: {
+      backgroundColor: 'white',
+      color: '#ef6c00',
+      padding: '2px 10px',
+      borderRadius: '12px', // Style "pilule" comme la carte Faune
+      fontSize: '0.9em'
+    },
+    content: { padding: '10px', textAlign: 'center' },
+    icone: { width: '50px', height: '50px', marginBottom: '15px' },
+    description: { fontSize: '1.05em', fontStyle: 'italic', color: '#444', marginBottom: '15px' },
+    effetBox: { backgroundColor: '#ffe0b2', padding: '5px', borderRadius: '8px', border: '1px dashed #ef6c00' },
+    btn: { width: '100%', padding: '15px', backgroundColor: '#ef6c00', color: 'white', border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px' }
   };
-
-  const pointsAction = parseInt(carte.VALEUR, 10) || 0;
 
   return (
     <div style={styles.carte}>
       <div style={styles.header}>
-        {carte.CATEGORIE || "ACTION"}
+        <span>{carte.CATEGORIE || "ACTION"}</span>
+        <span style={styles.pointsBadge}>
+          {pointsAction > 0 ? `+${pointsAction}` : pointsAction} pts
+        </span>
       </div>
       
       <div style={styles.content}>
-        {/* CORRECTION : On utilise la balise <img> avec le chemin préparé */}
-        <img src={cheminImage} alt={carte.CATEGORIE} style={styles.icone} />
+        <img src={cheminImage} alt="icone" style={styles.icone} />
 
         <p style={styles.description}>"{carte.DESCRIPTION || carte.QUESTION}"</p>
         
@@ -65,20 +80,10 @@ const CarteAction = ({ carte, onContinuer }) => {
         </div>
 
         {carte.EXPLICATIONS && (
-          <p style={{ fontSize: '0.8em', marginTop: '10px', color: '#888' }}>
+          <p style={{ fontSize: '0.85em', marginTop: '10px', color: '#666' }}>
               {carte.EXPLICATIONS}
           </p>
         )}
-
-        <div style={{ 
-          fontSize: '24px', 
-          fontWeight: 'bold', 
-          color: pointsAction < 0 ? '#d32f2f' : '#388e3c',
-          marginTop: '10px' 
-        }}>
-          {pointsAction > 0 ? `+${pointsAction}` : pointsAction} 
-          {Math.abs(pointsAction) <= 9 ? " Cases 🌊" : " Points ⭐"}
-        </div>
       </div>
 
       <button style={styles.btn} onClick={() => onContinuer(pointsAction)}>

@@ -60,7 +60,7 @@ const styles = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'flex-start', 
-  padding: '20px 15px', // On augmente le padding du haut à 40px pour "abaisser" le contenu
+  padding: '10px 15px', // On augmente le padding du haut à 40px pour "abaisser" le contenu
   boxSizing: 'border-box'
 }
 };
