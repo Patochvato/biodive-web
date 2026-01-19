@@ -292,8 +292,8 @@
     },
     {
       "ID": "faune_30",
-      "QUESTION": "Le calmar vit en pleine eau, à faible profondeur, près des récifs coralliens. Son corps translucide est bordé d'une nageoire latérale ondulante. Véritable caméléon, il devient blanc, noir, bleu, violet, rouge ou jaune. Il chasse en bande en encerclant les proies (petits poissons et crustacés). Peu méfiant, à la première alerte il s'enfuie en libérant une encre de camouflage.",
-      "REPONSE": "",
+      "QUESTION": "Le calmar vit en pleine eau, à faible profondeur, près des récifs coralliens. Son corps translucide est bordé d'une nageoire latérale ondulante. Véritable caméléon, il devient blanc, noir, bleu, violet, rouge ou jaune.",
+      "REPONSE": "👉  Il chasse en bande en encerclant les proies (petits poissons et crustacés). Peu méfiant, à la première alerte il s'enfuie en libérant une encre de camouflage. ",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f30.jpg",
       "TYPE": "BONUS",
@@ -312,8 +312,8 @@
     },
     {
       "ID": "faune_32",
-      "QUESTION": "La murène ruban change de coloration lorsqu'elle change de sexe. Le juvénile est noir et mesure au max 65 cm. Le mâle est d'un bleu vif avec les mâchoires jaunes. Lorsqu'il se transforme en femelle après avoir atteint 95 cm, son corps devient jaune et frôle les 120 cm. Sa tête dépasse de son trou dans le sable pour chasser. En pleine eau, elle se déplace en ondulant comme un ruban.",
-      "REPONSE": "",
+      "QUESTION": "La murène ruban change de coloration lorsqu'elle change de sexe. Le juvénile est noir et mesure au max 65 cm. Le mâle est d'un bleu vif avec les mâchoires jaunes. Lorsqu'il se transforme en femelle après avoir atteint 95 cm, son corps devient jaune et frôle les 120 cm. Sa tête dépasse de son trou dans le sable pour chasser.",
+      "REPONSE": "En pleine eau, elle se déplace en ondulant comme un ruban.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f32.jpg",
       "TYPE": "BONUS",
@@ -382,7 +382,7 @@
     },
     {
       "ID": "faune_39",
-      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. ,-Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains. ,-Je suis ?",
+      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains. Je suis ?",
       "REPONSE": "Le poulpe, la pieuvre, le zourite.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f39.jpg",
@@ -432,7 +432,7 @@
     },
     {
       "ID": "faune_44",
-      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante. ,- Je suis?",
+      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante. Je suis ?",
       "REPONSE": "Une éponge.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f44.jpg",
@@ -502,7 +502,7 @@
     },
     {
       "ID": "faune_51",
-      "QUESTION": "Bien que je n'opère pas, j'ai deux scalpels très coupants comme des lames de rasoir et qui plutôt que soigner provoquent des infections. ,-C'est bien là tout mon drame.",
+      "QUESTION": "Bien que je n'opère pas, j'ai deux scalpels très coupants comme des lames de rasoir et qui plutôt que soigner provoquent des infections. C'est bien là tout mon drame.",
       "REPONSE": "Un poisson chirurgien.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f51.jpg",
@@ -625,14 +625,14 @@
       "QUESTION": "Mon premier est une note de musique,- Mon second est une note de musique,- Mon troisième sert à attacher,- Mon tout est un personnage de légende",
       "REPONSE": "1 Si - 2 Ré - 3 nœud. Mon tout est une SIRENE.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f63.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f63.png",
       "TYPE": "CHARADE",
       "CATEGORIE": "légende",
       "POINTS": "20"
     },
     {
       "ID": "faune_64",
-      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage.  ,-Je suis?",
+      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage. Je suis ?",
       "REPONSE": "Une porcelaine.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f64.jpg",
@@ -970,7 +970,7 @@
       "TYPE": "Marine",
       "EFFET": "tirez une carte faune sans répondre à la question.",
       "VALEUR": "+60",
-      "EXPLICATIONS": "Chaque année, les usagers de la mer, la commune et les habitants s'organisent pour le grand nettoyage des fonds de la Marine, du port et des abords. Batteries, vélos, pneus, plombs de pêche, toutes sortes de déchets plastiques? sont retirés de l'océan. Hélas tous les ans il faut recommencer."
+      "EXPLICATIONS": "Chaque année, les usagers de la mer, la commune et les habitants s'organisent pour le grand nettoyage des fonds. Batteries, vélos, pneus, plombs de pêche, toutes sortes de déchets sont retirés de l'océan. Hélas tous les ans il faut recommencer."
     },
     {
       "ID": "action_16",

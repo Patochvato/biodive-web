@@ -4,7 +4,7 @@ import React from 'react';
 const obtenirIcone = (action) => {
     const categorie = action?.CATEGORIE?.toUpperCase() || "";
     const icones = {
-        "PLONGEE": "plongeur1.svg",
+        "PLONGÉE": "plongeur1.svg",
         "FAUNE": "faune1.svg",
         "ENVIRONNEMENT": "environnement1.svg",
         "REGLEMENTATION": "reglementation1.svg",
@@ -54,7 +54,7 @@ const CarteAction = ({ carte, onContinuer }) => {
       fontSize: '0.9em'
     },
     content: { padding: '10px', textAlign: 'center' },
-    icone: { width: '50px', height: '50px', marginBottom: '15px' },
+    icone: { width: '80px', height: '80px', marginBottom: '1px' },
     description: { fontSize: '1.05em', fontStyle: 'italic', color: '#444', marginBottom: '15px' },
     effetBox: { backgroundColor: '#ffe0b2', padding: '5px', borderRadius: '8px', border: '1px dashed #ef6c00' },
     btn: { width: '100%', padding: '15px', backgroundColor: '#ef6c00', color: 'white', border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px' }
