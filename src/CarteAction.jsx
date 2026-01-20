@@ -7,8 +7,7 @@ const obtenirIcone = (action) => {
         "PLONGÉE": "plongeur1.svg",
         "FAUNE": "faune1.svg",
         "ENVIRONNEMENT": "environnement1.svg",
-        "REGLEMENTATION": "reglementation1.svg",
-        "LOI": "reglementation1.svg",
+        "RÉGLEMENTATION": "reglementation1.svg",
         "BONUS": "bonus1.svg",
         "JEU": "jeu1.svg"
     };
