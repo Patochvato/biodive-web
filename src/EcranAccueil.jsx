@@ -1,6 +1,17 @@
 import React from 'react';
+import { playSound } from './audioManager';
 
 const EcranAccueil = ({ onDemarrer }) => {
+  
+  const jouerSonEtDemarrer = () => {
+    // JUSTE 'bulles.mp3', pas de '/sons/' devant
+    playSound('bulles.mp3', 0.5); 
+    
+    setTimeout(() => {
+      onDemarrer();
+    }, 400); // Un délai légèrement plus long pour bien entendre les bulles
+  };
+
   const styles = {
     conteneur: {
       height: '100vh',
@@ -79,7 +90,7 @@ const EcranAccueil = ({ onDemarrer }) => {
       
       <button 
         style={styles.bouton} 
-        onClick={onDemarrer}
+        onClick={jouerSonEtDemarrer}
         onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
         onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
       >

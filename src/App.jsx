@@ -7,7 +7,8 @@ import CarteFaune from './CarteFaune';
 import CarteAction from './CarteAction';
 import BarreProgression from './BarreProgression';
 import EcranVictoire from './EcranVictoire';
-import EcranAccueil from '../EcranAccueil';
+import EcranAccueil from './EcranAccueil';
+import { playSound } from './audioManager';
 
 const styles = {
   container: {
@@ -79,6 +80,7 @@ function App() {
   const [cartesUtilisees, setCartesUtilisees] = useState([]);
 
   const tenterLeDepart = () => {
+    playSound('dice.mp3', 0.4);
   const faces = ["PLONGEUR", "POIGNARD", "CAMERA", "PHOTO", "PLONGEUR", "BINGO"];
   const tirage = faces[Math.floor(Math.random() * faces.length)];
   setDernierDeDepart(tirage);
@@ -281,7 +283,7 @@ const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
     <DePlacement 
      // On envoie seulement les cartes qui n'ont pas encore été utilisées
       catalogue={toutesLesCartes.filter(c => !cartesUtilisees.includes(c.ID))}
-      onLancer={(valeurDe, carte) => {
+      onLancer={(valeurDe, carte) => {playSound('dice.mp3', 0.4);
         if (carte) {
           setPosition(prev => Math.min(100, prev + valeurDe));
           setCarteActuelle(carte);
