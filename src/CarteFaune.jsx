@@ -66,7 +66,7 @@ const CarteFaune = ({ carte, onReponse }) => {
                 onError={(e) => e.target.src = "/images/biodive.png"}
               />
             </div>
-            <p style={styles.question}><strong>{carte.TYPE}</strong><br/>{carte.QUESTION}</p>
+            <p style={styles.question}><strong>{carte.TYPE}</strong><br/><br/>{carte.QUESTION}</p>
             <button style={styles.btnAction} onClick={() => setMontrerReponse(true)}>
               VOIR LA RÉPONSE
             </button>

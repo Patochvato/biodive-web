@@ -7,7 +7,7 @@ const obtenirIcone = (action) => {
         "PLONGÉE": "plongeur1.svg",
         "FAUNE": "faune1.svg",
         "ENVIRONNEMENT": "environnement1.svg",
-        "RÉGLEMENTATION": "reglementation1.svg",
+        "REGLEMENTATION": "reglement1.svg",
         "BONUS": "bonus1.svg",
         "JEU": "jeu1.svg"
     };
@@ -21,7 +21,7 @@ const CarteAction = ({ carte, onContinuer }) => {
 
   const pointsAction = parseInt(carte.VALEUR, 10) || 0;
   const nomIcone = obtenirIcone(carte);
-  const cheminImage = new URL(`../public/images/${nomIcone}`, import.meta.url).href;
+  const cheminImage = `/images/${nomIcone}`;
 
   const styles = {
     carte: { 

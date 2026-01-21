@@ -7,6 +7,7 @@ import CarteFaune from './CarteFaune';
 import CarteAction from './CarteAction';
 import BarreProgression from './BarreProgression';
 import EcranVictoire from './EcranVictoire';
+import EcranAccueil from '../EcranAccueil';
 
 const styles = {
   container: {
@@ -66,6 +67,7 @@ const styles = {
 };
 
 function App() {
+  const [ecranAccueil, setEcranAccueil] = useState(true); // Nouveau : commence sur l'accueil
   const [position, setPosition] = useState(0);
   const [mode, setMode] = useState('DEPLACEMENT'); 
   const [estAuClub, setEstAuClub] = useState(true);
@@ -153,6 +155,9 @@ const toutesLesCartes = [
 const nbObjets = Object.values(inventaire).filter(val => val === true).length;
 const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
 
+  if (ecranAccueil) {
+    return <EcranAccueil onDemarrer={() => setEcranAccueil(false)} />;
+  }
   return (
     <div style={styles.container}>
       <header style={styles.header}>

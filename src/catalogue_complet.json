@@ -52,7 +52,7 @@
     },
     {
       "ID": "faune_06",
-      "QUESTION": "Comment fait-on le signe « tout va bien »  en plongée ?",
+      "QUESTION": "Comment fait-on le signe « tout va bien » en plongée ?",
       "REPONSE": "Avec la main (voir photo)",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f6.jpg",
@@ -72,11 +72,11 @@
     },
     {
       "ID": "faune_08",
-      "QUESTION": "Quelle est la mauvaise réponse sur la squille multicolore,- A. elle a la vision la plus performante du monde animal,- B. la femelle est plus grosse que le mâle,- C",
-      "REPONSE": "elle peut briser la carapace d'un crabe,- D. elle lance un marteau sur ses proies à une vitesse de 80km/h.",
-      "EXPLICATIONS": "Réponse B",
+      "QUESTION": "Quelle est la mauvaise réponse sur la squille multicolore,- A. elle a la vision la plus performante du monde animal,- B. la femelle est plus grosse que le mâle,- C. elle peut briser la carapace d'un crabe.",
+      "REPONSE": "Réponse B",
+      "EXPLICATIONS": "A savoir : Elle lance un marteau sur ses proies à une vitesse de 80km/h",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f8.jpg",
-      "TYPE": "",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -143,8 +143,8 @@
     {
       "ID": "faune_15",
       "QUESTION": "Mon premier est une marque d'étonnement,- Mon second est la vingt et unième lettre de l'alphabet grec,- Mon troisième est une tête de sanglier,- Mon tout est un échinoderme comme l'étoile de mer ou l'oursin",
-      "REPONSE": "1 Oh - 2 Ph i - 3 Hure. Mon tout est une OPHUIRE.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Mon tout est une OPHUIRE.",
+      "EXPLICATIONS": "1 Oh - 2 Ph i - 3 Hure. ",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f15.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
@@ -152,7 +152,7 @@
     },
     {
       "ID": "faune_16",
-      "QUESTION": "Je suis noir et rejette de longs filaments blancs pour me défendre. Je suis ?",
+      "QUESTION": "Je suis noir et rejette de longs filaments blancs pour me défendre. ",
       "REPONSE": "L'holoturie ou concombre de mer.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f16.jpg",
@@ -162,18 +162,18 @@
     },
     {
       "ID": "faune_17",
-      "QUESTION": "Constructeur infatiguable de récifs, mes formes sont extravagantes. ,- Mes couleurs variées deviennent phosphorescentes lorsque l'on m'éclaire dans la nuit. ,-Je peux être de feu, sinueux, jaune ou encore solitaire. ,-Je suis ?",
+      "QUESTION": "Constructeur infatiguable de récifs, mes formes sont extravagantes. ,- Mes couleurs variées deviennent phosphorescentes lorsque l'on m'éclaire dans la nuit. ,-Je peux être de feu, sinueux, jaune ou encore solitaire.",
       "REPONSE": "Le corail.",
       "EXPLICATIONS": "",
       "@images": "",
-      "TYPE": "DEVINETTE",
+      "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
       "ID": "faune_18",
-      "QUESTION": "Mon premier était avant,- Dans mon second il y a des animaux,- Mon troisième se pose sous une assiette ,- Mon tout est un poisson qui vole pour échapper à ses prédateurs.",
-      "REPONSE": "1 Ex - 2 Zoo - 3 Set - Mon tout est un EXOCET.",
+      "QUESTION": "Mon premier était avant,- Dans mon second il y a des animaux,- Mon troisième se pose sous une assiette ,\n Mon tout est un poisson qui vole pour échapper à ses prédateurs.",
+      "REPONSE": "1 Ex - 2 Zoo - 3 Set \n Mon tout est un EXOCET.",
       "EXPLICATIONS": "L'exocet nage rapidement près de la surface de l'eau, avec ses nageoires près du corps. Quand il sort de l'eau, il les déplie et vole.",
       "@images": "",
       "TYPE": "CHARADE",
@@ -233,8 +233,8 @@
     {
       "ID": "faune_24",
       "QUESTION": "Mon premier est une démarche,- Mon second n'est pas rapide,- Sur mon troisième, les bateaux s'attachent,- Mon tout est un groupe de plongeurs.",
-      "REPONSE": "1 Pas - 2 Lent - 3 Quai. Mon tout est une PALANQUEE.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Mon tout est une PALANQUEE.",
+      "EXPLICATIONS": "1 Pas - 2 Lent - 3 Quai.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f24.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "plongée",
@@ -243,8 +243,8 @@
     {
       "ID": "faune_25",
       "QUESTION": "Cétacés et tortues marines sont protégés",
-      "REPONSE": "à la Réunion, le non respect de la charte d'approche peut entraîner une amande pouvant atteindre 750,00 euros. ",
-      "EXPLICATIONS": "VRAI",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "à la Réunion, le non respect de la charte d'approche peut entraîner une amande pouvant atteindre 750,00 euros. ",
       "@images": "Suite à un arrêté préfectoral du 12 juin 2019, la charte définit différentes zones d'approche dans lesquelles sont précisés les paramètres à respecter :  vitesses des bateaux, durée de stationnement, comportement des observateurs?",
       "TYPE": "QUESTION",
       "CATEGORIE": "VRAI OU FAUX",
@@ -275,14 +275,14 @@
       "QUESTION": "Lors de l'éruption de mars 1977 à Piton Sainte Rose, la lave a rencontré la mer. Au contact de l'eau la lave forme des boules caractéristiques. ,- Comment appelle-t-on cette formation ?",
       "REPONSE": "Un pillow lava ou une lave en coussin.",
       "EXPLICATIONS": "",
-      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f24.jpg",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f28.jpg",
       "TYPE": "QUESTION",
       "CATEGORIE": "site",
       "POINTS": "20"
     },
     {
       "ID": "faune_29",
-      "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale. ,- Je suis?",
+      "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale.",
       "REPONSE": "Un hippocampe.",
       "EXPLICATIONS": "Une fois les oeufs pondus, le mâle les féconde avec son sperme. L'incubation dure environ 2 à 3 semaines, Il mettra au monde entre 5 et 1 800 « bébés » hippocampe.",
       "@images": "",
@@ -293,8 +293,8 @@
     {
       "ID": "faune_30",
       "QUESTION": "Le calmar vit en pleine eau, à faible profondeur, près des récifs coralliens. Son corps translucide est bordé d'une nageoire latérale ondulante. Véritable caméléon, il devient blanc, noir, bleu, violet, rouge ou jaune.",
-      "REPONSE": "👉  Il chasse en bande en encerclant les proies (petits poissons et crustacés). Peu méfiant, à la première alerte il s'enfuie en libérant une encre de camouflage. ",
-      "EXPLICATIONS": "",
+      "REPONSE": " ",
+      "EXPLICATIONS": "👉  Il chasse en bande en encerclant les proies (petits poissons et crustacés). Peu méfiant, à la première alerte il s'enfuie en libérant une encre de camouflage.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f30.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "faune",
@@ -362,7 +362,7 @@
     },
     {
       "ID": "faune_37",
-      "QUESTION": "Je suis une forme géométrique, je peux être géographe, on me trouve au fond de l'oeil, finalement on me déguste aussi glacé. Je suis?",
+      "QUESTION": "Je suis une forme géométrique, je peux être géographe, on me trouve au fond de l'oeil, finalement on me déguste aussi glacé.",
       "REPONSE": "Un cône.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f37.jpg",
@@ -372,7 +372,7 @@
     },
     {
       "ID": "faune_38",
-      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine, je suis également l'un des plus anciens équipements de plongée, je protège aussi le fromage. Je suis?",
+      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine, je suis également l'un des plus anciens équipements de plongée, je protège aussi le fromage.",
       "REPONSE": "Une cloche.",
       "EXPLICATIONS": "Vers 1870, lors de la construction de l'église de Sainte Rose, deux cloches avaient été commandées. On raconte que, l'une d'elles serait tombée d'un canot de débarquement dans la Marine. Lorsque vous regardez dans le clocher de l'église, vous ne voyez qu'une cloche? Mystère",
       "@images": "",
@@ -382,7 +382,7 @@
     },
     {
       "ID": "faune_39",
-      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains. Je suis ?",
+      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains.",
       "REPONSE": "Le poulpe, la pieuvre, le zourite.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f39.jpg",
@@ -413,8 +413,8 @@
     {
       "ID": "faune_42",
       "QUESTION": "Mon premier est un animal errant près d'un fleuve,- Mon second est solide comme une roche riche,- Quand mon troisième est à la mode, il prête une oreille, c'est incroyable,- Mon tout est un des 5 sites de plongée.",
-      "REPONSE": "1 Lama  l'Amazone (lama zone) - 2 le r  Rockfeller (roc fait l'r) - 3 in  inouï (in ouït). Mon tout est LA MARINE (lama r ine).",
-      "EXPLICATIONS": "",
+      "REPONSE": "Mon tout est LA MARINE",
+      "EXPLICATIONS": "1 Lama  l'Amazone (lama zone) - 2 le r  Rockfeller (roc fait l'r) - 3 in  inouï (in ouït).",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f42.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "site",
@@ -432,7 +432,7 @@
     },
     {
       "ID": "faune_44",
-      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante. Je suis ?",
+      "QUESTION": "La passer c'est pardonner, je suis presque indispensable dans une cuisine, et j'efface la craie des tableaux. Dans la mer, je peux être rouge ou étoilée, parfois encroûtante.",
       "REPONSE": "Une éponge.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f44.jpg",
@@ -452,7 +452,7 @@
     },
     {
       "ID": "faune_46",
-      "QUESTION": "La pêche traditionnelle à la « gaulette » a des conséquences sur l'écosystème océanique. Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus. ,-Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
+      "QUESTION": "La pêche traditionnelle à la « gaulette » a des conséquences sur l'écosystème océanique. Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus. Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
       "REPONSE": "",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f46.jpg",
@@ -463,8 +463,8 @@
     {
       "ID": "faune_47",
       "QUESTION": "Comment le plastique s'invite dans nos assiettes quand nous mangeons du poisson ?",
-      "REPONSE": "Avec la dégradation du plastique en micro-particules ingérées par des animaux marins. Ce processus s'amplifie avec le cycle de la chaîne alimentaire.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Avec la dégradation du plastique en micro-particules ingérées par des animaux marins.",
+      "EXPLICATIONS": "Ce processus s'amplifie avec le cycle de la chaîne alimentaire.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f47.jpg",
       "TYPE": "QUESTION",
       "CATEGORIE": "environnement",
@@ -492,11 +492,11 @@
     },
     {
       "ID": "faune_50",
-      "QUESTION": "Avec mon bec, mes deux bras, mes deux oreilles, et mes deux pattes, je repose immobile sur des fonds marins, témoin d'un commerce maritime passé. Je suis?",
+      "QUESTION": "Avec mon bec, mes deux bras, mes deux oreilles, et mes deux pattes, je repose immobile sur des fonds marins, témoin d'un commerce maritime passé.",
       "REPONSE": "Une ancre.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f50.jpg",
-      "TYPE": "DEVINETTE",
+      "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "habitat",
       "POINTS": "40"
     },
@@ -522,17 +522,17 @@
     },
     {
       "ID": "faune_53",
-      "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs. Je suis?",
+      "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs.",
       "REPONSE": "Un poisson scorpion feuille.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f53.jpg",
-      "TYPE": "DEVINETTE",
+      "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
       "ID": "faune_54",
-      "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..) dans mes mailles serrées qui ondulent le long des tombants. Je suis?",
+      "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..) dans mes mailles serrées qui ondulent le long des tombants.",
       "REPONSE": "Une gorgone.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f54.jpg",
@@ -562,7 +562,7 @@
     },
     {
       "ID": "faune_57",
-      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication impliquant une intervention médicale pour détresse respiratoire et troubles cardio-vasculaires. Je suis?",
+      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication impliquant une intervention médicale pour détresse respiratoire et troubles cardio-vasculaires.",
       "REPONSE": "Un poisson coffre.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f57.jpg",
@@ -583,7 +583,7 @@
     {
       "ID": "faune_59",
       "QUESTION": "Mon premier est un outil,- Mon second est actif,- Mon troisième est un pronom relatif,- Mon tout qualifie la mer haute.",
-      "REPONSE": "1 pelle - 2 agit - 3 que. Mon tout est l'adjectif PELAGIQUE.",
+      "REPONSE": "1 pelle - 2 agit - 3 que \n PELAGIQUE.",
       "EXPLICATIONS": "Pélagique signifie : qui vit en pleine mer. On parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou évolue à proximité des rivages de façon sédentaire comme les blennies.",
       "@images": "",
       "TYPE": "CHARADE",
@@ -613,8 +613,8 @@
     {
       "ID": "faune_62",
       "QUESTION": "En 4 étapes, comment passer du mot GIN à une espèce de poisson noir et blanc ?  Vous ajoutez une lettre à chaque étape dont voici le synonyme,- 1. bénéfice,- 2. semence,- 3. recette,- 4. poisson.",
-      "REPONSE": "Départ : GIN - 1  : GAIN - 2  : GRAIN - 3  : GRATIN - 4  : GATERIN",
-      "EXPLICATIONS": "",
+      "REPONSE": "GATERIN",
+      "EXPLICATIONS": "Départ : GIN - 1  : GAIN - 2  : GRAIN - 3  : GRATIN - 4  :",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f62.jpg",
       "TYPE": "MOT EN ESCALIER",
       "CATEGORIE": "faune",
@@ -632,7 +632,7 @@
     },
     {
       "ID": "faune_64",
-      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage. Je suis ?",
+      "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage.",
       "REPONSE": "Une porcelaine.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f64.jpg",
@@ -663,8 +663,8 @@
     {
       "ID": "faune_67",
       "QUESTION": "Bavards, les poissons ne prennent la parole que dans certaines situations, défendre leur territoire, se reproduire, signaler un danger, ou se localiser dans un banc. ",
-      "REPONSE": "Pas moins de six types de cris ont été recensés chez la demoiselle, un record ! ,-Eric Parmentier université de Liège dans Sciences et Vie n° 1134 (mars 2012)",
-      "EXPLICATIONS": "",
+      "REPONSE": "",
+      "EXPLICATIONS": "Pas moins de six types de cris ont été recensés chez la demoiselle, un record ! Eric Parmentier université de Liège dans Sciences et Vie n° 1134 (mars 2012)",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f67.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "comportement",
@@ -692,7 +692,7 @@
     },
     {
       "ID": "faune_70",
-      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe avec un grand nombre de juvéniles à l'embouchure des rivières avant de les remonter. Héla souvent, je termine en cari ! Je suis?",
+      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe avec un grand nombre de juvéniles à l'embouchure des rivières avant de les remonter. Héla souvent, je termine en cari !",
       "REPONSE": "Un bichique, ou bisik (en créole).",
       "EXPLICATIONS": "Le bisik est en voie d'extinction, car trop péché, braconné. Cet alvin a peu de chance de devenir l'adulte cabot bouche ronde qui lui aussi est en train de disparaitre des rivières réunionnaises.",
       "@images": "",
@@ -723,8 +723,8 @@
     {
       "ID": "faune_73",
       "QUESTION": "Quel est le mois préféré des poissons ?",
-      "REPONSE": "Avril  poisson d'avril.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Avril",
+      "EXPLICATIONS": "😉 poisson d'avril",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f73.png",
       "TYPE": "DEVINETTE",
       "CATEGORIE": "humour",
@@ -925,7 +925,7 @@
     {
       "ID": "action_11",
       "DESCRIPTION": "Nous sommes en alerte cyclonique orange, les sorties en mer sont interdites. Comme le temps est agréable vous décidez de vous mettre à l'eau.",
-      "CATEGORIE": "Réglementation",
+      "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "réglementation",
       "EFFET": "mettez une carte de 40 pts sur le club de plongée.",
@@ -975,7 +975,7 @@
     {
       "ID": "action_16",
       "DESCRIPTION": "Des pêcheurs ont une avarie sur le moteur de leur canot, vous les remorquez.",
-      "CATEGORIE": "Réglementation",
+      "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "réglementation",
       "EFFET": "tirez une carte faune sans répondre à la question.",
@@ -1164,7 +1164,7 @@
     },
     {
       "ID": "action_35",
-      "DESCRIPTION": "Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. Confuscius",
+      "DESCRIPTION": "Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. Confuscius",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
       "TYPE": "Bio Dive",
@@ -1195,7 +1195,7 @@
     {
       "ID": "action_38",
       "DESCRIPTION": "Lors d'une plongée encadrée, vous remarquez des langoustes. Quelques jours plus tard, vous vous équipez pour aller sur les sites repérés et pêcher tous ces crustacés.",
-      "CATEGORIE": "Réglementation",
+      "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "législation",
       "EFFET": "reculez jusqu'à la case rouge la plus proche.",
