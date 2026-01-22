@@ -160,6 +160,29 @@ const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
   if (ecranAccueil) {
     return <EcranAccueil onDemarrer={() => setEcranAccueil(false)} />;
   }
+  const quitterLeJeu = () => {
+  setEcranAccueil(true);
+  setMode('ACCUEIL');
+  setScore(0);
+  setInventaire([]);
+  setPosition(0);
+}
+const retournerALAccueil = () => {
+  // 1. On affiche à nouveau l'écran d'accueil
+  setEcranAccueil(true);
+    // On le remet soit à null, soit à 'DEPART' pour la prochaine partie
+  setMode('DEPLACEMENT'); 
+    // 3. On remet les compteurs à zéro pour ne pas retrouver l'ancien score
+  setScore(0);
+  setPosition(0);
+  setInventaire([]);
+  setCartesUtilisees([]);
+  setDernierDeDepart(null);
+};
+
+// Compte le nombre d'objets récupérés (ceux qui sont à true)
+const nbObjetsRecuperes = Object.values(inventaire).filter(val => val === true).length;
+
   return (
     <div style={styles.container}>
       <header style={styles.header}>
@@ -229,20 +252,24 @@ const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
 
 
   <main style={styles.main}>
-  {/* 1. CONDITION DE VICTOIRE */}
-  {position >= 100 && (
-    <EcranVictoire 
-      score={score + bonusCollection} 
-      nbObjets={nbObjets}
-      onRejouer={() => {
-        setPosition(0);
-        setScore(0);
-        setEstAuClub(true);
-        setInventaire({ couteau: false, camera: false, photo: false });
-        setCartesUtilisees([]);
-      }} 
-    />
-  )}
+  {/* On affiche l'écran de victoire uniquement si le mode est 'VICTOIRE' */}
+{mode === 'VICTOIRE' && (
+  <EcranVictoire 
+    score={score + bonusCollection} 
+    objets={nbObjets}
+    onRejouer={() => {
+      // 1. On remet tout à zéro
+      setPosition(0);
+      setScore(0);
+      setEstAuClub(true);
+      setInventaire({ couteau: false, camera: false, photo: false });
+      setCartesUtilisees([]);
+      // 2. IMPORTANT : On change le mode pour retourner au jeu
+      setMode('DEPLACEMENT'); 
+    }} 
+    onQuitter={retournerALAccueil}
+  />
+)}
 
   {/* 2. CAS : DÉPART (Club) */}
   {estAuClub ? (
@@ -281,13 +308,20 @@ const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
   ) : mode === 'DEPLACEMENT' ? (
     /* 3. CAS : DÉPLACEMENT */
     <DePlacement 
-     // On envoie seulement les cartes qui n'ont pas encore été utilisées
-      catalogue={toutesLesCartes.filter(c => !cartesUtilisees.includes(c.ID))}
-      onLancer={(valeurDe, carte) => {playSound('dice.mp3', 0.4);
-        if (carte) {
-          setPosition(prev => Math.min(100, prev + valeurDe));
-          setCarteActuelle(carte);
-          setMode('QUESTION');
+  catalogue={toutesLesCartes.filter(c => !cartesUtilisees.includes(c.ID))}
+  onLancer={(valeurDe, carte) => {
+    playSound('dice.mp3', 0.4);
+    
+    const nouvellePos = Math.min(100, position + valeurDe);
+    setPosition(nouvellePos);
+
+    if (nouvellePos >= 100) {
+      // Si on arrive au bout, on finit le jeu directement
+      setMode('VICTOIRE');
+    } else if (carte) {
+      // Sinon, on continue l'exploration
+      setCarteActuelle(carte);
+      setMode('QUESTION');
         }
       }} 
     />
