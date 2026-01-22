@@ -12,13 +12,19 @@ import { playSound } from './audioManager';
 
 const styles = {
   container: {
+    minHeight: '100vh',
+    width: '100vw',
+    position: 'relative',
+    overflow: 'hidden',
+    backgroundImage: `url('/images/fond1.svg')`, // Ton superbe SVG
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.1)', // Légère teinte pour le contraste
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '100%',
-    minHeight: '100vh',
-    backgroundColor: '#e1f5fe',
   },
+
   header: {
     width: '100%',
   textAlign: 'center',
@@ -30,7 +36,7 @@ const styles = {
   progressContainer: {
     width: '85%',
     height: '30px', // Plus haute pour plus de visibilité
-    backgroundColor: 'rgba(2, 136, 209, 0.2)', // Bleu très clair transparent
+    backgroundColor: 'rgba(157, 221, 255, 0.32)', // Bleu très clair transparent
     borderRadius: '20px',
     marginTop: '20px',
     position: 'relative',
