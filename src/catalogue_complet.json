@@ -173,8 +173,8 @@
     {
       "ID": "faune_18",
       "QUESTION": "Mon premier était avant,- Dans mon second il y a des animaux,- Mon troisième se pose sous une assiette ,\n Mon tout est un poisson qui vole pour échapper à ses prédateurs.",
-      "REPONSE": "1 Ex - 2 Zoo - 3 Set \n Mon tout est un EXOCET.",
-      "EXPLICATIONS": "L'exocet nage rapidement près de la surface de l'eau, avec ses nageoires près du corps. Quand il sort de l'eau, il les déplie et vole.",
+      "REPONSE": " Mon tout est un EXOCET.",
+      "EXPLICATIONS": "1 Ex - 2 Zoo - 3 Set. L'exocet nage rapidement près de la surface de l'eau, avec ses nageoires près du corps. Quand il sort de l'eau, il les déplie et vole.",
       "@images": "",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
@@ -312,9 +312,9 @@
     },
     {
       "ID": "faune_32",
-      "QUESTION": "La murène ruban change de coloration lorsqu'elle change de sexe. Le juvénile est noir et mesure au max 65 cm. Le mâle est d'un bleu vif avec les mâchoires jaunes. Lorsqu'il se transforme en femelle après avoir atteint 95 cm, son corps devient jaune et frôle les 120 cm. Sa tête dépasse de son trou dans le sable pour chasser.",
+      "QUESTION": "La murène ruban change de coloration lorsqu'elle change de sexe. Le juvénile est noir et mesure au max 65 cm. Le mâle est d'un bleu vif avec les mâchoires jaunes. Lorsqu'il se transforme en femelle après avoir atteint 95 cm, son corps devient jaune et frôle les 120 cm.",
       "REPONSE": "",
-      "EXPLICATIONS": "👉 En pleine eau, elle se déplace en ondulant comme un ruban.",
+      "EXPLICATIONS": "👉 En pleine eau, elle se déplace en ondulant comme un ruban. Sa tête dépasse de son trou dans le sable pour chasser.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f32.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "faune",
@@ -452,9 +452,9 @@
     },
     {
       "ID": "faune_46",
-      "QUESTION": "La pêche traditionnelle à la « gaulette » a des conséquences sur l'écosystème océanique. Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus. Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
+      "QUESTION": "La pêche traditionnelle à la « gaulette » a des conséquences sur l'écosystème océanique. Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus.",
       "REPONSE": "",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": " Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f46.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "environnement",
@@ -483,8 +483,8 @@
     {
       "ID": "faune_49",
       "QUESTION": "Le plastique premier maillon de la chaine alimentaire ? Mais que dire des microparticules qui sont devenues un des derniers maillons.",
-      "REPONSE": "BONUS",
-      "EXPLICATIONS": "",
+      "REPONSE": "",
+      "EXPLICATIONS": "les micro-particules de plastique (moins de 5 mm) sont ingérées par le plancton, puis par les petits poissons qui se font manger par des poissons plus gros, et ainsi de suite jusqu'aux humains.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f49b.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "environnement",
@@ -497,7 +497,7 @@
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f50.jpg",
       "TYPE": "QUI SUIS-JE",
-      "CATEGORIE": "habitat",
+      "CATEGORIE": "marine",
       "POINTS": "40"
     },
     {
@@ -577,17 +577,17 @@
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f58.jpg",
       "TYPE": "DEVINETTE",
-      "CATEGORIE": "biologie",
+      "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
       "ID": "faune_59",
       "QUESTION": "Mon premier est un outil,- Mon second est actif,- Mon troisième est un pronom relatif,- Mon tout qualifie la mer haute.",
-      "REPONSE": "1 pelle - 2 agit - 3 que \n PELAGIQUE.",
-      "EXPLICATIONS": "Pélagique signifie : qui vit en pleine mer. On parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou évolue à proximité des rivages de façon sédentaire comme les blennies.",
+      "REPONSE": "PELAGIQUE.",
+      "EXPLICATIONS": "1 pelle - 2 agit - 3 que. Pélagique : qui vit en pleine mer. On parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou évolue à proximité des rivages de façon sédentaire comme les blennies.",
       "@images": "",
       "TYPE": "CHARADE",
-      "CATEGORIE": "environnement",
+      "CATEGORIE": "pêche",
       "POINTS": "20"
     },
     {
@@ -603,8 +603,8 @@
     {
       "ID": "faune_61",
       "QUESTION": "Monsieur et Madame L'mar dans ma nasse ont une fille, comment se nomme-t-elle ?",
-      "REPONSE": "Jéssica, J'ai 6 calmars dans ma nasse.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Jéssica",
+      "EXPLICATIONS": "J'ai 6 calmars dans ma nasse",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f61.jpg",
       "TYPE": "M. et Mme",
       "CATEGORIE": "humour",
@@ -647,7 +647,7 @@
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f65.jpg",
       "TYPE": "DEVINETTE",
-      "CATEGORIE": "faune",
+      "CATEGORIE": "humour",
       "POINTS": "20"
     },
     {
@@ -703,8 +703,8 @@
     {
       "ID": "faune_71",
       "QUESTION": "Un Indien pacifique fait la manche sur les bords du Gange",
-      "REPONSE": "Le Gange est une rivière, les autres des océans (Indien, Pacifique) ou mer (la Manche)",
-      "EXPLICATIONS": "Notre planète est recouverte par 71% de mer, c'est pour cela qu'on la nomme planète bleue.",
+      "REPONSE": "Le Gange est le seul fleuve",
+      "EXPLICATIONS": "les autres des océans (Indien, Pacifique) ou mer (la Manche). Notre planète est recouverte par 71% de mer, c'est pour cela qu'on la nomme planète bleue.",
       "@images": "",
       "TYPE": "TROUVER L'INTRUS",
       "CATEGORIE": "environnement",
@@ -743,8 +743,8 @@
     {
       "ID": "faune_75",
       "QUESTION": "En 4 étapes, comment passer du pronom MA à un poisson recherché par les pécheurs au gros ?  Vous ajoutez une lettre à chaque étape dont voici le synonyme,- 1 mois,- 2 homme uni,- 3 homme de mer,- 4 poisson.",
-      "REPONSE": "Départ : MA, - 1  : MAI, - 2  : MARI, - 3  : MARIN, - 4  : MARLIN",
-      "EXPLICATIONS": "",
+      "REPONSE": "MARLIN",
+      "EXPLICATIONS": "Départ : MA, 1 : MAI, 2 : MARI, 3 : MARIN, 4 : MARLIN",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f75.jpg",
       "TYPE": "MOT EN ESCALIER",
       "CATEGORIE": "faune",
@@ -753,8 +753,8 @@
     {
       "ID": "faune_76",
       "QUESTION": "Comment s'appelle ce poisson dont l'anagramme est riposte, ce qu'il fait quand il se sent attaqué en déployant ses nageoires épineuses comme des éventails ?",
-      "REPONSE": "Le ptéroïs (riposte) en créole poisson larmé",
-      "EXPLICATIONS": "",
+      "REPONSE": "Le ptéroïs (riposte) ",
+      "EXPLICATIONS": "en créole poisson larmé",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f76.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
@@ -782,9 +782,9 @@
     },
     {
       "ID": "faune_79",
-      "QUESTION": "L'oreille interne des poissons est située en arrière des yeux de chaque côté du cerveau. Elle renferme les otolithes dont la densité est proche de celle des os. Elles ont l'aspect d'une petite pierre blanche. Les déplacements du poisson provoquent une «réaction» des otolithes, dont l'inertie varie en fonction de la direction et de la vitesse du déplacement. Ces oreilles internes ont une fonction d'équilibre et d'audition.",
+      "QUESTION": "L'oreille interne des poissons est située en arrière des yeux de chaque côté du cerveau. Elle renferme les otolithes dont la densité est proche de celle des os. Elles ont l'aspect d'une petite pierre blanche. Les déplacements du poisson provoquent une «réaction» des otolithes, dont l'inertie varie en fonction de la direction et de la vitesse du déplacement.",
       "REPONSE": "",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "Ces oreilles internes ont une fonction d'équilibre et d'audition",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f79.png",
       "TYPE": "BONUS",
       "CATEGORIE": "biologie",
@@ -918,7 +918,7 @@
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "réglementation",
-      "EFFET": "mettez une carte de 20 pts sur le club de plongée.",
+      "EFFET": "vous payez une amende.",
       "VALEUR": "-20",
       "EXPLICATIONS": "Tout organisme marin a une fonction dans son biotope. Une coquille vide servira de refuge à un petit poisson ou de protection à un bernard l'hermite."
     },
@@ -948,7 +948,7 @@
       "CATEGORIE": "Faune",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Afaune.jpg",
       "TYPE": "baliste titan",
-      "EFFET": "jouez le tour suivant avec un dé.",
+      "EFFET": "Vous avez le temps de prendre une photo sans bouger.",
       "VALEUR": "0",
       "EXPLICATIONS": "C'est le plus gros des balistes. Il vit sur les platiers, en bordure de récif, ou dans les zones mixtes de sable et d'éboulis. Il est solitaire parfois en couple. Il se nourrit de crustacés, d'oursins et d'étoiles de mer mais aussi de coraux grâce à sa bouche puissante armée de dents robustes et tranchantes."
     },
@@ -1018,7 +1018,7 @@
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
       "TYPE": "Bio Dive",
-      "EFFET": "rejoignez le site de plongée de votre choix.",
+      "EFFET": "partager son savoir est toujours payant",
       "VALEUR": "+100",
       "EXPLICATIONS": "Le long littoral saint-rosien, la plongée se pratique sur une multitude de sites, chacun avec sa géographie. Des tombants vertigineux aux plaines sablonneuses, les plongeurs apprécieront la limpidité des eaux bleutées et la richesse insoupçonnée de la biodiversité."
     },
@@ -1058,8 +1058,8 @@
       "CATEGORIE": "Bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
       "TYPE": "Bio Dive",
-      "EFFET": "gardez cette carte tout le long de la partie.",
-      "VALEUR": "cammera",
+      "EFFET": "protection contre la sirène.",
+      "VALEUR": "camera",
       "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme, les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais?"
     },
     {
@@ -1078,7 +1078,7 @@
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "faune",
-      "EFFET": "avancez jusqu'à la prochaine case jaune.",
+      "EFFET": "votre patience est récompensée.",
       "VALEUR": "+3",
       "EXPLICATIONS": "Vous n'appréciez pas particulièrement que vos invités touchent à tout, déplacer des objets? Sous l'océan c'est pareil. Considérez que les habitants des fonds marins vous invitent."
     },
@@ -1098,7 +1098,7 @@
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
       "TYPE": "matériel",
-      "EFFET": "jouez pendant deux tours avec un dé.",
+      "EFFET": "sans carburant, vous avancez lentement.",
       "VALEUR": "-3",
       "EXPLICATIONS": "Que ce soit le bateau, les équipements de plongée et tout autre accessoire, tout doit être vérifié avant le départ. Chaque négligence peut avoir une effet domino et avoir des conséquences sur la sécurité des plongeurs."
     },
@@ -1128,7 +1128,7 @@
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
       "TYPE": "Bio Dive",
-      "EFFET": "reculez de 6 cases",
+      "EFFET": "vous payez cher vos hésitations",
       "VALEUR": "-6",
       "EXPLICATIONS": "Bonne chance"
     },
@@ -1138,7 +1138,7 @@
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
       "TYPE": "Bio Dive",
-      "EFFET": "reculez de 3 cases",
+      "EFFET": "retourner observer le concombre de mer.",
       "VALEUR": "-3",
       "EXPLICATIONS": "Bonne chance"
     },
@@ -1168,7 +1168,7 @@
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
       "TYPE": "Bio Dive",
-      "EFFET": "avancez de 3 cases",
+      "EFFET": "partager son savoir est toujours payant",
       "VALEUR": "+3",
       "EXPLICATIONS": "Bonne chance"
     },
@@ -1178,7 +1178,7 @@
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
       "TYPE": "Bio Dive",
-      "EFFET": "demandez une carte faune de 20 pts au joueur de votre choix.",
+      "EFFET": "votre savoir faire est récompensé",
       "VALEUR": "+20",
       "EXPLICATIONS": "La connaissance des nœuds s'appelle le matelotage. Qu'ils soient simples ou compliqués leur utilisation dépend de leurs fonctions."
     },
@@ -1188,7 +1188,7 @@
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "Bio Dive",
-      "EFFET": "demandez une carte faune de 60 pts au joueur de votre choix.",
+      "EFFET": "votre action est récompensée",
       "VALEUR": "+60",
       "EXPLICATIONS": "Si l'Homme ne prend pas conscience de l'importance de son environnement, sa destruction est inévitable."
     },
@@ -1198,7 +1198,7 @@
       "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
       "TYPE": "législation",
-      "EFFET": "reculez jusqu'à la case rouge la plus proche.",
+      "EFFET": "vous avez mérité une pénalité.",
       "VALEUR": "-6",
       "EXPLICATIONS": "La pêche sous-marine est réglementée. Il est strictement interdit de chasser en bouteille, cela s'appelle du braconnage."
     },
@@ -1272,7 +1272,7 @@
       "ID": "bonus_01",
       "NOM": "Le courant marin",
       "DESCRIPTION": "Il peut se lever soudainement. Il est difficile de lutter contre pour rejoindre le mouillage ou le rivage",
-      "POINTS": "la puissance est telle qu'elle peut parfois arracher un masque. Pour les plongeurs confirmés, le courant permet sur certains sites d'effectuer une plongée dérivante, par exemple le long d'un tombant, comme à Saint Leu sur le tombant de la Pointe au Sel"
+      "POINTS": "20"
     },
     {
       "ID": "bonus_02",

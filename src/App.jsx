@@ -16,7 +16,7 @@ const styles = {
     width: '100vw',
     position: 'relative',
     overflow: 'hidden',
-    backgroundImage: `url('/images/fond1.svg')`, // Ton superbe SVG
+    backgroundImage: `url('/images/fond2.svg')`, // Ton superbe SVG
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.1)', // Légère teinte pour le contraste
@@ -85,6 +85,13 @@ function App() {
   const [messageBonus, setMessageBonus] = useState("");
   const [cartesUtilisees, setCartesUtilisees] = useState([]);
 
+  const imagesFacesDe = {
+  "PLONGEUR": "face_plongeur.png", // Remplace par tes vrais noms de fichiers
+  "POIGNARD": "face_poignard.png",
+  "CAMERA": "face_camera.png",
+  "PHOTO": "face_photo.png",
+  "BINGO": "face_bingo.png"
+}; 
   const tenterLeDepart = () => {
     playSound('dice.mp3', 0.4);
   const faces = ["PLONGEUR", "POIGNARD", "CAMERA", "PHOTO", "PLONGEUR", "BINGO"];
@@ -291,13 +298,30 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val === true).
     <h2 style={{ color: '#0288d1', marginBottom: '20px' }}>🏠 Club de Plongée</h2>
       
       <div style={{ 
-        margin: '20px auto', width: '120px', height: '120px', 
-        border: '2px solid #0288d1', borderRadius: '15px',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        backgroundColor: 'white', fontSize: '1.2rem', fontWeight: 'bold', color: '#0288d1'
-      }}>
-        {dernierDeDepart ? <span>{dernierDeDepart}</span> : <span>🎲</span>}
-      </div>
+  margin: '20px auto', width: '150px', height: '150px', 
+  border: '3px solid #0288d1', borderRadius: '20px',
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+  backgroundColor: 'white', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
+}}>
+  {dernierDeDepart ? (
+    /* Affiche la face spécifique tirée */
+    <img 
+      src={`/images/${imagesFacesDe[dernierDeDepart]}`} 
+      alt={dernierDeDepart}
+      style={{ 
+        width: '100%', height: '100%', objectFit: 'contain', 
+        padding: '10px', animation: 'popIn 0.3s ease-out' 
+      }} 
+    />
+  ) : (
+    /* Image du dé entier par défaut avant le lancer */
+    <img 
+      src="/images/dedepart.png" 
+      alt="Lancer le dé" 
+      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '15px', opacity: 0.6 }} 
+    />
+  )}
+</div>
 
       <p style={{ marginBottom: '15px' }}>
         {dernierDeDepart 

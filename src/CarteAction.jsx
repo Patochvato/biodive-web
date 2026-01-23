@@ -71,7 +71,7 @@ const CarteAction = ({ carte, onContinuer }) => {
       <div style={styles.content}>
         <img src={cheminImage} alt="icone" style={styles.icone} />
 
-        <p style={styles.description}>"{carte.DESCRIPTION || carte.QUESTION}"</p>
+        <p style={styles.description}>{carte.DESCRIPTION || carte.QUESTION}</p>
         
         <div style={styles.effetBox}>
           <strong>EFFET :</strong>
