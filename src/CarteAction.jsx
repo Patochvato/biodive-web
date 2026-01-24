@@ -5,7 +5,7 @@ const obtenirIcone = (action) => {
     const categorie = action?.CATEGORIE?.toUpperCase() || "";
     const icones = {
         "PLONGÉE": "plongeur1.svg",
-        "FAUNE": "faune1.svg",
+        "FAUNE": "faune1.png",
         "ENVIRONNEMENT": "environnement1.svg",
         "REGLEMENTATION": "reglement1.svg",
         "BONUS": "bonus1.svg",
