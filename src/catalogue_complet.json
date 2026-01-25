@@ -64,7 +64,7 @@
       "ID": "faune_07",
       "QUESTION": "Le petit ou juvénile du poisson-ange empereur a les mêmes couleurs que l'adulte.",
       "REPONSE": "FAUX",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "comme beaucoup de poissons, le juvénile a une livrée différente de l'adulte. Cela lui permet de se camoufler plus facilement et d'échapper à ses prédateurs.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f7.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
@@ -142,7 +142,7 @@
     },
     {
       "ID": "faune_15",
-      "QUESTION": "Mon premier est une marque d'étonnement,- Mon second est la vingt et unième lettre de l'alphabet grec,- Mon troisième est une tête de sanglier,- Mon tout est un échinoderme comme l'étoile de mer ou l'oursin",
+      "QUESTION": "Mon premier est une marque d'étonnement,- Mon second est la vingt et unième lettre de l'alphabet grec,- Mon troisième est une tête de sanglier,\nMon tout est un échinoderme comme l'étoile de mer ou l'oursin",
       "REPONSE": "Mon tout est une OPHUIRE.",
       "EXPLICATIONS": "1 Oh - 2 Ph i - 3 Hure. ",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f15.jpg",
@@ -154,7 +154,7 @@
       "ID": "faune_16",
       "QUESTION": "Je suis noir et rejette de longs filaments blancs pour me défendre. ",
       "REPONSE": "L'holoturie ou concombre de mer.",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "Elle peut aussi expulser une partie de ses organes internes pour échapper à un danger. Ceux-ci repousseront ensuite.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f16.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
@@ -172,7 +172,7 @@
     },
     {
       "ID": "faune_18",
-      "QUESTION": "Mon premier était avant,- Dans mon second il y a des animaux,- Mon troisième se pose sous une assiette ,\n Mon tout est un poisson qui vole pour échapper à ses prédateurs.",
+      "QUESTION": "Mon premier était avant,- Dans mon second il y a des animaux,- Mon troisième se pose sous une assiette. \nMon tout est un poisson qui vole pour échapper à ses prédateurs.",
       "REPONSE": " Mon tout est un EXOCET.",
       "EXPLICATIONS": "1 Ex - 2 Zoo - 3 Set. L'exocet nage rapidement près de la surface de l'eau, avec ses nageoires près du corps. Quand il sort de l'eau, il les déplie et vole.",
       "@images": "",
@@ -224,8 +224,8 @@
       "ID": "faune_23",
       "QUESTION": "Comment s'appelle le phénomène dû à l'élévation de la température de l'eau qui fait perdre leur coloration aux coraux et entraine leur disparition ?",
       "REPONSE": "Le blanchissement",
-      "EXPLICATIONS": "Un corail blanchi n'est pas un corail mort",
-      "@images": "seulement sans zooxanthelles, les apports énergétique se voient fortement réduits. Si ces conditions de stress perdurent les coraux meurent. 1 à 2° de plus suffissent.",
+      "EXPLICATIONS": "Un corail blanchi n'est pas un corail mort seulement sans zooxanthelles, les apports énergétique se voient fortement réduits. Si ces conditions de stress perdurent les coraux meurent. 1 à 2° de plus suffissent.",
+      "@images": "biodive-web\\public\\images\\f23.jpg",
       "TYPE": "QUESTION",
       "CATEGORIE": "environnement",
       "POINTS": "40"
@@ -827,8 +827,8 @@
       "DESCRIPTION": "Au cours de la plongée, vous n'avez pas vérifié régulièrement votre manomètre, à la remontée vous êtes sur réserve.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
-      "EFFET": "passez deux tours.",
+      "TYPE": "Plongée",
+      "EFFET": "Reculer de deux cases.",
       "VALEUR": "-2",
       "EXPLICATIONS": "Sur réserve à la remontée, la quantité d'air disponible dans votre bouteille ne sera pas suffisante pour effectuer les paliers prévus. Les autres plongeurs vous assisteront avec leur deuxième détendeur."
     },
@@ -837,8 +837,8 @@
       "DESCRIPTION": "Vous avez le niveau1. Le guide de planquée a fixé la profondeur maximale à -20 m. Attiré par une murène, vous ne vous apercevez pas que vous venez de franchir cette limite.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "réglementation",
-      "EFFET": "mettez une carte faune de 40 pts sur le club de plongée.",
+      "TYPE": "Malus",
+      "EFFET": "vous avez mérité une pénalité.",
       "VALEUR": "-40",
       "EXPLICATIONS": "Le brevet de plongeur niveau 1 (N1) est le premier niveau de plongée français. Il permet d'effectuer des plongées encadrées jusqu'à une profondeur maximum de 20 mètres."
     },
@@ -847,9 +847,10 @@
       "DESCRIPTION": "Un poisson-pierre vous a piqué, des soins sont nécessaires.",
       "CATEGORIE": "Faune",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Afaune.jpg",
-      "TYPE": "poisson pierre",
-      "EFFET": "passez deux tours pour vous soigner.",
+      "TYPE": "Danger",
+      "EFFET": "vous êtes retardé.",
       "VALEUR": "-9",
+      "OBJET_REQUIS": "Couteau",
       "EXPLICATIONS": "Quand il se sent en danger, le poissons-pierre déploie ses épines dorsales qui se terminent par des piquants acérés qui injectent un venin. La piqure très douloureuse peut provoquer une paralysie et entrainer un accident de plongée. Le venin est thermolabile, la chaleur atténue ses effets."
     },
     {
@@ -857,28 +858,29 @@
       "DESCRIPTION": "Votre binôme vous fait signe qu'il est essoufflé, vous prenez le temps nécessaire pour l'aider, votre palanquée est ralentie.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
-      "EFFET": "rejoignez le site de plongée de votre choix.",
+      "TYPE": "BONUS",
+      "EFFET": "Votre solidarité est récompensée.",
       "VALEUR": "+100",
       "EXPLICATIONS": "Quand un plongeur est essoufflé, il avertit par un signe conventionnel son binôme. Le guide de palanquée stoppe la plongée. Un protocole est appliqué pour prévenir tout risque."
     },
     {
       "ID": "action_05",
-      "DESCRIPTION": "Vous oubliez de mettre un fanion de plongée sur votre bateau.",
+      "DESCRIPTION": "La sirène fait entendre son chant envoutant, tu dois te rapprocher de la côte. Elle adore se faire prendre en photo",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "réglementation",
-      "EFFET": "revenez à votre position précédente.",
+      "TYPE": "Danger",
+      "EFFET": "Pour te rapprocher tu dois reculer.",
       "VALEUR": "-3",
-      "EXPLICATIONS": "Ce fanion permet de signaler aux autres navigateurs la présence de plongeurs. Il est obligatoire."
+      "OBJET_REQUIS": "photo",
+      "EXPLICATIONS": "Les sirènes sont des créatures mythiques connues pour leur chant envoûtant qui attire les marins. Selon la légende, elles vivent près des côtes et sont souvent représentées comme des femmes avec une queue de poisson."
     },
     {
       "ID": "action_06",
       "DESCRIPTION": "La veille d'une plongée, vous vous couchez tard. Durant la plongée, vous ne vous sentez pas bien, votre guide de palanquée arrête la plongée.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
-      "EFFET": "mettez une carte de 60 pts sur le club de plongée.",
+      "TYPE": "Malus",
+      "EFFET": "vous avez mérité une pénalité.",
       "VALEUR": "-60",
       "EXPLICATIONS": "Pour éviter tout risque, un plongeur doit être en bonne forme physique. Sous l'eau, l'organisme est soumis à des pressions, la fatigue est un facteur aggravant."
     },
@@ -887,9 +889,10 @@
       "DESCRIPTION": "En voyant un requin vous paniquez, votre guide de palanquée annule la plongée.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "faune",
-      "EFFET": "donnez une carte faune de 20 pts au joueur situé à votre droite.",
+      "TYPE": "Danger",
+      "EFFET": "vous perdez vingt points.",
       "VALEUR": "-20",
+      "OBJET_REQUIS": "Couteau",
       "EXPLICATIONS": "Les statistiques publiées par l'International Shark Attack File montrent que les attaques de requins sont plutôt rares. Chaque année, on dénombre 50 à 75 cas à travers le monde, dont 10 à 30 mortels. Les attaques sur des plongeurs en bouteille représentent 5 à 10%."
     },
     {
@@ -897,9 +900,10 @@
       "DESCRIPTION": "Vous n'avez pas respecté vos paliers, vous faites un accident de décompression.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
+      "TYPE": "Danger",
       "EFFET": "retournez au club de plongée.",
       "VALEUR": "-100",
+      "OBJET_REQUIS": "bouclier",
       "EXPLICATIONS": "Les paliers de décompression s'effectuent à la remontée. La profondeur et le temps de chaque palier varient en fonction du temps passé sous l'eau et de la profondeur atteinte. Ces paliers indispensables réduisent le taux d'azote restant dans les tissus humains afin d'éviter un accident de décompression."
     },
     {
@@ -907,8 +911,8 @@
       "DESCRIPTION": "Avant de rejoindre le club, des dauphins tournent autour du bateau. Vous passez outre les consignes qui interdisent de faire de l'apnée après une plongée.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
-      "EFFET": "revenez à votre position précédente.",
+      "TYPE": "Malus",
+      "EFFET": "vous avez mérité une pénalité.",
       "VALEUR": "-3",
       "EXPLICATIONS": "En sortant de plongée, l'apnée est interdite à cause des phénomènes de surpression. Si par inadvertance, votre masque venait à couler au fond de l'eau, laissez le s'enfoncer dans la mer."
     },
@@ -917,7 +921,7 @@
       "DESCRIPTION": "Alors que c'est interdit, vous ramassez un coquillage.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "réglementation",
+      "TYPE": "Malus",
       "EFFET": "vous payez une amende.",
       "VALEUR": "-20",
       "EXPLICATIONS": "Tout organisme marin a une fonction dans son biotope. Une coquille vide servira de refuge à un petit poisson ou de protection à un bernard l'hermite."
@@ -927,8 +931,8 @@
       "DESCRIPTION": "Nous sommes en alerte cyclonique orange, les sorties en mer sont interdites. Comme le temps est agréable vous décidez de vous mettre à l'eau.",
       "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
-      "TYPE": "réglementation",
-      "EFFET": "mettez une carte de 40 pts sur le club de plongée.",
+      "TYPE": "Malus",
+      "EFFET": "vous payez une amende.",
       "VALEUR": "-40",
       "EXPLICATIONS": "En alerte orange, il peut faire beau. Or, l'état de la mer continue de se dégrader par l'effet conjugué de l'élévation du niveau de la mer et de la houle cyclonique. Toute activité sur et en mer est dangereuse et donc proscrite."
     },
@@ -937,8 +941,8 @@
       "DESCRIPTION": "Avant de partir pour une plongée de nuit, vous oubliez de vérifier la charge de la batterie de votre lampe.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "consignes",
-      "EFFET": "reculez jusqu'à la case rouge la plus proche.",
+      "TYPE": "Malus",
+      "EFFET": "vous rester derrière.",
       "VALEUR": "-2",
       "EXPLICATIONS": "La nuit sous l'eau c'est comme dans une grotte, on ne voit rien. Le matériel utilisé ne peut pas être défaillant. Les piles doivent être neuves et les batteries rechargées."
     },
@@ -947,9 +951,10 @@
       "DESCRIPTION": "Le baliste titan est un poisson qui défend son territoire en période de ponte. Vous en rencontrez un au cours de votre plongée, vous nagez prudemment.",
       "CATEGORIE": "Faune",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Afaune.jpg",
-      "TYPE": "baliste titan",
+      "TYPE": "Danger",
       "EFFET": "Vous avez le temps de prendre une photo sans bouger.",
-      "VALEUR": "0",
+      "VALEUR": "-10",
+      "OBJET_REQUIS": "Camera",
       "EXPLICATIONS": "C'est le plus gros des balistes. Il vit sur les platiers, en bordure de récif, ou dans les zones mixtes de sable et d'éboulis. Il est solitaire parfois en couple. Il se nourrit de crustacés, d'oursins et d'étoiles de mer mais aussi de coraux grâce à sa bouche puissante armée de dents robustes et tranchantes."
     },
     {
@@ -957,9 +962,9 @@
       "DESCRIPTION": "Vous ramenez une tortue prise dans un emballage plastique.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "tortue",
-      "EFFET": "tirez une carte faune sans répondre à la question.",
-      "VALEUR": "+40",
+      "TYPE": "BONUS",
+      "EFFET": "votre action est récompensée",
+      "VALEUR": "photo",
       "EXPLICATIONS": "Les tortues confondent les sacs plastiques avec les méduses. La matière ingérée provoque des occlusions intestinales et l'animal finit souvent par mourir de faim après des semaines de souffrance."
     },
     {
@@ -967,8 +972,8 @@
       "DESCRIPTION": "Vous participez au nettoyage de la Marine qui a lieu chaque année dans le cadre des journées mondiales de l'océan.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "Marine",
-      "EFFET": "tirez une carte faune sans répondre à la question.",
+      "TYPE": "BONUS",
+      "EFFET": "votre action est récompensée",
       "VALEUR": "+60",
       "EXPLICATIONS": "Chaque année, les usagers de la mer, la commune et les habitants s'organisent pour le grand nettoyage des fonds. Batteries, vélos, pneus, plombs de pêche, toutes sortes de déchets sont retirés de l'océan. Hélas tous les ans il faut recommencer."
     },
@@ -977,8 +982,8 @@
       "DESCRIPTION": "Des pêcheurs ont une avarie sur le moteur de leur canot, vous les remorquez.",
       "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
-      "TYPE": "réglementation",
-      "EFFET": "tirez une carte faune sans répondre à la question.",
+      "TYPE": "BONUS",
+      "EFFET": "vous avez mérité une récompense.",
       "VALEUR": "+20",
       "EXPLICATIONS": "Toute personne en mer se doit de porter secours et assistance dés qu'elle aperçoit quelqu'un ou une embarcation en difficulté. Numéro d'alerte, le 196, permet de joindre directement les CROSS depuis un téléphone."
     },
@@ -987,8 +992,8 @@
       "DESCRIPTION": "Vous débarrassez les coraux des fils et des plombs de pêche.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "",
-      "EFFET": "tirez une carte faune sans répondre à la question.",
+      "TYPE": "BONUS",
+      "EFFET": "votre action est récompensée",
       "VALEUR": "+40",
       "EXPLICATIONS": "Ces déchets s'enroulent autour des branches de corail, des mousses y adhèrent et s'agglomèrent puis envahissent le corail et l'asphyxient, l'entrainant dans une mort inéluctable."
     },
@@ -997,9 +1002,9 @@
       "DESCRIPTION": "Grâce aux connaissances que vous avez acquises sur les espèces sous-marines vous faites la différence entre un serpent de mer (tricot rayé) et une murène serpent.",
       "CATEGORIE": "Faune",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Afaune.jpg",
-      "TYPE": "",
-      "EFFET": "demandez une carte faune de 40 pts au joueur de votre choix.",
-      "VALEUR": "+40",
+      "TYPE": "BONUS",
+      "EFFET": "vous êtes récompensé pour votre savoir.",
+      "VALEUR": "camera",
       "EXPLICATIONS": "Les serpents de mer n'existent pas à la Réunion. On rencontre des anguilles serpent appelées aussi murènes serpent inoffensives"
     },
     {
@@ -1007,9 +1012,9 @@
       "DESCRIPTION": "De retour de plongée, vous signalez au laboratoire de la faune sous-marine la présence d'acanthasters.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "acanthaster",
-      "EFFET": "avancez jusqu'à la prochaine case jaune.",
-      "VALEUR": "+3",
+      "TYPE": "BONUS",
+      "EFFET": "Prenez un peu d'avance.",
+      "VALEUR": "+6",
       "EXPLICATIONS": "Appelée aussi couronne d'épines, cette étoile de mer est un prédateur redoutable du corail. Elle possède de 8 à 23 bras qu'elle peut perdre sans danger pour sa survie : comme pour les autres étoiles de mer, les bras manquant se régénèrent à la vitesse de 2,5 mm/mois."
     },
     {
@@ -1017,7 +1022,7 @@
       "DESCRIPTION": "Des amis viennent en vacance chez vous, vous leur faites découvrir les différents sites de plongée.",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "partager son savoir est toujours payant",
       "VALEUR": "+100",
       "EXPLICATIONS": "Le long littoral saint-rosien, la plongée se pratique sur une multitude de sites, chacun avec sa géographie. Des tombants vertigineux aux plaines sablonneuses, les plongeurs apprécieront la limpidité des eaux bleutées et la richesse insoupçonnée de la biodiversité."
@@ -1025,11 +1030,11 @@
     {
       "ID": "action_21",
       "DESCRIPTION": "Cette carte, vous évitera de retourner au club de plongée si vous tombez sur la case courant marin.",
-      "CATEGORIE": "Bonus",
+      "CATEGORIE": "super bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "gardez cette carte tout le long de la partie.",
-      "VALEUR": "couteau",
+      "VALEUR": "bouclier",
       "EXPLICATIONS": "Plonger est une expérience inoubliable tant par les rencontres avec les habitants de la mer que par les sensations ressenties. mais en même temps attention au courant qui se lève soudainement."
     },
     {
@@ -1037,19 +1042,19 @@
       "DESCRIPTION": "Avec cette carte vous serez sauvé si vous tombez sur la case de la Roche Kaisari.",
       "CATEGORIE": "Bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "Bio Dive",
-      "EFFET": "gardez cette carte tout le long de la partie.",
+      "TYPE": "BONUS",
+      "EFFET": "Elle vous protègera dans certains cas.",
       "VALEUR": "photo",
       "EXPLICATIONS": "Plusieurs roches affleurent sur le littoral de Sainte Rose. Invisibles à marée haute, elle se dévoilent quand le niveau de la mer baisse, la plus connue étant la Roche Kaisari."
     },
     {
       "ID": "action_23",
       "DESCRIPTION": "Vous avez gagné le premier prix du concours de photo sous-marine.",
-      "CATEGORIE": "Bonus",
+      "CATEGORIE": "super bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "Bio Dive",
-      "EFFET": "prenez les cartes faune déposées sur le talon-club de plongée.",
-      "VALEUR": "+60",
+      "TYPE": "super bonus",
+      "EFFET": "vous gagnez un Super Bonus.",
+      "VALEUR": "bouclier",
       "EXPLICATIONS": "Un concours de photos sous-marines est organisé régulièrement sur Sainte-Rose. Le règlement fixe le thème et les modalités. Il est accessible au plongeurs et apnéistes qui concourent dans leur catégorie."
     },
     {
@@ -1057,7 +1062,7 @@
       "DESCRIPTION": "Cette carte vous immunise contre les chants de la Sirène, si vous vous arrêtez sur la case Sirène, il ne vous arrivera rien.",
       "CATEGORIE": "Bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "protection contre la sirène.",
       "VALEUR": "camera",
       "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme, les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais?"
@@ -1067,8 +1072,8 @@
       "DESCRIPTION": "Chaque fois que vous plongez, vous emportez un filet afin de ramasser tous les déchets plastiques que vous rencontrez.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "environnement",
-      "EFFET": "avancez jusqu'à la prochaine case jaune.",
+      "TYPE": "BONUS",
+      "EFFET": "votre action est récompensée",
       "VALEUR": "+3",
       "EXPLICATIONS": "Chaque geste quelqu'il soit a une implication sur nos océans. Ramasser un déchet en mer sauvera un corail qui nourrira un poisson. Ainsi vous participez à la préservation de la chaîne alimentaire marine."
     },
@@ -1077,7 +1082,7 @@
       "DESCRIPTION": "En tant que plongeur, vous ne dérangez pas les animaux que vous apercevez, soit pour mieux les photographier ou mieux les observer.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "faune",
+      "TYPE": "BONUS",
       "EFFET": "votre patience est récompensée.",
       "VALEUR": "+3",
       "EXPLICATIONS": "Vous n'appréciez pas particulièrement que vos invités touchent à tout, déplacer des objets? Sous l'océan c'est pareil. Considérez que les habitants des fonds marins vous invitent."
@@ -1085,11 +1090,11 @@
     {
       "ID": "action_27",
       "DESCRIPTION": "Gardez cette carte, alerte requin, vous pourrez poursuivre votre parcours sur mer si vous tombez sur la case requin.",
-      "CATEGORIE": "Bonus",
+      "CATEGORIE": "super bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "",
-      "EFFET": "gardez cette carte tout le long de la partie.",
-      "VALEUR": "bingo",
+      "TYPE": "super bonus",
+      "EFFET": "C'est rassurant.",
+      "VALEUR": "bouclier",
       "EXPLICATIONS": "Le requin, ultime prédateur ? Jusqu'à maintenant, aucune attaque de plongeurs sous-marins par un requin n'a été constatée dans les eaux réunionnaises."
     },
     {
@@ -1097,39 +1102,42 @@
       "DESCRIPTION": "Vous avez oublié de vérifier le niveau d'essence de votre zodiac, vous devez économiser votre carburant en navigant à faible vitesse.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "matériel",
+      "TYPE": "Danger",
       "EFFET": "sans carburant, vous avancez lentement.",
       "VALEUR": "-3",
+      "OBJET_REQUIS": "Couteau",
       "EXPLICATIONS": "Que ce soit le bateau, les équipements de plongée et tout autre accessoire, tout doit être vérifié avant le départ. Chaque négligence peut avoir une effet domino et avoir des conséquences sur la sécurité des plongeurs."
     },
     {
       "ID": "action_29",
       "DESCRIPTION": "Cette carte vous protège contre tous les dangers du jeu : requin, sirène, courant marin, gardien trésor, roche Kaisari.",
-      "CATEGORIE": "Bonus",
+      "CATEGORIE": "super bonus",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\Abonus.jpg",
-      "TYPE": "Bio Dive",
-      "EFFET": "gardez cette carte tout le long de la partie.",
-      "VALEUR": "couteau",
+      "TYPE": "super bonus",
+      "EFFET": "Elle vous protègera de tous les dangers.",
+      "VALEUR": "bouclier",
       "EXPLICATIONS": "Avoir une bonne connaissance de la mer est une bonne assurance pour prévenir tout risque."
     },
     {
       "ID": "action_30",
-      "DESCRIPTION": "Votre blague préférée ne fait plus rire personne et pourtant « Quelle est la couleur des petits pois », réponse : les petits pois sont rouges.",
+      "DESCRIPTION": "vous remarquez des zones sombres en realité ce sont des roches volcaniques immergées qui peuvent provoquer des remous et des courants dangereux.",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
-      "EFFET": "reculez de 9 cases",
+      "TYPE": "Danger",
+      "EFFET": "Vous êtes pris dans le courant, reculez de 9 cases",
       "VALEUR": "-9",
+      "OBJET_REQUIS": "bouclier",
       "EXPLICATIONS": "Bonne chance"
     },
     {
       "ID": "action_31",
-      "DESCRIPTION": "« Il vaut mieux se tromper en allant de l'avant que d'avoir raison en reculant » Frédéric Dard.",
+      "DESCRIPTION": "Le courant marin peut se lever soudainement. Il est difficile de lutter contre pour rejoindre le mouillage ou le rivage.",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
-      "EFFET": "vous payez cher vos hésitations",
+      "TYPE": "Danger",
+      "EFFET": "Il vaut mieux se mettre à l'abri et reculer de 6 cases. le super bonus bouclier vous protège.",
       "VALEUR": "-6",
+      "OBJET_REQUIS": "bouclier",
       "EXPLICATIONS": "Bonne chance"
     },
     {
@@ -1137,9 +1145,10 @@
       "DESCRIPTION": "Pour faire une salade vous couper en rondelle un concombre de mer. Vous l'avez confondu avec un concombre végétal. Votre préparation est immangeable.",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
+      "TYPE": "Danger",
       "EFFET": "retourner observer le concombre de mer.",
       "VALEUR": "-3",
+      "OBJET_REQUIS": "photo",
       "EXPLICATIONS": "Bonne chance"
     },
     {
@@ -1147,19 +1156,20 @@
       "DESCRIPTION": "« La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre » Albert Einstein.",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "avancez de 9 cases",
       "VALEUR": "+9",
       "EXPLICATIONS": "Bonne chance"
     },
     {
       "ID": "action_34",
-      "DESCRIPTION": "« Heureux comme un poisson dans l'eau » cette expression repose sur une observation. Or en supposant qu'il l'est continuellement, sait-il qu'il est heureux ?",
-      "CATEGORIE": "Jeu",
+      "DESCRIPTION": "On signale un requin dans la zone de plongée, vous décidez de retourner au club plus tôt que prévu mais vous êtes indécis.",
+      "CATEGORIE": "plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
-      "EFFET": "avancez de 6 cases",
-      "VALEUR": "+6",
+      "TYPE": "Danger",
+      "EFFET": "votre hésitation vous fait reculer de 6 cases",
+      "VALEUR": "-6",
+      "OBJET_REQUIS": "bouclier",
       "EXPLICATIONS": "Bonne chance"
     },
     {
@@ -1167,7 +1177,7 @@
       "DESCRIPTION": "Quand un homme a faim, mieux vaut lui apprendre à pêcher que de lui donner un poisson. Confuscius",
       "CATEGORIE": "Jeu",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\biodive.png",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "partager son savoir est toujours payant",
       "VALEUR": "+3",
       "EXPLICATIONS": "Bonne chance"
@@ -1177,7 +1187,7 @@
       "DESCRIPTION": "Les noeuds de chaise, cabestan, de chainette, etc n'ont plus de secret pour vous. Excellent, car ils sont indispensables dans la pratique des activités marines.",
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "votre savoir faire est récompensé",
       "VALEUR": "+20",
       "EXPLICATIONS": "La connaissance des nœuds s'appelle le matelotage. Qu'ils soient simples ou compliqués leur utilisation dépend de leurs fonctions."
@@ -1187,7 +1197,7 @@
       "DESCRIPTION": "Pour préserver la biodiversité marine, vous créez une association. Son objectif : informer sur les conséquences dues aux agissement des humains.",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "Bio Dive",
+      "TYPE": "BONUS",
       "EFFET": "votre action est récompensée",
       "VALEUR": "+60",
       "EXPLICATIONS": "Si l'Homme ne prend pas conscience de l'importance de son environnement, sa destruction est inévitable."
@@ -1197,7 +1207,7 @@
       "DESCRIPTION": "Lors d'une plongée encadrée, vous remarquez des langoustes. Quelques jours plus tard, vous vous équipez pour aller sur les sites repérés et pêcher tous ces crustacés.",
       "CATEGORIE": "Reglementation",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\reglement1.svg",
-      "TYPE": "législation",
+      "TYPE": "Malus",
       "EFFET": "vous avez mérité une pénalité.",
       "VALEUR": "-6",
       "EXPLICATIONS": "La pêche sous-marine est réglementée. Il est strictement interdit de chasser en bouteille, cela s'appelle du braconnage."
@@ -1208,7 +1218,7 @@
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
       "TYPE": "protection",
-      "EFFET": "si vous le souhaitez, vous pouvez relancer ou non un ou deux dés.",
+      "EFFET": "Cela mérite un petit coup de pouce.",
       "VALEUR": "+6",
       "EXPLICATIONS": "Chaque déchet peut se retrouver sous les océans. Certains ont été retrouvés à de grandes profondeurs. Sachons préserver notre environnement maritime."
     },
@@ -1217,8 +1227,8 @@
       "DESCRIPTION": "Quand vous quittez une pièce, vous éteignez la lumière, la climatisation et lorsque vous vous lavez les dents vous fermez le robinet, ?",
       "CATEGORIE": "Environnement",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\environnement1.svg",
-      "TYPE": "Bio Dive",
-      "EFFET": "tirez une carte faune sans répondre à la question.",
+      "TYPE": "BONUS",
+      "EFFET": "Vos gestes du quotidien sont récompensés.",
       "VALEUR": "+60",
       "EXPLICATIONS": "Ces gestes simples limitent les émission de gaz à effet de serre qui participent au réchauffement de la planète."
     }

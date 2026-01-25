@@ -136,7 +136,7 @@ const EcranVictoire = ({ score, objets, onRejouer, onQuitter }) => {
       <span style={{ color: '#888', fontSize: '0.9rem' }}>SCORE FINAL</span>
       <span style={styles.scoreChiffre}>{score} PTS</span>
       <div style={{ marginTop: '5px', fontWeight: 'bold', color: '#0277bd' }}>
-         🎒 Objets : {objets} / 3 
+         🎒 Objets : {objets} / 4 
       </div>
     </div>
         <button 

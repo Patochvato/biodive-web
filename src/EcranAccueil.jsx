@@ -96,6 +96,9 @@ const EcranAccueil = ({ onDemarrer }) => {
       >
         COMMENCER
       </button>
+      <p style={styles.message}>
+        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis sur la biodiversité marine !
+      </p>
 
       <style>
         {`

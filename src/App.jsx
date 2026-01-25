@@ -78,7 +78,7 @@ function App() {
   const [position, setPosition] = useState(0);
   const [mode, setMode] = useState('DEPLACEMENT'); 
   const [estAuClub, setEstAuClub] = useState(true);
-  const [inventaire, setInventaire] = useState({ camera: false, couteau: false, photo: false });
+  const [inventaire, setInventaire] = useState({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
   const [carteActuelle, setCarteActuelle] = useState(null);
   const [score, setScore] = useState(0);
   const [dernierDeDepart, setDernierDeDepart] = useState(null);
@@ -99,9 +99,9 @@ function App() {
   setDernierDeDepart(tirage);
 
   // Mise à jour de l'inventaire selon le tirage
-  if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: true }));
-  if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: true }));
-  if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: true }));
+  if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
+if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
+if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
 
   // Si c'est un départ validé (Plongeur ou Bingo)
   if (tirage === "PLONGEUR" || tirage === "BINGO") {
@@ -114,17 +114,31 @@ function App() {
 };
 
   
-const finirTour = (points = 0) => {
+const finirTour = (points = 0, objetUtilise = null) => {
   let pointsFinal = parseInt(points, 10) || 0;
 
+  // 1. GESTION DE LA CONSOMMATION D'OBJET
+  if (objetUtilise) {
+    playSound('bris.mp3', 0.5); // On joue le son ici !
+    setInventaire(prev => ({
+      ...prev,
+      [objetUtilise]: Math.max(0, prev[objetUtilise] - 1)
+    }));
+    
+    const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
+                       objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
+                       
+    setMessageBonus(`⚠️ Votre ${nomAffiche} est épuisé/utilisé !`);
+    setTimeout(() => setMessageBonus(""), 3000);
+  }
   // 1. CALCUL DES BONUS
   if (pointsFinal > 0) {
-    if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo) {
-      pointsFinal += 10;
-    }
-    if (inventaire.camera) {
-      pointsFinal = Math.round(pointsFinal * 1.2);
-    }
+  if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo > 0) { // On teste > 0
+    pointsFinal += 10;
+  }
+  if (inventaire.camera > 0) { // On teste > 0
+    pointsFinal = Math.round(pointsFinal * 1.2);
+  }
   }
 
   // 2. APPLICATION DES POINTS
@@ -137,18 +151,23 @@ const finirTour = (points = 0) => {
   // 3. RAMASSER LES OBJETS (Correction ici : on utilise objetTrouve partout)
   const objetTrouve = carteActuelle?.VALEUR ? String(carteActuelle.VALEUR).toUpperCase() : "";
 
-  if (objetTrouve.includes("CAMERA") && !inventaire.camera) {
-    setInventaire(prev => ({ ...prev, camera: true }));
+  if (objetTrouve.includes("CAMERA") ) {
+    setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
     setMessageBonus("✨ Super ! Vous avez trouvé la CAMÉRA vidéo !");
     setTimeout(() => setMessageBonus(""), 3000);
   } 
-  else if (objetTrouve.includes("PHOTO") && !inventaire.photo) {
-    setInventaire(prev => ({ ...prev, photo: true }));
+  else if (objetTrouve.includes("PHOTO") ) {
+    setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
     setMessageBonus("✨ Super ! Vous avez trouvé l'APPAREIL PHOTO !");
     setTimeout(() => setMessageBonus(""), 3000);
+  }
+  else if (objetTrouve.includes("BOUCLIER")) {
+    setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
+    setMessageBonus("✨ Super ! Vous avez trouvé le BOUCLIER de protection !");
+    setTimeout(() => setMessageBonus(""), 3000);
   } 
-  else if (objetTrouve.includes("COUTEAU") && !inventaire.couteau) {
-    setInventaire(prev => ({ ...prev, couteau: true }));
+  else if (objetTrouve.includes("COUTEAU") ) {
+    setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
     setMessageBonus("✨ Super ! Vous avez trouvé le COUTEAU de sécurité !");
     setTimeout(() => setMessageBonus(""), 3000);
   }
@@ -167,8 +186,8 @@ const toutesLesCartes = [
     ...(catalogue_complet.faune || []),
     ...(catalogue_complet.action || [])
   ];
-const nbObjets = Object.values(inventaire).filter(val => val === true).length;
-const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
+const nbObjetsRecuperesUnique = Object.keys(inventaire).filter(cle => inventaire[cle] > 0).length;
+const bonusCollection = nbObjetsRecuperesUnique >= 4 ? 100 : 0; // 4 car tu as Caméra, Couteau, Photo, Bouclier
 
   if (ecranAccueil) {
     return <EcranAccueil onDemarrer={() => setEcranAccueil(false)} />;
@@ -177,7 +196,7 @@ const bonusCollection = nbObjets === 3 ? 100 : 0; // +100 si inventaire complet
   setEcranAccueil(true);
   setMode('ACCUEIL');
   setScore(0);
-  setInventaire([]);
+  setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
   setPosition(0);
 }
 const retournerALAccueil = () => {
@@ -194,7 +213,7 @@ const retournerALAccueil = () => {
 };
 
 // Compte le nombre d'objets récupérés (ceux qui sont à true)
-const nbObjetsRecuperes = Object.values(inventaire).filter(val => val === true).length;
+const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).length;
 
   return (
     <div style={styles.container}>
@@ -269,15 +288,14 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val === true).
 {mode === 'VICTOIRE' && (
   <EcranVictoire 
     score={score + bonusCollection} 
-    objets={nbObjets}
+    objets={nbObjetsRecuperesUnique} // <--- Utilise la nouvelle variable ici
     onRejouer={() => {
-      // 1. On remet tout à zéro
       setPosition(0);
       setScore(0);
       setEstAuClub(true);
-      setInventaire({ couteau: false, camera: false, photo: false });
+      // Réinitialise avec des zéros
+      setInventaire({ couteau: 0, camera: 0, photo: 0, bouclier: 0 });
       setCartesUtilisees([]);
-      // 2. IMPORTANT : On change le mode pour retourner au jeu
       setMode('DEPLACEMENT'); 
     }} 
     onQuitter={retournerALAccueil}
@@ -360,7 +378,7 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val === true).
     carteActuelle.ID.includes("faune") ? (
       <CarteFaune carte={carteActuelle} onReponse={finirTour} />
     ) : (
-      <CarteAction carte={carteActuelle} onContinuer={finirTour} />
+      <CarteAction carte={carteActuelle} inventaire={inventaire} onContinuer={finirTour} />
     )
   ) : (
     /* 5. SÉCURITÉ */
