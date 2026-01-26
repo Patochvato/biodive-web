@@ -117,67 +117,69 @@ if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 
 const finirTour = (points = 0, objetUtilise = null) => {
   let pointsFinal = parseInt(points, 10) || 0;
 
-  // 1. GESTION DE LA CONSOMMATION D'OBJET
-  if (objetUtilise) {
-    playSound('bris.mp3', 0.5); // On joue le son ici !
-    setInventaire(prev => ({
-      ...prev,
-      [objetUtilise]: Math.max(0, prev[objetUtilise] - 1)
-    }));
-    
-    const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
-                       objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
-                       
-    setMessageBonus(`⚠️ Votre ${nomAffiche} est épuisé/utilisé !`);
-    setTimeout(() => setMessageBonus(""), 3000);
-  }
-  // 1. CALCUL DES BONUS
+  // --- ÉTAPE A : CALCUL DES POINTS ---
   if (pointsFinal > 0) {
-  if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo > 0) { // On teste > 0
-    pointsFinal += 10;
-  }
-  if (inventaire.camera > 0) { // On teste > 0
-    pointsFinal = Math.round(pointsFinal * 1.2);
-  }
+    if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo > 0) {
+      pointsFinal += 10;
+    }
+    if (inventaire.camera > 0) {
+      pointsFinal = Math.round(pointsFinal * 1.2);
+    }
   }
 
-  // 2. APPLICATION DES POINTS
+  // --- ÉTAPE B : APPLICATION DES POINTS / POSITION ---
   if (pointsFinal >= -9 && pointsFinal <= 9) {
     setPosition(prev => Math.min(100, Math.max(0, prev + pointsFinal)));
   } else {
     setScore(prev => prev + pointsFinal);
   }
 
-  // 3. RAMASSER LES OBJETS (Correction ici : on utilise objetTrouve partout)
-  const objetTrouve = carteActuelle?.VALEUR ? String(carteActuelle.VALEUR).toUpperCase() : "";
+  // --- ÉTAPE C : MISE À JOUR UNIQUE DE L'INVENTAIRE ---
+  setInventaire(prev => {
+    let nouvelInventaire = { ...prev };
 
-  if (objetTrouve.includes("CAMERA") ) {
-    setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
-    setMessageBonus("✨ Super ! Vous avez trouvé la CAMÉRA vidéo !");
-    setTimeout(() => setMessageBonus(""), 3000);
-  } 
-  else if (objetTrouve.includes("PHOTO") ) {
-    setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
-    setMessageBonus("✨ Super ! Vous avez trouvé l'APPAREIL PHOTO !");
-    setTimeout(() => setMessageBonus(""), 3000);
-  }
-  else if (objetTrouve.includes("BOUCLIER")) {
-    setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
-    setMessageBonus("✨ Super ! Vous avez trouvé le BOUCLIER de protection !");
-    setTimeout(() => setMessageBonus(""), 3000);
-  } 
-  else if (objetTrouve.includes("COUTEAU") ) {
-    setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
-    setMessageBonus("✨ Super ! Vous avez trouvé le COUTEAU de sécurité !");
-    setTimeout(() => setMessageBonus(""), 3000);
-  }
+    // 1. On consomme si nécessaire
+    if (objetUtilise) {
+      playSound('bris.mp3', 0.5);
+      nouvelInventaire[objetUtilise] = Math.max(0, nouvelInventaire[objetUtilise] - 1);
+      
+      const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
+                         objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
+      setMessageBonus(`⚠️ Votre ${nomAffiche} est épuisé/utilisé !`);
+      setTimeout(() => setMessageBonus(""), 3000);
+    }
 
-  // 4. MÉMOIRE ET NETTOYAGE
+    // 2. On ramasse si la carte en donne un
+    const objetTrouve = carteActuelle?.VALEUR ? String(carteActuelle.VALEUR).toUpperCase() : "";
+    
+    if (objetTrouve.includes("CAMERA")) {
+      nouvelInventaire.camera += 1;
+      setMessageBonus("✨ Super ! Vous avez trouvé la CAMÉRA vidéo !");
+    } 
+    else if (objetTrouve.includes("PHOTO")) {
+      nouvelInventaire.photo += 1;
+      setMessageBonus("✨ Super ! Vous avez trouvé l'APPAREIL PHOTO !");
+    }
+    else if (objetTrouve.includes("BOUCLIER")) {
+      nouvelInventaire.bouclier += 1;
+      setMessageBonus("✨ Super ! Vous avez trouvé le BOUCLIER !");
+    } 
+    else if (objetTrouve.includes("COUTEAU")) {
+      nouvelInventaire.couteau += 1;
+      setMessageBonus("✨ Super ! Vous avez trouvé le COUTEAU !");
+    }
+
+    if (objetTrouve !== "") {
+       setTimeout(() => setMessageBonus(""), 3000);
+    }
+
+    return nouvelInventaire;
+  });
+
+  // --- ÉTAPE D : NETTOYAGE ---
   if (carteActuelle) {
     setCartesUtilisees(prev => [...prev, carteActuelle.ID]);
   }
-  
-  // Ces deux lignes sont cruciales pour fermer la carte et revenir au dé
   setMode('DEPLACEMENT');
   setCarteActuelle(null);
 };
@@ -193,24 +195,26 @@ const bonusCollection = nbObjetsRecuperesUnique >= 4 ? 100 : 0; // 4 car tu as C
     return <EcranAccueil onDemarrer={() => setEcranAccueil(false)} />;
   }
   const quitterLeJeu = () => {
-  setEcranAccueil(true);
-  setMode('ACCUEIL');
-  setScore(0);
-  setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
-  setPosition(0);
-}
-const retournerALAccueil = () => {
-  // 1. On affiche à nouveau l'écran d'accueil
-  setEcranAccueil(true);
-    // On le remet soit à null, soit à 'DEPART' pour la prochaine partie
-  setMode('DEPLACEMENT'); 
-    // 3. On remet les compteurs à zéro pour ne pas retrouver l'ancien score
-  setScore(0);
-  setPosition(0);
-  setInventaire([]);
-  setCartesUtilisees([]);
-  setDernierDeDepart(null);
-};
+    setEcranAccueil(true);
+    setMode('DEPLACEMENT'); 
+    setScore(0);
+    setPosition(0);
+    setEstAuClub(true); // <--- REPASSER PAR LA CASE DÉPART
+    setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
+    setCartesUtilisees([]);
+    setDernierDeDepart(null);
+  };
+
+  const retournerALAccueil = () => {
+    setEcranAccueil(true);
+    setMode('DEPLACEMENT'); 
+    setScore(0);
+    setPosition(0);
+    setEstAuClub(true); // <--- REPASSER PAR LA CASE DÉPART
+    setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
+    setCartesUtilisees([]);
+    setDernierDeDepart(null);
+  };
 
 // Compte le nombre d'objets récupérés (ceux qui sont à true)
 const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).length;
@@ -289,15 +293,7 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).lengt
   <EcranVictoire 
     score={score + bonusCollection} 
     objets={nbObjetsRecuperesUnique} // <--- Utilise la nouvelle variable ici
-    onRejouer={() => {
-      setPosition(0);
-      setScore(0);
-      setEstAuClub(true);
-      // Réinitialise avec des zéros
-      setInventaire({ couteau: 0, camera: 0, photo: 0, bouclier: 0 });
-      setCartesUtilisees([]);
-      setMode('DEPLACEMENT'); 
-    }} 
+    onRejouer={retournerALAccueil} 
     onQuitter={retournerALAccueil}
   />
 )}

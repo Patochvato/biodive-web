@@ -52,7 +52,7 @@ const EcranAccueil = ({ onDemarrer }) => {
       fontSize: '1.2rem',
       margin: '20px 0 40px',
       maxWidth: '300px',
-      fontWeight: 'bold',
+      fontWeight: 'normal',
       textShadow: '0 2px 4px rgba(0,0,0,0.5)',
       zIndex: 3
     },
@@ -85,7 +85,7 @@ const EcranAccueil = ({ onDemarrer }) => {
       <h1 style={styles.titre}>BIO DIVE</h1>
       
       <p style={styles.message}>
-        Plonger à la découverte de la biodiversité marine
+        Plonger à la découverte de la biodiversité marine de La Réunion
       </p>
       
       <button 
@@ -97,7 +97,7 @@ const EcranAccueil = ({ onDemarrer }) => {
         COMMENCER
       </button>
       <p style={styles.message}>
-        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis sur la biodiversité marine !
+        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis !
       </p>
 
       <style>

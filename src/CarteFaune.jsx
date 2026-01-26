@@ -68,7 +68,7 @@ const CarteFaune = ({ carte, onReponse }) => {
     imageContainer: { width: '100%', textAlign: 'center', padding: '1px 0' },
     image: { maxWidth: '100%', maxHeight: '180px', objectFit: 'contain', borderRadius: '10px' },
     content: { padding: '20px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' },
-    question: { fontSize: '1.1rem', color: '#333', lineHeight: '1.4', whiteSpace: 'pre-line' },
+    question: { fontSize: '1.1rem', color: '#333', lineHeight: '1.4', margin: '1px',whiteSpace: 'pre-line' },
     btnAction: { 
       width: '100%', 
       padding: '12px', 
@@ -117,9 +117,9 @@ const CarteFaune = ({ carte, onReponse }) => {
         {estBonus ? (
           /* --- MODE BONUS --- */
           <div style={{animation: 'fadeIn 0.5s'}}>
-            <h2 style={{color: '#fbc02d', marginBottom: '1px'}}>BRAVO !</h2>
+            <h2 style={{color: '#fbc02d',marginBottom: '1px',marginTop: '10px'}}>BRAVO !</h2>
             <p style={styles.question}>{carte.QUESTION || "Vous avez trouvé un trésor marin !"}</p>
-            <div style={{margin: '1px 0', padding: '15px', backgroundColor: '#fff9c4', borderRadius: '10px'}}>
+            <div style={{margin: '1px 0', padding: '1px', backgroundColor: '#fff9c4', borderRadius: '10px'}}>
                <p style={{fontSize: '0.9rem', fontStyle: 'italic'}}>{carte.EXPLICATIONS}</p>
             </div>
             <button style={styles.btnAction} onClick={() => onReponse(pointsCarte)}>
@@ -129,7 +129,7 @@ const CarteFaune = ({ carte, onReponse }) => {
         ) : !montrerReponse ? (
           /* --- RECTO --- */
           <>
-            <p style={styles.question}><strong>{carte.TYPE}</strong><br/><br/>{carte.QUESTION}</p>
+            <p style={styles.question}><strong>{carte.TYPE}</strong><br/>{carte.QUESTION}</p>
             {estVraiFaux ? (
               <div style={{ display: 'flex', marginTop: '10px' }}>
                 <button style={{ ...styles.btnVF, backgroundColor: '#4caf50' }} onClick={() => validerChoixVF("VRAI")}>VRAI</button>
@@ -149,10 +149,10 @@ const CarteFaune = ({ carte, onReponse }) => {
                 {scoreAutomatique > 0 ? "BIEN JOUÉ ! ✨" : "DOMMAGE... 🦈"}
               </h2>
             )}
-          <h3 style={{color: '#2e7d32', marginBottom: '10px'}}>Réponse : {carte.REPONSE}</h3>
+          <h3 style={{color: '#2e7d32',marginTop: '1px',marginBottom: '1px'}}>Réponse : {carte.REPONSE}</h3>
                <p style={{...styles.explicationTexte, whiteSpace: 'pre-line'}}>{carte.EXPLICATIONS}</p>
             
-            <div style={{marginTop: '10px', borderTop: '1px solid #eee', paddingTop: '10px'}}>
+            <div style={{marginTop: '1px', borderTop: '1px solid #eee', paddingTop: '1px'}}>
               {estVraiFaux ? (
                 /* Bouton Continuer pour Vrai/Faux */
                 <button style={styles.btnAction} onClick={() => onReponse(scoreAutomatique)}>
