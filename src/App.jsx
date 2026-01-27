@@ -73,6 +73,25 @@ const styles = {
 }
 };
 
+const EffetBulles = () => {
+  // On génère 3 bulles avec des délais différents
+  return (
+    <div style={{ position: 'absolute', top: '-15px', left: '10px' }}>
+      {[1, 2, 3].map((i) => (
+        <span key={i} style={{
+          position: 'absolute',
+          width: '8px',
+          height: '8px',
+          borderRadius: '50%',
+          border: '1px solid white',
+          backgroundColor: 'rgba(255, 255, 255, 0.4)',
+          animation: `monterBulles ${1 + i * 0.5}s infinite ease-out`,
+          left: `${i * 8}px`
+        }}></span>
+      ))}
+    </div>
+  );
+};
 function App() {
   const [ecranAccueil, setEcranAccueil] = useState(true); // Nouveau : commence sur l'accueil
   const [position, setPosition] = useState(0);
@@ -102,6 +121,7 @@ function App() {
   if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
 if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
 if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
+if (tirage === "BINGO") setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
 
   // Si c'est un départ validé (Plongeur ou Bingo)
   if (tirage === "PLONGEUR" || tirage === "BINGO") {
@@ -241,10 +261,13 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).lengt
   {/* L'icône du plongeur qui suit la barre */}
   <div style={{ 
     ...styles.plongeurIcon, 
-    left: `calc(${position}% - 15px)` 
-  }}>
-    🤿
-  </div>
+    left: `calc(${position}% - 15px)`,
+  animation: 'bounce 2s infinite ease-in-out' // Le plongeur flotte doucement
+}}>
+  {/* On n'affiche les bulles que si le plongeur n'est pas à 0 ou 100 */}
+  {position > 0 && position < 100 && <EffetBulles />}
+  🤿
+</div>
 
   {/* Petits repères de distance */}
   <div style={{

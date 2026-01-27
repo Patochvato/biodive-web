@@ -97,7 +97,7 @@ const EcranAccueil = ({ onDemarrer }) => {
         COMMENCER
       </button>
       <p style={styles.message}>
-        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis !
+        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis !<br /><br />Gagner des cartes bonus<br /><br />Éviter les malus grâce aux objets de protection
       </p>
 
       <style>
