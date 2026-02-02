@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DePlacement = ({ onLancer, catalogue }) => {
+const DePlacement = ({ onLancer, catalogue, onFouiller }) => {
   const lancerLeDe = () => {
   if (catalogue.length === 0) {
     alert("Vous avez exploré toutes les zones ! Direction l'arrivée !");
@@ -45,7 +45,20 @@ const DePlacement = ({ onLancer, catalogue }) => {
       boxShadow: '0 4px 0 #388e3c', // Petit effet 3D sur le bouton
       transition: 'transform 0.1s'
     }
-  };
+      };
+  const styleBoutonFouille = {
+    padding: '12px',
+    fontSize: '1rem',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    backgroundColor: '#ff9800', // Orange
+    color: 'white',
+    border: 'none',
+    borderRadius: '12px',
+    boxShadow: '0 4px 0 #e68a00',
+    transition: 'transform 0.1s',
+    marginTop: '10px' // Espace avec le bouton vert
+  };    
 
   return (
     <div style={styles.container}>
@@ -58,6 +71,16 @@ const DePlacement = ({ onLancer, catalogue }) => {
         onMouseUp={(e) => e.target.style.transform = 'scale(1)'}
       >
         🎲 LANCER LE DÉ
+      </button>
+
+      {/* --- LE NOUVEAU BOUTON ICI --- */}
+      <button 
+        onClick={onFouiller} 
+        style={styleBoutonFouille}
+        onMouseDown={(e) => e.target.style.transform = 'scale(0.95)'}
+        onMouseUp={(e) => e.target.style.transform = 'scale(1)'}
+      >
+        ⚓ FOUILLER L'ÉPAVE (Bonus)
       </button>
     </div>
   );

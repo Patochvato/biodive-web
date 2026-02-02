@@ -75,7 +75,7 @@ const CarteFaune = ({ carte, onReponse }) => {
   return (
     <div style={styles.carte}>
       <div style={styles.header}>
-        <span>{estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉSULTAT" : `🔍 ${carte.CATEGORIE}`)}</span>
+        <span>{estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `🔍 ${carte.CATEGORIE}`)}</span>
         <span style={{backgroundColor:'white', padding:'2px 8px', borderRadius:'10px', color:'#333'}}>
           {pointsCarte} pts
         </span>
@@ -117,8 +117,8 @@ const CarteFaune = ({ carte, onReponse }) => {
             )}
             
             <div style={{padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '8px', borderLeft: '5px solid #0288d1', textAlign: 'left', marginBottom: '15px'}}>
-              <strong style={{color: '#0277bd'}}>Réponse : {carte.REPONSE}</strong>
-              <p style={{fontSize: '0.95rem', marginTop: '5px', whiteSpace: 'pre-line'}}>{carte.EXPLICATIONS}</p>
+              <strong style={{fontSize: '1.2rem',color: '#0277bd'}}> {carte.REPONSE}</strong>
+              <p style={{fontSize: '0.95rem', marginTop: '10px', whiteSpace: 'pre-line'}}>{carte.EXPLICATIONS}</p>
             </div>
 
             {/* Si c'est un choix ou V/F, on affiche Continuer. Sinon, on affiche OUI/NON */}

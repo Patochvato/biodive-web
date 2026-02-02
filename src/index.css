@@ -98,5 +98,28 @@ button:focus-visible {
   filter: drop-shadow(0 0 10px #ffd700) !important;
   transform: scale(1.1);
 }
-
+@keyframes fastFloatUp {
+      0% { opacity: 0; 
+        transform: translate(-50%, 20%) scale(0.5); 
+      }
+      20% { opacity: 1; 
+        transform: translate(-50%, -50%) scale(1.2); /* Effet d'impact */
+      }
+      100% { opacity: 0; 
+        transform: translate(-50%, -300%) scale(1); /* Monte très haut */
+      }
+    }
+@keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+@keyframes popIn {
+          0% { transform: scale(0.5); opacity: 0; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}        
 }

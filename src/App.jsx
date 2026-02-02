@@ -30,7 +30,7 @@ const styles = {
   textAlign: 'center',
   backgroundColor: '#0288d1',
   color: 'white',
-  padding: '8px 0', // Hauteur réduite
+  padding: '6px 0', // Hauteur réduite
   boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
   },  
   progressContainer: {
@@ -92,6 +92,29 @@ const EffetBulles = () => {
     </div>
   );
 };
+const AnimationPoints = ({ points }) => {
+  if (points === 0) return null;
+  const estPositif = points > 0;
+  
+  return (
+    <div style={{
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      fontSize: '4rem', // Légèrement plus grand pour l'impact
+      fontWeight: '900',
+      color: estPositif ? '#4caf50' : '#f44336',
+      textShadow: '0 0 20px rgba(255,255,255,0.8), 2px 2px 5px rgba(0,0,0,0.5)',
+      zIndex: 5000,
+      pointerEvents: 'none',
+      animation: 'fastFloatUp 0.8s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67)'
+    }}>
+      {estPositif ? `+${points}` : points}
+    </div>
+  );
+};
+
 function App() {
   const [ecranAccueil, setEcranAccueil] = useState(true); // Nouveau : commence sur l'accueil
   const [position, setPosition] = useState(0);
@@ -103,6 +126,13 @@ function App() {
   const [dernierDeDepart, setDernierDeDepart] = useState(null);
   const [messageBonus, setMessageBonus] = useState("");
   const [cartesUtilisees, setCartesUtilisees] = useState([]);
+  const [animationScore, setAnimationScore] = useState(null);
+  const [flashScore, setFlashScore] = useState(false);
+  const [miniJeuOuvert, setMiniJeuOuvert] = useState(false);
+  const [motATrouver, setMotATrouver] = useState({ melange: "", solution: "" });
+  const [reponseUser, setReponseUser] = useState("");
+  const [tempsRestant, setTempsRestant] = useState(0); // Pour un futur timer
+
 
   const imagesFacesDe = {
   "PLONGEUR": "face_plongeur.png", // Remplace par tes vrais noms de fichiers
@@ -133,12 +163,62 @@ if (tirage === "BINGO") setInventaire(prev => ({ ...prev, bouclier: prev.bouclie
   }
 };
 
+const preparerMiniJeu = () => {
+  const dictionnaire = [
+    { solution: "PALMES", melange: "MLAPES" }, // On utilise les noms complets
+    { solution: "ANCRE", melange: "NCARE" },
+    { solution: "CORAIL", melange: "LIAROC" },
+    { solution: "REQUIN", melange: "NUIREQ" },
+    { solution: "MEDUSE", melange: "USEDEM" }
+  ];
   
+  const choisi = dictionnaire[Math.floor(Math.random() * dictionnaire.length)];
+  setReponseUser("");
+  setMotATrouver(choisi); // Plus besoin du spread ici si les noms correspondent
+  setTempsRestant(15); // Par exemple, 15 secondes pour répondre
+  setMiniJeuOuvert(true);
+};
+
+const verifierMiniJeu = (reponse) => {
+  if (reponseUser.toUpperCase() === motATrouver.solution) {
+    // Gain d'un objet aléatoire
+    const objets = ["camera", "couteau", "photo", "bouclier"];
+    const gain = objets[Math.floor(Math.random() * objets.length)];
+    
+    setInventaire(prev => ({ ...prev, [gain]: prev[gain] + 1 }));
+    setMessageBonus(`✨ BRAVO ! Vous avez trouvé : ${gain.toUpperCase()} !`);
+    setMiniJeuOuvert(false);
+    setTimeout(() => setMessageBonus(""), 3000);
+  } else {
+    setMessageBonus(`❌ Dommage ! Le mot était ${motATrouver.solution}`);
+    setMiniJeuOuvert(false);
+    setTimeout(() => setMessageBonus(""), 3000);
+  }
+};  
+// Logique du compte à rebours
+React.useEffect(() => {
+  let intervalle;
+  if (miniJeuOuvert && tempsRestant > 0) {
+    intervalle = setInterval(() => {
+      setTempsRestant((prev) => prev - 1);
+    }, 1000);
+  } else if (tempsRestant === 0 && miniJeuOuvert) {
+    // Temps écoulé !
+    setMessageBonus("⌛ TEMPS ÉCOULÉ ! Le coffre s'est refermé...");
+    setTimeout(() => {
+      setMiniJeuOuvert(false);}, 1000);
+    setTimeout(() =>  setMessageBonus(""), 3000);
+  }
+
+  return () => clearInterval(intervalle); // Nettoyage de l'intervalle
+}, [miniJeuOuvert, tempsRestant]);
+
 const finirTour = (points = 0, objetUtilise = null) => {
   let pointsFinal = parseInt(points, 10) || 0;
 
   // --- ÉTAPE A : CALCUL DES POINTS ---
   if (pointsFinal > 0) {
+      playSound('bling.mp3', 0.3);
     if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo > 0) {
       pointsFinal += 10;
     }
@@ -146,7 +226,15 @@ const finirTour = (points = 0, objetUtilise = null) => {
       pointsFinal = Math.round(pointsFinal * 1.2);
     }
   }
-
+  // --- NOUVEAU : DÉCLENCHER L'ANIMATION ---
+  if (pointsFinal !== 0) {
+    setAnimationScore(pointsFinal);
+    setFlashScore(true);
+    setTimeout(() => {
+      setAnimationScore(null);
+      setFlashScore(false);
+    }, 800); // Disparaît après 0.8s
+  }
   // --- ÉTAPE B : APPLICATION DES POINTS / POSITION ---
   if (pointsFinal >= -9 && pointsFinal <= 9) {
     setPosition(prev => Math.min(100, Math.max(0, prev + pointsFinal)));
@@ -165,7 +253,7 @@ const finirTour = (points = 0, objetUtilise = null) => {
       
       const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
                          objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
-      setMessageBonus(`⚠️ Votre ${nomAffiche} est épuisé/utilisé !`);
+      setMessageBonus(`⚠️ Votre ${nomAffiche} a été utilisé !`);
       setTimeout(() => setMessageBonus(""), 3000);
     }
 
@@ -239,12 +327,24 @@ const bonusCollection = nbObjetsRecuperesUnique >= 4 ? 100 : 0; // 4 car tu as C
 // Compte le nombre d'objets récupérés (ceux qui sont à true)
 const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).length;
 
-  return (
+return (
     <div style={styles.container}>
+     {/* Affichage de l'animation de points si elle existe */}
+    {animationScore !== null && <AnimationPoints points={animationScore} />} 
       <header style={styles.header}>
   <h1 style={styles.headerTitle}>
     BIO DIVE 🐠 
-    <span style={{ fontSize: '1rem', marginLeft: '15px', opacity: 0.9 }}>
+    <span style={{ 
+      fontSize: '1.2rem', 
+      marginLeft: '15px', 
+      display: 'inline-block',
+      transition: 'all 0.2s ease',
+      // Le flash : grossit et devient jaune si activé
+      transform: flashScore ? 'scale(1.4)' : 'scale(1)',
+      color: flashScore ? '#ffd700' : 'white',
+      textShadow: flashScore ? '0 0 10px rgba(255, 215, 0, 0.8)' : 'none',
+      fontWeight: '900'
+    }}>
       Score : {score}
     </span>
   </h1>
@@ -297,7 +397,7 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).lengt
     transform: 'translateX(-50%)',
     backgroundColor: '#ffd700',
     color: '#000',
-    padding: '15px 25px',
+    padding: '15px 15px',
     borderRadius: '30px',
     fontWeight: 'bold',
     zIndex: 3000,
@@ -391,6 +491,7 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).lengt
       setMode('QUESTION');
         }
       }} 
+  onFouiller={preparerMiniJeu}    
     />
   ) : mode === 'QUESTION' && carteActuelle ? (
     /* 4. CAS : QUESTION */
@@ -407,7 +508,88 @@ const nbObjetsRecuperes = Object.values(inventaire).filter(val => val > 0).lengt
     </div>
   )}
 </main>
+{/* 3. LE MINI-JEU (Juste avant la fin de la DIV container) */}
+    {miniJeuOuvert && (
+      <div style={{
+        position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
+        backgroundColor: 'rgba(0,0,0,0.85)', zIndex: 5000, // Z-index très haut
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        backdropFilter: 'blur(5px)' // Floute le fond pour plus de style
+      }}>
+        <div style={{ 
+          backgroundColor: 'white', 
+          padding: '30px', 
+          borderRadius: '25px', 
+          textAlign: 'center', 
+          width: '85%', 
+          maxWidth: '400px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+          border: '4px solid #ff9800'
+        }}>
+      <div style={{
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        color: tempsRestant <= 5 ? '#f44336' : '#ff9800', // Devient rouge à 5s
+        marginBottom: '10px',
+        animation: tempsRestant <= 5 ? 'blink 1s infinite' : 'none'
+      }}>
+        ⏱️ {tempsRestant}s
+      </div>
+
+          <h3 style={{ color: '#ff9800', marginTop: 0 }}>⚓ DÉFI DE L'ÉPAVE</h3>
+          <p>Remettez les lettres dans l'ordre :</p>
+          
+          {motATrouver.melange && (
+          <h2 style={{ 
+            letterSpacing: '8px', 
+            color: '#0288d1', 
+            fontSize: '2rem',
+            backgroundColor: '#f0faff',
+            padding: '15px',
+            borderRadius: '10px',
+            margin: '10px 0'
+          }}>
+            {motATrouver.melange}
+          </h2>
+        )}
+        <input 
+          type="text" 
+          value={reponseUser} // Lit la valeur du state
+          onChange={(e) => setReponseUser(e.target.value)} // Met à jour le state
+          placeholder="Ta réponse..."
+          style={{ 
+              padding: '12px', 
+              fontSize: '1.2rem', 
+              width: '100%', 
+              marginBottom: '20px', 
+              textAlign: 'center',
+              borderRadius: '10px',
+              border: '2px solid #ccc'
+            }}
+          onKeyDown={(e) => e.key === 'Enter' && verifierMiniJeu(reponseUser)} // Utilise le state ici
+          autoFocus
+        />
+
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button 
+              onClick={() => setMiniJeuOuvert(false)}
+              style={{ flex: 1, padding: '12px', backgroundColor: '#ccc', border: 'none', borderRadius: '10px', fontWeight: 'bold' }}
+            >
+              ANNULER
+            </button>
+            <button 
+              onClick={verifierMiniJeu} 
+              style={{ flex: 2, padding: '12px', backgroundColor: '#4caf50', color: 'white', border: 'none', borderRadius: '10px', fontWeight: 'bold' }}
+            >
+              VALIDER
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
     </div>
+    
+  
   );
 }
 

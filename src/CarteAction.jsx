@@ -96,7 +96,7 @@ const CarteAction = ({ carte, inventaire, onContinuer }) => {
         </div>
 
         <div style={styles.effetBox}>
-          <strong>{estProtege ? "SÉCURITÉ :" : "EFFET :"}</strong>
+          <strong>{estProtege ? "SÉCURITÉ :" : ""}</strong>
           <p>{estProtege ? `Grâce à votre ${aBouclier ? 'Bouclier' : carte.OBJET_REQUIS}, vous évitez le danger !` : carte.EFFET}</p>
         </div>
 
