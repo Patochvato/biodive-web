@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import BarreInventaire from './BarreInventaire';
 import DePlacement from './DePlacement';
 import catalogue_complet from './catalogue_complet.json';
@@ -55,7 +55,7 @@ const styles = {
   plongeurIcon: {
     position: 'absolute',
     top: '-10px', // Positionné légèrement au-dessus
-    left: 'calc(width)', // Sera géré en ligne
+    left: '0', // Sera géré en ligne
     fontSize: '24px',
     transition: 'left 0.8s ease-out',
     filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))'
@@ -132,6 +132,7 @@ function App() {
   const [motATrouver, setMotATrouver] = useState({ melange: "", solution: "" });
   const [reponseUser, setReponseUser] = useState("");
   const [tempsRestant, setTempsRestant] = useState(0); // Pour un futur timer
+  const timersRef = useRef({ intervals: [], timeouts: [] });
 
 
   const imagesFacesDe = {
@@ -141,29 +142,30 @@ function App() {
   "PHOTO": "face_photo.png",
   "BINGO": "face_bingo.png"
 }; 
-  const tenterLeDepart = () => {
+  const tenterLeDepart = useCallback(() => {
     playSound('dice.mp3', 0.4);
-  const faces = ["PLONGEUR", "POIGNARD", "CAMERA", "PHOTO", "PLONGEUR", "BINGO"];
-  const tirage = faces[Math.floor(Math.random() * faces.length)];
-  setDernierDeDepart(tirage);
+    const faces = ["PLONGEUR", "POIGNARD", "CAMERA", "PHOTO", "PLONGEUR", "BINGO"];
+    const tirage = faces[Math.floor(Math.random() * faces.length)];
+    setDernierDeDepart(tirage);
 
-  // Mise à jour de l'inventaire selon le tirage
-  if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
-if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
-if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
-if (tirage === "BINGO") setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
+    // Mise à jour de l'inventaire selon le tirage
+    if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
+    if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
+    if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
+    if (tirage === "BINGO") setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
 
-  // Si c'est un départ validé (Plongeur ou Bingo)
-  if (tirage === "PLONGEUR" || tirage === "BINGO") {
-    // On laisse 1.5s au joueur pour voir le résultat avant de changer d'écran
-    setTimeout(() => {
-      setEstAuClub(false);
-      setDernierDeDepart(null); // On réinitialise pour la prochaine fois
-    }, 1500);
-  }
-};
+    // Si c'est un départ validé (Plongeur ou Bingo)
+    if (tirage === "PLONGEUR" || tirage === "BINGO") {
+      // On laisse 1.5s au joueur pour voir le résultat avant de changer d'écran
+      const departTimeout = setTimeout(() => {
+        setEstAuClub(false);
+        setDernierDeDepart(null); // On réinitialise pour la prochaine fois
+      }, 1500);
+      timersRef.current.timeouts.push(departTimeout);
+    }
+  }, []);
 
-const preparerMiniJeu = () => {
+const preparerMiniJeu = useCallback(() => {
   const dictionnaire = [
     { solution: "PALMES", melange: "MLAPES" }, // On utilise les noms complets
     { solution: "ANCRE", melange: "NCARE" },
@@ -175,12 +177,12 @@ const preparerMiniJeu = () => {
   const choisi = dictionnaire[Math.floor(Math.random() * dictionnaire.length)];
   setReponseUser("");
   setMotATrouver(choisi); // Plus besoin du spread ici si les noms correspondent
-  setTempsRestant(15); // Par exemple, 15 secondes pour répondre
+  setTempsRestant(20); // Par exemple, 15 secondes pour répondre
   setMiniJeuOuvert(true);
-};
+}, []);
 
-const verifierMiniJeu = (reponse) => {
-  if (reponseUser.toUpperCase() === motATrouver.solution) {
+const verifierMiniJeu = useCallback(() => {
+  if (reponseUser.trim().toUpperCase() === motATrouver.solution) {
     // Gain d'un objet aléatoire
     const objets = ["camera", "couteau", "photo", "bouclier"];
     const gain = objets[Math.floor(Math.random() * objets.length)];
@@ -188,13 +190,15 @@ const verifierMiniJeu = (reponse) => {
     setInventaire(prev => ({ ...prev, [gain]: prev[gain] + 1 }));
     setMessageBonus(`✨ BRAVO ! Vous avez trouvé : ${gain.toUpperCase()} !`);
     setMiniJeuOuvert(false);
-    setTimeout(() => setMessageBonus(""), 3000);
+    const clearMsg = setTimeout(() => setMessageBonus(""), 3000);
+    timersRef.current.timeouts.push(clearMsg);
   } else {
     setMessageBonus(`❌ Dommage ! Le mot était ${motATrouver.solution}`);
     setMiniJeuOuvert(false);
-    setTimeout(() => setMessageBonus(""), 3000);
+    const clearMsg = setTimeout(() => setMessageBonus(""), 3000);
+    timersRef.current.timeouts.push(clearMsg);
   }
-};  
+}, [reponseUser, motATrouver]);  
 // Logique du compte à rebours
 React.useEffect(() => {
   let intervalle;
@@ -202,16 +206,26 @@ React.useEffect(() => {
     intervalle = setInterval(() => {
       setTempsRestant((prev) => prev - 1);
     }, 1000);
+    timersRef.current.intervals.push(intervalle);
   } else if (tempsRestant === 0 && miniJeuOuvert) {
     // Temps écoulé !
     setMessageBonus("⌛ TEMPS ÉCOULÉ ! Le coffre s'est refermé...");
-    setTimeout(() => {
-      setMiniJeuOuvert(false);}, 1000);
-    setTimeout(() =>  setMessageBonus(""), 3000);
+    const closeTimeout = setTimeout(() => { setMiniJeuOuvert(false); }, 1000);
+    const clearMsg = setTimeout(() =>  setMessageBonus(""), 3000);
+    timersRef.current.timeouts.push(closeTimeout, clearMsg);
   }
 
-  return () => clearInterval(intervalle); // Nettoyage de l'intervalle
+  return () => {
+    if (intervalle) clearInterval(intervale);
+  };
 }, [miniJeuOuvert, tempsRestant]);
+
+React.useEffect(() => {
+  return () => {
+    timersRef.current.intervals.forEach(clearInterval);
+    timersRef.current.timeouts.forEach(clearTimeout);
+  };
+}, []);
 
 const finirTour = (points = 0, objetUtilise = null) => {
   let pointsFinal = parseInt(points, 10) || 0;
@@ -230,10 +244,11 @@ const finirTour = (points = 0, objetUtilise = null) => {
   if (pointsFinal !== 0) {
     setAnimationScore(pointsFinal);
     setFlashScore(true);
-    setTimeout(() => {
+    const animTimeout = setTimeout(() => {
       setAnimationScore(null);
       setFlashScore(false);
     }, 800); // Disparaît après 0.8s
+    timersRef.current.timeouts.push(animTimeout);
   }
   // --- ÉTAPE B : APPLICATION DES POINTS / POSITION ---
   if (pointsFinal >= -9 && pointsFinal <= 9) {
@@ -254,7 +269,8 @@ const finirTour = (points = 0, objetUtilise = null) => {
       const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
                          objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
       setMessageBonus(`⚠️ Votre ${nomAffiche} a été utilisé !`);
-      setTimeout(() => setMessageBonus(""), 3000);
+      const clearMsgUse = setTimeout(() => setMessageBonus(""), 3000);
+      timersRef.current.timeouts.push(clearMsgUse);
     }
 
     // 2. On ramasse si la carte en donne un
@@ -278,7 +294,8 @@ const finirTour = (points = 0, objetUtilise = null) => {
     }
 
     if (objetTrouve !== "") {
-       setTimeout(() => setMessageBonus(""), 3000);
+       const clearMsgFound = setTimeout(() => setMessageBonus(""), 3000);
+       timersRef.current.timeouts.push(clearMsgFound);
     }
 
     return nouvelInventaire;
@@ -292,10 +309,10 @@ const finirTour = (points = 0, objetUtilise = null) => {
   setCarteActuelle(null);
 };
 
-const toutesLesCartes = [
+const toutesLesCartes = useMemo(() => [
     ...(catalogue_complet.faune || []),
     ...(catalogue_complet.action || [])
-  ];
+  ], [catalogue_complet]);
 const nbObjetsRecuperesUnique = Object.keys(inventaire).filter(cle => inventaire[cle] > 0).length;
 const bonusCollection = nbObjetsRecuperesUnique >= 4 ? 100 : 0; // 4 car tu as Caméra, Couteau, Photo, Bouclier
 
@@ -566,7 +583,7 @@ return (
               borderRadius: '10px',
               border: '2px solid #ccc'
             }}
-          onKeyDown={(e) => e.key === 'Enter' && verifierMiniJeu(reponseUser)} // Utilise le state ici
+          onKeyDown={(e) => e.key === 'Enter' && verifierMiniJeu()} // Utilise le state ici
           autoFocus
         />
 

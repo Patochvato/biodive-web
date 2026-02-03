@@ -57,11 +57,11 @@ const CarteFaune = ({ carte, onReponse }) => {
     header: {
       backgroundColor: obtenirCouleurHeader(),
       color: estBonus ? '#000' : 'white', padding: '12px 15px',
-      display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', transition: 'background-color 0.3s'
+      display: 'flex', justifyContent: 'space-between',textTransform: 'uppercase',fontWeight: 'bold', transition: 'background-color 0.3s'
     },
     content: { padding: '20px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' },
     image: { maxWidth: '100%', maxHeight: '150px', objectFit: 'contain', borderRadius: '10px', marginBottom: '10px' },
-    question: { fontSize: '1.05rem', color: '#333', marginBottom: '15px', fontWeight: '500', whiteSpace: 'pre-line' },
+    question: { fontSize: '1.05rem', color: '#333', marginBottom: '5px', fontWeight: '500', whiteSpace: 'pre-line' },
     btnChoix: { 
       width: '100%', padding: '10px', margin: '4px 0', 
       backgroundColor: '#f1f8ff', border: '1px solid #0288d1', 
@@ -75,7 +75,7 @@ const CarteFaune = ({ carte, onReponse }) => {
   return (
     <div style={styles.carte}>
       <div style={styles.header}>
-        <span>{estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `🔍 ${carte.CATEGORIE}`)}</span>
+        <span>{estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `${carte.CATEGORIE} - ${carte.TYPE} `)}</span>
         <span style={{backgroundColor:'white', padding:'2px 8px', borderRadius:'10px', color:'#333'}}>
           {pointsCarte} pts
         </span>

@@ -5,7 +5,7 @@ const obtenirIcone = (action) => {
     const categorie = action?.CATEGORIE?.toUpperCase() || "";
     const icones = {
         "PLONGÉE": "plongeur1.svg",
-        "FAUNE": "faune1.png",
+        "FAUNE": "faune1.svg",
         "ENVIRONNEMENT": "environnement1.svg",
         "REGLEMENTATION": "reglement1.svg",
         "BONUS": "bonus1.svg",
@@ -50,7 +50,7 @@ const CarteAction = ({ carte, inventaire, onContinuer }) => {
     header: { 
       backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'), 
       color: estSuperBonus ? '#5c4300' : 'white', 
-      padding: '12px 15px', display: 'flex', justifyContent: 'space-between', fontWeight: 'bold' 
+      padding: '12px 15px', display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', textTransform: 'uppercase' 
     },
     pointsBadge: { 
         backgroundColor: 'white', 
@@ -66,7 +66,7 @@ const CarteAction = ({ carte, inventaire, onContinuer }) => {
         border: estSuperBonus ? '2px solid #ffd700' : '1px dashed #ef6c00' 
     },
     btn: { 
-        width: '100%', padding: '15px', 
+        width: '100%', padding: '10px', 
         backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'), 
         color: estSuperBonus ? '#5c4300' : 'white', 
         border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px' 

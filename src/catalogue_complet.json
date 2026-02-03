@@ -17,7 +17,7 @@
       "EXPLICATIONS": " La symbiose sous-entend le plus souvent une relation mutualiste, dans laquelle les deux organismes bénéficient de l'association, mais elle peut être parasitaire, voir commensaliste.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f2.jpg",
       "TYPE": "QUESTION",
-      "CATEGORIE": "faune",
+      "CATEGORIE": "biologie",
       "POINTS": "40"
     },
     {
@@ -85,7 +85,7 @@
       "QUESTION": "La tortue verte pond environ 200 oeufs dans le sable du littoral, combien parviendront à l'âge adulte,\nA 1 ou 2,\nB une dizaine,\nC un peu plus de 20,\nD la moitié.",
       "REPONSE": "A",
       "EXPLICATIONS": "La petite tortue qui sort du sable peut être mangée par des crabes et des oiseaux.\nDans l'eau, elle peut ingérer des boules de pétrole et des emballages plastiques qui causent sa mort.",
-      "@images": "",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f9.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "biologie",
       "POINTS": "40"
@@ -163,9 +163,9 @@
     {
       "ID": "faune_17",
       "QUESTION": "Constructeur infatiguable de récifs, mes formes sont extravagantes. Mes couleurs variées deviennent phosphorescentes lorsque l'on m'éclaire dans la nuit. Je peux être de feu, sinueux, jaune ou encore solitaire.",
-      "REPONSE": "Le corail.",
-      "EXPLICATIONS": "",
-      "@images": "",
+      "REPONSE": "Le corail",
+      "EXPLICATIONS": "Le terme corail désigne un certain nombre d'animaux marins appartenant à l'embranchement des cnidaires. Il en existe deux grands types : les coraux durs et les coraux mous.",
+      "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f17.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -244,10 +244,10 @@
       "ID": "faune_25",
       "QUESTION": "Cétacés et tortues marines sont des espèces protégées ?",
       "REPONSE": "VRAI",
-      "EXPLICATIONS": "à la Réunion, le non respect de la charte d'approche peut entraîner une amande pouvant atteindre 750,00 euros. ",
+      "EXPLICATIONS": "A la Réunion, le non respect de la charte d'approche peut entraîner une amande pouvant atteindre 750,00 euros. ",
       "@images": "Suite à un arrêté préfectoral du 12 juin 2019, la charte définit différentes zones d'approche dans lesquelles sont précisés les paramètres à respecter :  vitesses des bateaux, durée de stationnement, comportement des observateurs?",
       "TYPE": "VRAI OU FAUX",
-      "CATEGORIE": "VRAI OU FAUX",
+      "CATEGORIE": "environnement",
       "POINTS": "20"
     },
     {
@@ -257,7 +257,7 @@
       "EXPLICATIONS": "Aussi connue sous le nom de « couronne du Christ », cette étoile de mer carnivore se nourrit de coraux. ",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f26.jpg",
       "TYPE": "CHOIX",
-      "CATEGORIE": "faune",
+      "CATEGORIE": "Faune",
       "POINTS": "60"
     },
     {
@@ -384,7 +384,7 @@
       "ID": "faune_39",
       "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains.",
       "REPONSE": "Le poulpe, la pieuvre, le zourite.",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "Trois mots pour désigner le même animal. Pieuvre se trouve plutôt dans la littérature (Victor Hugo), zourite est l'appellation créole. Poulpe est surtout l'appellation commerciale et gastronomique, du poulpe commun.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f39.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
@@ -417,17 +417,17 @@
       "EXPLICATIONS": "1 Lama  l'Amazone (lama zone) - 2 le r  Rockfeller (roc fait l'r) - 3 in  inouï (in ouït).",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f42.jpg",
       "TYPE": "CHARADE",
-      "CATEGORIE": "CHARADE",
+      "CATEGORIE": "site",
       "POINTS": "60"
     },
     {
       "ID": "faune_43",
-      "QUESTION": "L'un dans l'autre, ces deux nombres premiers ne sont pas abyssaux. ,- Je suis un des 5 sites de plongée.",
+      "QUESTION": "L'un dans l'autre, ces deux nombres premiers ne sont pas abyssaux.\nJe suis un des 5 sites de plongée.",
       "REPONSE": "Le 13/41.",
       "EXPLICATIONS": "13 et 41 sont deux nombres premiers. Ces deux profondeurs sont accessibles en plongée.",
       "@images": "",
       "TYPE": "DEVINETTE",
-      "CATEGORIE": "DEVINETTE",
+      "CATEGORIE": "site",
       "POINTS": "20"
     },
     {
@@ -444,7 +444,7 @@
       "ID": "faune_45",
       "QUESTION": "Je suis le poumon de notre planète. Grâce à la photosynthèse, je produis plus de la moitié de l'oxygène terrestre et je consomme la moitié du dioxyde de carbone. Je me trouve également à la base de la chaîne alimentaire océanique.",
       "REPONSE": "Le phytoplancton",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "La plupart de ces organismes sont trop petits pour être visibles à l’œil nu. Ils flottent à la surface de l'eau et dérivent au gré des courants marins.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f45.jpg",
       "TYPE": "QUESTION",
       "CATEGORIE": "faune",
@@ -497,7 +497,7 @@
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f50.jpg",
       "TYPE": "QUI SUIS-JE",
-      "CATEGORIE": "QUI SUIS-JE",
+      "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
@@ -514,7 +514,7 @@
       "ID": "faune_52",
       "QUESTION": "Mon premier est un accélérateur de voilier,\nMon second est une émission bruyante,\nSans mon troisième les lunettes tomberaient ,\nMon tout est un ver marin.",
       "REPONSE": "Mon tout est un SPIROBRANCHE.",
-      "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche",
+      "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche\nLe Spirobranche-arbre de Noël (Spirobranchus giganteus) est une espèce de vers. Il vit en symbiose avec les coraux durs.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f52.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
@@ -534,7 +534,7 @@
       "ID": "faune_54",
       "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..) dans mes mailles serrées qui ondulent le long des tombants.",
       "REPONSE": "Une gorgone.",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "Ces coraux ne cultivent pas de zooxanthelles, et n'ont donc pas besoin de soleil pour croître. Elles vivent en eau profonde, entre 30 et 200 mètres.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f54.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
@@ -584,7 +584,7 @@
       "ID": "faune_59",
       "QUESTION": "Mon premier est un outil,\nMon second est actif,\nMon troisième est un pronom relatif,\nMon tout qualifie la mer haute.",
       "REPONSE": "PELAGIQUE.",
-      "EXPLICATIONS": "1 pelle - 2 agit - 3 que\nPélagique : qui vit en pleine mer. On parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou à proximité des rivages de façon sédentaire comme les blennies.",
+      "EXPLICATIONS": "1 pelle - 2 agit - 3 que\nPélagique : qui vit en pleine mer.\nOn parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou à proximité des rivages de façon sédentaire comme les blennies.",
       "@images": "",
       "TYPE": "CHARADE",
       "CATEGORIE": "pêche",
@@ -614,7 +614,7 @@
       "ID": "faune_62",
       "QUESTION": "En 4 étapes, comment passer du mot GIN à une espèce de poisson noir et blanc ?\nVous ajoutez une lettre à chaque étape dont voici le synonyme,\n1 bénéfice, 2 semence,\n3 plat, 4 poisson.",
       "REPONSE": "GATERIN",
-      "EXPLICATIONS": "Départ : GIN, 1: GAIN, 2: GRAIN, 3: GRATIN, 4: GATERIN",
+      "EXPLICATIONS": "Départ : GIN, 1: GAIN, 2: GRAIN, 3: GRATIN, 4: GATERIN\nPlectorhinchus est un genre de poissons de la famille des Haemulidae. Ils sont appelés « diagrammes ».",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f62.jpg",
       "TYPE": "MOT EN ESCALIER",
       "CATEGORIE": "faune",
@@ -707,14 +707,14 @@
       "EXPLICATIONS": "Le Gange est le seul fleuve, les autres des océans (Indien, Pacifique) ou mer (la Manche). Notre planète est recouverte par 71% de mer, c'est pour cela qu'on la nomme planète bleue.",
       "@images": "",
       "TYPE": "TROUVER L'INTRUS",
-      "CATEGORIE": "environnement",
+      "CATEGORIE": "géographie",
       "POINTS": "40"
     },
     {
       "ID": "faune_72",
       "QUESTION": "Mon premier n'a pas d'habits,\nMon second est nombre,\nMon troisième est une partie d'arbre,\nMon tout est un mollusque marin.",
       "REPONSE": "Mon tout est un NUDIBRANCHE.",
-      "EXPLICATIONS": "1 nu - 2 dix - 3 branche",
+      "EXPLICATIONS": "1 nu - 2 dix - 3 branche\nCes animaux marins sont caractérisés par leur absence de coquille et leurs branchies nues, origine de leur nom.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f72.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
@@ -742,9 +742,9 @@
     },
     {
       "ID": "faune_75",
-      "QUESTION": "En 4 étapes, comment passer du pronom MA à un poisson recherché par les pécheurs au gros ?\nVous ajoutez une lettre à chaque étape dont voici le synonyme,\n1 mois,\n2 époux,\n3 homme de mer,\n4 poisson.",
+      "QUESTION": "En 4 étapes, comment passer du pronom MA à un poisson recherché par les pécheurs au gros ?\nVous ajoutez une lettre à chaque étape dont voici le synonyme,\n1 -> mois,\n2 -> époux,\n3 -> homme de mer,\n4 -> poisson.",
       "REPONSE": "MARLIN",
-      "EXPLICATIONS": " mois : MAI, époux : MARI, homme de mer : MARIN, poisson : MARLIN",
+      "EXPLICATIONS": "mois : MAI,\n époux : MARI,\nHomme de mer : MARIN,\n poisson : MARLIN",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f75.jpg",
       "TYPE": "MOT EN ESCALIER",
       "CATEGORIE": "faune",
@@ -754,7 +754,7 @@
       "ID": "faune_76",
       "QUESTION": "Comment s'appelle ce poisson dont l'anagramme est riposte, ce qu'il fait quand il se sent attaqué en déployant ses nageoires épineuses comme des éventails ?",
       "REPONSE": "Le ptéroïs (riposte) ",
-      "EXPLICATIONS": "en créole poisson larmé",
+      "EXPLICATIONS": "En créole poisson larmé",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f76.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
@@ -901,7 +901,7 @@
       "CATEGORIE": "Plongée",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\carte_action\\plongeur.jpg",
       "TYPE": "Danger",
-      "EFFET": "Retournez au club de plongée.",
+      "EFFET": "Retournez au club de plongée, seul le bouclier vous protège.",
       "VALEUR": "-100",
       "OBJET_REQUIS": "bouclier",
       "EXPLICATIONS": "Les paliers de décompression s'effectuent à la remontée. La profondeur et le temps de chaque palier varient en fonction du temps passé sous l'eau et de la profondeur atteinte. Ces paliers indispensables réduisent le taux d'azote restant dans les tissus humains afin d'éviter un accident de décompression."
@@ -1159,7 +1159,7 @@
       "TYPE": "BONUS",
       "EFFET": "Avancez de 9 cases",
       "VALEUR": "+9",
-      "EXPLICATIONS": "Et en plongée, il faut aussi avancer pour découvrir un nouveau monde."
+      "EXPLICATIONS": "En plongée, il faut aussi avancer pour découvrir un nouveau monde."
     },
     {
       "ID": "action_34",
