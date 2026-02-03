@@ -182,6 +182,21 @@ const preparerMiniJeu = useCallback(() => {
 }, []);
 
 const verifierMiniJeu = useCallback(() => {
+    if (!motATrouver || !motATrouver.solution) {
+    console.error('[mini] verifierMiniJeu: motATrouver invalide', motATrouver);
+    setMessageBonus("Erreur interne du mini‑jeu");
+    setMiniJeuOuvert(false);
+    const clearMsg = setTimeout(() => setMessageBonus(""), 3000);
+    timersRef.current.timeouts.push(clearMsg);
+    return;
+  }
+  if (reponseUser.trim() === "") {
+    setMessageBonus("Veuillez entrer une réponse");
+    const clearMsg = setTimeout(() => setMessageBonus(""), 2000);
+    timersRef.current.timeouts.push(clearMsg);
+    return;
+  }
+
   if (reponseUser.trim().toUpperCase() === motATrouver.solution) {
     // Gain d'un objet aléatoire
     const objets = ["camera", "couteau", "photo", "bouclier"];
@@ -216,7 +231,7 @@ React.useEffect(() => {
   }
 
   return () => {
-    if (intervalle) clearInterval(intervale);
+    if (intervalle) clearInterval(intervalle);
   };
 }, [miniJeuOuvert, tempsRestant]);
 
