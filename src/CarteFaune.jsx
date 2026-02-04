@@ -83,7 +83,7 @@ const CarteFaune = ({ carte, onReponse }) => {
       </div>
 
       <div style={styles.content}>
-        <ImageOptimisee src={`/images/${nomImage}`} style={styles.image} alt="Illustration" />
+        <img src={`/images/${nomImage}`} style={styles.image} alt="Illustration" loading="lazy" onError={(e) => e.target.src = "/images/biodive.png"} />
 
         {!montrerReponse ? (
           <>
