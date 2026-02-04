@@ -167,11 +167,11 @@ function App() {
 
 const preparerMiniJeu = useCallback(() => {
   const dictionnaire = [
-    { solution: "PALMES", melange: "MLAPES" }, // On utilise les noms complets
-    { solution: "ANCRE", melange: "NCARE" },
-    { solution: "CORAIL", melange: "LIAROC" },
-    { solution: "REQUIN", melange: "NUIREQ" },
-    { solution: "MEDUSE", melange: "USEDEM" }
+    { solution: ["PALMES"], melange: "MLAPES" }, // On utilise les noms complets
+    { solution: ["ANCRE","NACRE"], melange: "NCARE" },
+    { solution: ["CORAIL"], melange: "LIAROC" },
+    { solution: ["REQUIN"], melange: "NUIREQ" },
+    { solution: ["MEDUSE"], melange: "USEDEM" }
   ];
   
   const choisi = dictionnaire[Math.floor(Math.random() * dictionnaire.length)];
@@ -197,7 +197,7 @@ const verifierMiniJeu = useCallback(() => {
     return;
   }
 
-  if (reponseUser.trim().toUpperCase() === motATrouver.solution) {
+  if (motATrouver.solution.includes(reponseUser.trim().toUpperCase())) {
     // Gain d'un objet aléatoire
     const objets = ["camera", "couteau", "photo", "bouclier"];
     const gain = objets[Math.floor(Math.random() * objets.length)];
@@ -215,18 +215,39 @@ const verifierMiniJeu = useCallback(() => {
   }
 }, [reponseUser, motATrouver]);  
 // Logique du compte à rebours
+// 1. GESTION DU SON (Se déclenche UNIQUEMENT quand on ouvre/ferme le jeu)
+React.useEffect(() => {
+  let sonChrono = null;
+
+  if (miniJeuOuvert) {
+    sonChrono = new Audio('/sons/attente.mp3');
+    sonChrono.volume = 0.3;
+    sonChrono.loop = true; // Pour que le son continue si le chrono est long
+    sonChrono.play().catch(e => console.log("Erreur audio attente:", e));
+  }
+
+  return () => {
+    if (sonChrono) {
+      sonChrono.pause();
+      sonChrono.currentTime = 0;
+    }
+  };
+}, [miniJeuOuvert]); // <--- On ne surveille QUE l'ouverture/fermeture
+
+// 2. GESTION DU CHRONO
 React.useEffect(() => {
   let intervalle;
+
   if (miniJeuOuvert && tempsRestant > 0) {
     intervalle = setInterval(() => {
       setTempsRestant((prev) => prev - 1);
     }, 1000);
     timersRef.current.intervals.push(intervalle);
-  } else if (tempsRestant === 0 && miniJeuOuvert) {
-    // Temps écoulé !
+  } 
+  else if (tempsRestant === 0 && miniJeuOuvert) {
     setMessageBonus("⌛ TEMPS ÉCOULÉ ! Le coffre s'est refermé...");
     const closeTimeout = setTimeout(() => { setMiniJeuOuvert(false); }, 1000);
-    const clearMsg = setTimeout(() =>  setMessageBonus(""), 3000);
+    const clearMsg = setTimeout(() => setMessageBonus(""), 3000);
     timersRef.current.timeouts.push(closeTimeout, clearMsg);
   }
 
@@ -235,6 +256,7 @@ React.useEffect(() => {
   };
 }, [miniJeuOuvert, tempsRestant]);
 
+// 3. NETTOYAGE GLOBAL (Ton code existant est parfait ici)
 React.useEffect(() => {
   return () => {
     timersRef.current.intervals.forEach(clearInterval);

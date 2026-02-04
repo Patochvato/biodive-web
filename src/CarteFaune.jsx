@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { playSound } from './audioManager';
+import ImageOptimisee from './ImageOptimisee';
 
 const CarteFaune = ({ carte, onReponse }) => {
   const [montrerReponse, setMontrerReponse] = useState(false);
@@ -60,7 +61,7 @@ const CarteFaune = ({ carte, onReponse }) => {
       display: 'flex', justifyContent: 'space-between',textTransform: 'uppercase',fontWeight: 'bold', transition: 'background-color 0.3s'
     },
     content: { padding: '20px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' },
-    image: { maxWidth: '100%', maxHeight: '150px', objectFit: 'contain', borderRadius: '10px', marginBottom: '10px' },
+    image: { maxWidth: '100%', maxHeight: '150px', objectFit: 'cover', borderRadius: '10px', marginBottom: '10px' },
     question: { fontSize: '1.05rem', color: '#333', marginBottom: '5px', fontWeight: '500', whiteSpace: 'pre-line' },
     btnChoix: { 
       width: '100%', padding: '10px', margin: '4px 0', 
@@ -82,7 +83,7 @@ const CarteFaune = ({ carte, onReponse }) => {
       </div>
 
       <div style={styles.content}>
-        <img src={`/images/${nomImage}`} style={styles.image} alt="Illustration" onError={(e) => e.target.src = "/images/biodive.png"} />
+        <ImageOptimisee src={`/images/${nomImage}`} style={styles.image} alt="Illustration" />
 
         {!montrerReponse ? (
           <>
