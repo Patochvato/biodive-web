@@ -22,11 +22,11 @@
     },
     {
       "ID": "faune_03",
-      "QUESTION": "Dans cette phrase:\n« chouette dit la baleine, je me cache à l'eau ».\nQuel est l'intrus ?",
-      "REPONSE": "La chouette",
-      "EXPLICATIONS": "La baleine et le cachalot appartiennent à la famille des cétacés. Il est vrai qu'une baleine aurait quelques difficultés, à se cacher dans l'eau. Ce qui lui a valu d'être une espèce protégée, du fait de la surpêche.",
+      "QUESTION": "Quel est l'intrus ?\nA La baleine à bosse\nB Le cachalot\nC Le requin baleine\nD Le dauphin",
+      "REPONSE": "C",
+      "EXPLICATIONS": "La baleine,le cachalot et le dauphin appartiennent à la famille des cétacés. le requin baleine est un poisson cartilagineux.",
       "@images": "",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "20"
     },
@@ -42,11 +42,11 @@
     },
     {
       "ID": "faune_05",
-      "QUESTION": "Dans cette liste de poissons, quel est l'intrus ?\nraie manta, requin baleine, rémora, requin léopard",
-      "REPONSE": "Le rémora",
+      "QUESTION": "Dans cette liste de poissons, quel est l'intrus ?\nA La raie manta\nB Le requin baleine\nC Le rémora\nD Le requin léopard",
+      "REPONSE": "C",
       "EXPLICATIONS": "Le rémora est un poisson osseux, les trois autres sont des poissons cartilagineux.",
       "@images": "",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -212,11 +212,11 @@
     },
     {
       "ID": "faune_22",
-      "QUESTION": "Le capitaine passe un savon au caporal qui a laissé un bagnard s'échapper pour rejoindre une demoiselle.",
-      "REPONSE": "Le caporal",
+      "QUESTION": "Qui est l'intrus ? \nALe capitaine passe un savon\nB au caporal qui a laissé\nC un bagnard s'échapper pour rejoindre\nD une demoiselle.",
+      "REPONSE": "B",
       "EXPLICATIONS": "Le caporal n'est pas un habitant des océans, \nà l'inverse du capitaine, des poissons savon, bagnard et demoiselle.",
       "@images": "",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -234,7 +234,7 @@
       "ID": "faune_24",
       "QUESTION": "Mon premier est une démarche,\nMon second n'est pas rapide,\nSur mon troisième, les bateaux accostent,\nMon tout est un groupe de plongeurs.",
       "REPONSE": "Mon tout est une PALANQUEE.",
-      "EXPLICATIONS": "1 Pas - 2 Lent - 3 Quai.",
+      "EXPLICATIONS": "1 Pas - 2 Lent - 3 Quai.\n👉 Elle symbolise l'esprit de solidarité qui prévaut dans l'activité plongée.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f24.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "plongée",
@@ -363,7 +363,7 @@
     {
       "ID": "faune_37",
       "QUESTION": "Je suis une forme géométrique, je peux être géographe, on me trouve au fond de l'oeil, finalement on me déguste aussi glacé.",
-      "REPONSE": "Un cône.",
+      "REPONSE": "Un cône",
       "EXPLICATIONS": "Ce sont des mollusques gastéropodes de taille moyenne à grande, de forme allongée et plus ou moins conique. Ils sont recherchés pour les ornementations spectaculaires sur leur coquille.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f37.jpg",
       "TYPE": "QUI SUIS-JE",
@@ -472,11 +472,11 @@
     },
     {
       "ID": "faune_48",
-      "QUESTION": "Coiffée d'un bonnet de prêtre poussiéreux, une gorgone malicieuse éteint des candélabres rococo, avec l'eau d'un bénitier défraîchi, au milieu d'un oratoire abandonné.",
-      "REPONSE": "Un oratoire.",
-      "EXPLICATIONS": "Un oratoire est une chapelle aux dimensions restreintes, les autres, l'oursin bonnet de prêtre, la gorgone, le corail candélabre et le bénitier sont des habitants des océans.",
+      "QUESTION": "Dans ce fouillis un intrus s'est glissé\nA un bonnet de prêtre poussiéreux\nB des candélabres rococo\nC un bénitier défraîchi\nD un oratoire abandonné.",
+      "REPONSE": "D",
+      "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière. L'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants des océans.",
       "@images": "",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -493,7 +493,7 @@
     {
       "ID": "faune_50",
       "QUESTION": "Avec mon bec, mes deux bras, mes deux oreilles, et mes deux pattes, je repose immobile sur des fonds marins, témoin d'un commerce maritime passé.",
-      "REPONSE": "Une ancre.",
+      "REPONSE": "Une ancre.\nRares sont les plongeurs Sainte-Rosiens qui n’ont pas été attirés un moment ou un autre par les multiples ancres présentes sur le site de La Marine.",
       "EXPLICATIONS": "",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f50.jpg",
       "TYPE": "QUI SUIS-JE",
@@ -524,7 +524,7 @@
       "ID": "faune_53",
       "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs.",
       "REPONSE": "Un poisson-feuille.",
-      "EXPLICATIONS": "De la famille des Scorpaenidae.Les rayons de sa nageoire dorsale sont venimeux. Sa bouche en position terminale est de grande dimension.",
+      "EXPLICATIONS": "De la famille des Scorpaenidae. Les rayons de sa nageoire dorsale sont venimeux. Sa bouche en position terminale est de grande dimension.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f53.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
@@ -592,11 +592,11 @@
     },
     {
       "ID": "faune_60",
-      "QUESTION": "Parmi toutes ces espèces de thon, une n'existe pas, laquelle ?\nthon banane, thon germon, thon momon, thon rouge, thon albacore",
-      "REPONSE": "thon momon",
+      "QUESTION": "Parmi toutes ces espèces de thon, une n'existe pas, laquelle ?\nA thon banane\nB thon germon\nC thon momon\nD thon albacore",
+      "REPONSE": "C",
       "EXPLICATIONS": "Ton momon est une expression créole qui peut être vulgaire et injurieuse, comme populaire et familière.",
       "@images": "",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "humour",
       "POINTS": "20"
     },
@@ -682,11 +682,11 @@
     },
     {
       "ID": "faune_69",
-      "QUESTION": "Un clown qui joue de la trompette et de la flûte cherche un violoniste pour l'accompagner",
-      "REPONSE": "le violoniste ",
+      "QUESTION": "Trouver l'intrus\nA Le clown\nB La trompette\nC La flûte\nD Le violoniste",
+      "REPONSE": "D",
       "EXPLICATIONS": "le violoniste est un crabe donc un invertébré, les trois autres sont des poissons.",
       "@images": "B:\\OneDrive\\BIOdive jeux\\images\\f65.jpg",
-      "TYPE": "TROUVER L'INTRUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -698,7 +698,7 @@
       "@images": "",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_71",
