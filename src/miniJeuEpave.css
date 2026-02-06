@@ -1,0 +1,87 @@
+.mini-jeu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  background-image: url('/images/fond2.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.mini-jeu-carte {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 4px solid #ff9800;
+}
+
+.mini-jeu-timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.mini-jeu-timer.danger {
+  color: #f44336;
+  animation: blink 1s infinite;
+}
+
+.mini-jeu-titre {
+  color: #ff9800;
+  margin-top: 0;
+}
+
+.mini-jeu-melange {
+  letter-spacing: 8px;
+  color: #0288d1;
+  font-size: 2rem;
+  background-color: #f0faff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.mini-jeu-input {
+  padding: 12px;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #cccccc;
+}
+
+.mini-jeu-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.mini-jeu-btn {
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.mini-jeu-btn-annuler {
+  flex: 1;
+  background-color: #cccccc;
+}
+
+.mini-jeu-btn-valider {
+  flex: 2;
+  background-color: #4caf50;
+  color: #ffffff;
+}

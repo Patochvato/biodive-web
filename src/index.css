@@ -56,6 +56,80 @@ button:focus-visible {
   white-space: pre-line;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes monterBulles {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes goldGlow {
+  0% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
+  50% { box-shadow: 0 0 20px #ffb300, inset 0 0 10px #ffb300; }
+  100% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
+}
+
+@keyframes fastFloatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -300%) scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Classe specifique pour le Super Bonus */
+.carte-super-bonus {
+  animation: goldGlow 2.5s infinite ease-in-out !important;
+  background-color: #fffdf0 !important;
+  border-width: 5px !important;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.icone-super-bonus {
+  filter: drop-shadow(0 0 10px #ffd700) !important;
+  transform: scale(1.1);
+}
+
+.fade-in-image {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.skeleton-animation {
+  animation: shimmer 1.5s infinite;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -67,76 +141,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-  @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes monterBulles {
-  0% { transform: translateY(0) scale(1); opacity: 1; }
-  100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-@keyframes goldGlow {
-  0% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
-  50% { box-shadow: 0 0 20px #ffb300, inset 0 0 10px #ffb300; }
-  100% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
-}
-/* Classe spécifique pour le Super Bonus */
-.carte-super-bonus {
-  animation: goldGlow 2.5s infinite ease-in-out !important;
-  background-color: #fffdf0 !important;
-  border-width: 5px !important;
-  transform: scale(1.02); /* Légèrement plus grande pour l'emphase */
-  transition: transform 0.3s ease;
-}
-
-.icone-super-bonus {
-  filter: drop-shadow(0 0 10px #ffd700) !important;
-  transform: scale(1.1);
-}
-@keyframes fastFloatUp {
-      0% { opacity: 0; 
-        transform: translate(-50%, 20%) scale(0.5); 
-      }
-      20% { opacity: 1; 
-        transform: translate(-50%, -50%) scale(1.2); /* Effet d'impact */
-      }
-      100% { opacity: 0; 
-        transform: translate(-50%, -300%) scale(1); /* Monte très haut */
-      }
-    }
-@keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-@keyframes popIn {
-          0% { transform: scale(0.5); opacity: 0; }
-          100% { transform: scale(1); opacity: 1; }
-        }
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
-}   
-/* Dans ton fichier CSS */
-.fade-in-image {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.skeleton-animation {
-  animation: shimmer 1.5s infinite;
-}     
 }

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { playSound } from './audioManager';
-import ImageOptimisee from './ImageOptimisee';
+import CarteActionButton from './components/CarteActionButton';
+import CarteChoixOptions from './components/CarteChoixOptions';
+import CarteFauneReponse from './components/CarteFauneReponse';
+import CarteHeader from './components/CarteHeader';
+import CarteVraiFauxButtons from './components/CarteVraiFauxButtons';
+import './cartes.css';
 
 const CarteFaune = ({ carte, onReponse }) => {
   const [montrerReponse, setMontrerReponse] = useState(false);
@@ -17,8 +22,10 @@ const CarteFaune = ({ carte, onReponse }) => {
 
   const extraireNomFichier = (cheminBrut) => {
     if (!cheminBrut) return "biodive.png";
-    const parties = cheminBrut.split(/[\\/]/);
-    return parties[parties.length - 1];
+    const parties = String(cheminBrut).split(/[\\/]/);
+    const dernierSegment = parties[parties.length - 1];
+    const estImage = /\.(png|jpe?g|svg|webp|gif)$/i.test(dernierSegment);
+    return estImage ? dernierSegment : "biodive.png";
   };
 
   const nomImage = extraireNomFichier(carte["@images"]);
@@ -47,97 +54,68 @@ const CarteFaune = ({ carte, onReponse }) => {
     return '#0288d1'; // Couleur neutre pour les questions simples
   };
 
-  const styles = {
-    carte: {
-      width: '100%', maxWidth: '400px', minHeight: '450px',
-      backgroundColor: 'white', borderRadius: '15px',
-      boxShadow: '0 4px 15px rgba(0,0,0,0.2)', display: 'flex',
-      flexDirection: 'column', border: estBonus ? '4px solid #ffd54f' : '2px solid #0288d1',
-      overflow: 'hidden', zIndex: 10
-    },
-    header: {
-      backgroundColor: obtenirCouleurHeader(),
-      color: estBonus ? '#000' : 'white', padding: '12px 15px',
-      display: 'flex', justifyContent: 'space-between',textTransform: 'uppercase',fontWeight: 'bold', transition: 'background-color 0.3s'
-    },
-    content: { padding: '20px', textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column' },
-    image: { maxWidth: '100%', maxHeight: '150px', objectFit: 'cover', borderRadius: '10px', marginBottom: '10px' },
-    question: { fontSize: '1.05rem', color: '#333', marginBottom: '5px', fontWeight: '500', whiteSpace: 'pre-line' },
-    btnChoix: { 
-      width: '100%', padding: '10px', margin: '4px 0', 
-      backgroundColor: '#f1f8ff', border: '1px solid #0288d1', 
-      borderRadius: '8px', cursor: 'pointer', textAlign: 'left',
-      fontSize: '0.95rem', color: '#0277bd'
-    },
-    btnValidation: { padding: '15px 10px', margin: '10px 5px', borderRadius: '8px', border: 'none', cursor: 'pointer', color: 'white', fontWeight: 'bold', flex: 1 },
-    btnAction: { width: '100%', padding: '12px', backgroundColor: '#0288d1', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px'}
-  };
-
   return (
-    <div style={styles.carte}>
-      <div style={styles.header}>
-        <span>{estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `${carte.CATEGORIE} - ${carte.TYPE} `)}</span>
-        <span style={{backgroundColor:'white', padding:'2px 8px', borderRadius:'10px', color:'#333'}}>
-          {pointsCarte} pts
-        </span>
-      </div>
+    <div
+      className="carte carte-faune"
+      style={{ border: estBonus ? '4px solid #ffd54f' : '2px solid #0288d1' }}
+    >
+      <CarteHeader
+        title={estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `${carte.CATEGORIE} - ${carte.TYPE} `)}
+        pointsText={`${pointsCarte} pts`}
+        headerStyle={{
+          backgroundColor: obtenirCouleurHeader(),
+          color: estBonus ? '#000' : 'white'
+        }}
+      />
 
-      <div style={styles.content}>
-        <img src={`/images/${nomImage}`} style={styles.image} alt="Illustration" onError={(e) => e.target.src = "/images/biodive.png"} />
+      <div className="carte-content">
+        <img
+          src={`/images/${nomImage}`}
+          className="carte-image"
+          alt="Illustration"
+          onError={(e) => e.target.src = "/images/biodive.png"}
+        />
 
-        {!montrerReponse ? (
-          <>
-            <p style={styles.question}>{estChoix ? enTeteQuestion : carte.QUESTION}</p>
-            
-            {estChoix ? (
-              <div style={{textAlign: 'left'}}>
-                {options.map((opt, index) => (
-                  <button key={index} style={styles.btnChoix} onClick={() => validerReponseDirecte(opt.trim().charAt(0))}>
-                    {opt}
-                  </button>
-                ))}
-              </div>
-            ) : estVraiFaux ? (
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <button style={{ ...styles.btnChoix, textAlign: 'center', backgroundColor: '#4caf50', color: 'white' }} onClick={() => validerReponseDirecte("VRAI")}>VRAI</button>
-                <button style={{ ...styles.btnChoix, textAlign: 'center', backgroundColor: '#f44336', color: 'white' }} onClick={() => validerReponseDirecte("FAUX")}>FAUX</button>
-              </div>
-            ) : (
-              <button style={styles.btnAction} onClick={() => setMontrerReponse(true)}>
-                {estBonus ? "RÉCUPÉRER" : "VOIR LA RÉPONSE"}
-              </button>
-            )}
-          </>
-        ) : (
-          /* --- VERSO : SOLUTION --- */
-          <div style={{animation: 'fadeIn 0.5s'}}>
-            {scoreAutomatique !== null && (
-               <h2 style={{ color: scoreAutomatique > 0 ? '#2e7d32' : '#c62828', margin: '0 0 10px 0' }}>
-                 {scoreAutomatique > 0 ? "EXCELLENT ! ✨" : "OUPS... 🦈"}
-               </h2>
-            )}
-            
-            <div style={{padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '8px', borderLeft: '5px solid #0288d1', textAlign: 'left', marginBottom: '15px'}}>
-              <strong style={{fontSize: '1.2rem',color: '#0277bd'}}> {carte.REPONSE}</strong>
-              <p style={{fontSize: '0.95rem', marginTop: '10px', whiteSpace: 'pre-line'}}>{carte.EXPLICATIONS}</p>
-            </div>
-
-            {/* Si c'est un choix ou V/F, on affiche Continuer. Sinon, on affiche OUI/NON */}
-            {(estChoix || estVraiFaux || estBonus) ? (
-              <button style={styles.btnAction} onClick={() => onReponse(scoreAutomatique || pointsCarte)}>
-                CONTINUER
-              </button>
-            ) : (
-              <div style={{marginTop: '10px'}}>
-                <p style={{fontWeight: 'bold', marginBottom: '10px'}}>Avez-vous trouvé ?</p>
-                <div style={{display: 'flex'}}>
-                  <button style={{...styles.btnValidation, backgroundColor: '#4caf50'}} onClick={() => onReponse(pointsCarte)}>OUI (+{pointsCarte})</button>
-                  <button style={{...styles.btnValidation, backgroundColor: '#f44336'}} onClick={() => onReponse(-pointsCarte)}>NON (-{pointsCarte})</button>
+        <div className="carte-body">
+          {!montrerReponse ? (
+            <>
+              <p className="carte-question">{estChoix ? enTeteQuestion : carte.QUESTION}</p>
+              
+              {estChoix ? (
+                <CarteChoixOptions
+                  className="carte-actions-bottom"
+                  options={options}
+                  onChoix={(opt) => validerReponseDirecte(opt.trim().charAt(0))}
+                />
+              ) : estVraiFaux ? (
+                <CarteVraiFauxButtons
+                  className="carte-actions-bottom"
+                  onVrai={() => validerReponseDirecte("VRAI")}
+                  onFaux={() => validerReponseDirecte("FAUX")}
+                />
+              ) : (
+                <div className="carte-actions-bottom">
+                  <CarteActionButton
+                    label={estBonus ? "RÉCUPÉRER" : "VOIR LA RÉPONSE"}
+                    onClick={() => setMontrerReponse(true)}
+                  />
                 </div>
-              </div>
-            )}
-          </div>
-        )}
+              )}
+            </>
+          ) : (
+            /* --- VERSO : SOLUTION --- */
+            <CarteFauneReponse
+              scoreAutomatique={scoreAutomatique}
+              pointsCarte={pointsCarte}
+              reponse={carte.REPONSE}
+              explications={carte.EXPLICATIONS}
+              estChoix={estChoix}
+              estVraiFaux={estVraiFaux}
+              estBonus={estBonus}
+              onReponse={onReponse}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

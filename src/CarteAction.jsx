@@ -1,5 +1,9 @@
 import React from 'react';
 import { playSound } from './audioManager';
+import CarteActionButton from './components/CarteActionButton';
+import CarteActionEffet from './components/CarteActionEffet';
+import CarteHeader from './components/CarteHeader';
+import './cartes.css';
 
 const obtenirIcone = (action) => {
     const categorie = action?.CATEGORIE?.toUpperCase() || "";
@@ -40,76 +44,58 @@ const CarteAction = ({ carte, inventaire, onContinuer }) => {
     }
   };
 
-  const styles = {
-    carte: { 
-      width: '100%', maxWidth: '400px', backgroundColor: '#fff3e0', 
-      borderRadius: '15px', boxShadow: '0 8px 16px rgba(0,0,0,0.2)', 
-      border: estProtege ? '4px solid #4caf50' : '3px solid #ef6c00', 
-      display: 'flex', flexDirection: 'column', overflow: 'hidden' 
-    },
-    header: { 
-      backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'), 
-      color: estSuperBonus ? '#5c4300' : 'white', 
-      padding: '12px 15px', display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', textTransform: 'uppercase' 
-    },
-    pointsBadge: { 
-        backgroundColor: 'white', 
-        color: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'), 
-        padding: '2px 10px', borderRadius: '12px', fontSize: '0.9em' 
-    },
-    content: { padding: '15px', textAlign: 'center' },
-    icone: { width: '100px', height: '100px', marginBottom: '10px' },
-    description: { fontSize: '1.05em', fontStyle: 'italic', color: '#444', marginBottom: '15px' },
-    effetBox: { 
-        backgroundColor: estSuperBonus ? '#fff9c4' : (estProtege ? '#e8f5e9' : '#ffe0b2'), 
-        padding: '10px', borderRadius: '8px', 
-        border: estSuperBonus ? '2px solid #ffd700' : '1px dashed #ef6c00' 
-    },
-    btn: { 
-        width: '100%', padding: '10px', 
-        backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'), 
-        color: estSuperBonus ? '#5c4300' : 'white', 
-        border: 'none', cursor: 'pointer', fontWeight: 'bold', marginTop: '10px' 
-    }
-  };
-
   return (
-    <div style={styles.carte} className={estSuperBonus ? 'carte-super-bonus' : ''}>
-      <div style={styles.header}>
-        <span>{estSuperBonus ? "✨ SUPER BONUS ✨" : (estProtege ? "🛡️ PROTECTION ACTIVE" : (carte.CATEGORIE || "ACTION"))}</span>
-        <span style={styles.pointsBadge}>
-          {estProtege ? "0 pts" : (pointsAction > 0 ? `+${pointsAction}` : `${pointsAction} pts`)}
-        </span>
-      </div>
+    <div
+      className={`carte carte-action ${estSuperBonus ? 'carte-super-bonus' : ''}`}
+      style={{ border: estProtege ? '4px solid #4caf50' : '3px solid #ef6c00' }}
+    >
+      <CarteHeader
+        title={estSuperBonus ? "✨ SUPER BONUS ✨" : (estProtege ? "🛡️ PROTECTION ACTIVE" : (carte.CATEGORIE || "ACTION"))}
+        pointsText={estProtege ? "0 pts" : (pointsAction > 0 ? `+${pointsAction}` : `${pointsAction} pts`)}
+        headerStyle={{
+          backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'),
+          color: estSuperBonus ? '#5c4300' : 'white'
+        }}
+        badgeStyle={{
+          color: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00')
+        }}
+      />
       
-      <div style={styles.content}>
-        <img 
-          src={cheminImage} 
-          alt="icone" 
-          style={styles.icone} 
-          className={estSuperBonus ? 'icone-super-bonus' : ''} 
-        />
-        
-        <div style={styles.description}>
-            {estSuperBonus && <span style={{display:'block', color:'#b8860b', fontWeight:'bold', marginBottom: '5px'}}>ÉQUIPEMENT LÉGENDAIRE !</span>}
-            {carte.DESCRIPTION || carte.QUESTION}
-        </div>
+      <div className="carte-action-content">
+        <div className="carte-body">
+          <img
+            src={cheminImage}
+            alt="icone"
+            className={`carte-action-icone ${estSuperBonus ? 'icone-super-bonus' : ''}`}
+          />
+          
+          <div className="carte-action-description">
+              {estSuperBonus && <span style={{display:'block', color:'#b8860b', fontWeight:'bold', marginBottom: '5px'}}>ÉQUIPEMENT LÉGENDAIRE !</span>}
+              {carte.DESCRIPTION || carte.QUESTION}
+          </div>
 
-        <div style={styles.effetBox}>
-          <strong>{estProtege ? "SÉCURITÉ :" : ""}</strong>
-          <p>{estProtege ? `Grâce à votre ${aBouclier ? 'Bouclier' : carte.OBJET_REQUIS}, vous évitez le danger !` : carte.EFFET}</p>
-        </div>
+          <CarteActionEffet
+            estSuperBonus={estSuperBonus}
+            estProtege={estProtege}
+            aBouclier={aBouclier}
+            objetRequis={carte.OBJET_REQUIS}
+            effet={carte.EFFET}
+            explications={carte.EXPLICATIONS}
+          />
 
-        {carte.EXPLICATIONS && (
-          <p style={{ fontSize: '0.85em', marginTop: '15px', color: '#666', whiteSpace: 'pre-line' }}>
-              {carte.EXPLICATIONS}
-          </p>
-        )}
+          <div className="carte-actions-bottom">
+            <CarteActionButton
+              className="carte-action-btn"
+              style={{
+                backgroundColor: estSuperBonus ? '#ffd700' : (estProtege ? '#4caf50' : '#ef6c00'),
+                color: estSuperBonus ? '#5c4300' : 'white'
+              }}
+              label={estSuperBonus ? "GÉNIAL ! JE PRENDS" : (estProtege ? "OUF ! CONTINUER" : "OK, J'AI COMPRIS")}
+              onClick={gererClicFinal}
+            />
+          </div>
+        </div>
       </div>
-
-      <button style={styles.btn} onClick={gererClicFinal}>
-        {estSuperBonus ? "GÉNIAL ! JE PRENDS" : (estProtege ? "OUF ! CONTINUER" : "OK, J'AI COMPRIS")}
-      </button>
     </div>
   );
 };
