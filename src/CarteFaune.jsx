@@ -5,15 +5,18 @@ import CarteChoixOptions from './components/CarteChoixOptions';
 import CarteFauneReponse from './components/CarteFauneReponse';
 import CarteHeader from './components/CarteHeader';
 import CarteVraiFauxButtons from './components/CarteVraiFauxButtons';
+import JeuAnagramme from './components/JeuAnagramme';
 import './cartes.css';
 
 const CarteFaune = ({ carte, onReponse }) => {
   const [montrerReponse, setMontrerReponse] = useState(false);
   const [scoreAutomatique, setScoreAutomatique] = useState(null);
+  const [choixSelectionnes, setChoixSelectionnes] = useState([]);
 
   const estBonus = carte.TYPE?.toLowerCase() === 'bonus';
   const estVraiFaux = carte.TYPE?.toUpperCase().includes("VRAI OU FAUX");
   const estChoix = carte.TYPE?.toUpperCase() === "CHOIX";
+  const estAnagramme = carte.TYPE?.toUpperCase() === "ANAGRAMME";
 
   // Extraction des options pour le TYPE CHOIX
   const partiesQuestion = carte.QUESTION.split('\n');
@@ -30,10 +33,17 @@ const CarteFaune = ({ carte, onReponse }) => {
 
   const nomImage = extraireNomFichier(carte["@images"]);
   const pointsCarte = parseInt(carte.POINTS, 10) || 0;
+  const motAnagramme = carte.REPONSE || '';
   
   useEffect(() => {
     if (estBonus) playSound('gagne.mp3', 0.4);
   }, [estBonus]);
+
+  useEffect(() => {
+    setMontrerReponse(false);
+    setScoreAutomatique(null);
+    setChoixSelectionnes([]);
+  }, [carte?.ID]);
 
   const validerReponseDirecte = (choix) => {
     const laBonneReponse = carte.REPONSE?.trim().toUpperCase();
@@ -44,6 +54,32 @@ const CarteFaune = ({ carte, onReponse }) => {
     
     if (estCorrect) playSound('gagne.mp3', 0.4);
     else playSound('perdu.mp3', 0.4);
+  };
+
+  const reponsesChoix = String(carte.REPONSE || '')
+    .split(',')
+    .map((valeur) => valeur.trim().toUpperCase())
+    .filter(Boolean);
+  const nombreReponsesChoix = reponsesChoix.length || 1;
+
+  const gererChoixMultiple = (optionKey) => {
+    setChoixSelectionnes((prev) => {
+      const existeDeja = prev.includes(optionKey);
+      const prochain = existeDeja ? prev.filter((val) => val !== optionKey) : [...prev, optionKey];
+
+      if (prochain.length >= nombreReponsesChoix) {
+        const estCorrect = reponsesChoix.length > 0
+          ? (prochain.length === reponsesChoix.length && prochain.every((val) => reponsesChoix.includes(val)))
+          : prochain[0] === optionKey;
+
+        setScoreAutomatique(estCorrect ? pointsCarte : -pointsCarte);
+        setMontrerReponse(true);
+        if (estCorrect) playSound('gagne.mp3', 0.4);
+        else playSound('perdu.mp3', 0.4);
+      }
+
+      return prochain;
+    });
   };
 
   // Détermine la couleur du header selon la situation
@@ -80,12 +116,32 @@ const CarteFaune = ({ carte, onReponse }) => {
           {!montrerReponse ? (
             <>
               <p className="carte-question">{estChoix ? enTeteQuestion : carte.QUESTION}</p>
+              {estChoix && reponsesChoix.length > 1 && (
+                <p className="carte-multi-reponse">Plusieurs reponses possibles</p>
+              )}
               
-              {estChoix ? (
+              {estAnagramme ? (
+                <div className="carte-actions-bottom">
+                  <JeuAnagramme
+                    motATrouver={motAnagramme}
+                    onWin={() => {
+                      playSound('sifflet.mp3', 0.4);
+                      setScoreAutomatique(pointsCarte);
+                      setMontrerReponse(true);
+                    }}
+                    onAbandon={() => {
+                      playSound('perd.mp3', 0.4);
+                      setScoreAutomatique(-pointsCarte);
+                      setMontrerReponse(true);
+                    }}
+                  />
+                </div>
+              ) : estChoix ? (
                 <CarteChoixOptions
                   className="carte-actions-bottom"
                   options={options}
-                  onChoix={(opt) => validerReponseDirecte(opt.trim().charAt(0))}
+                  selectedKeys={choixSelectionnes}
+                  onToggle={(optionKey) => gererChoixMultiple(optionKey)}
                 />
               ) : estVraiFaux ? (
                 <CarteVraiFauxButtons
@@ -112,6 +168,7 @@ const CarteFaune = ({ carte, onReponse }) => {
               estChoix={estChoix}
               estVraiFaux={estVraiFaux}
               estBonus={estBonus}
+              estAnagramme={estAnagramme}
               onReponse={onReponse}
             />
           )}

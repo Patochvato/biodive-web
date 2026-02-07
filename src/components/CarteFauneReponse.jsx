@@ -11,6 +11,7 @@ const CarteFauneReponse = ({
   estChoix,
   estVraiFaux,
   estBonus,
+  estAnagramme,
   onReponse
 }) => {
   const pointsFinal = scoreAutomatique !== null ? scoreAutomatique : pointsCarte;
@@ -22,7 +23,9 @@ const CarteFauneReponse = ({
           className="carte-result-title"
           style={{ color: scoreAutomatique > 0 ? '#2e7d32' : '#c62828' }}
         >
-          {scoreAutomatique > 0 ? "EXCELLENT ! \u2728" : "OUPS... \ud83e\udd88"}
+          {scoreAutomatique > 0
+            ? (estAnagramme ? "BRAVO ! \u2728" : "EXCELLENT ! \u2728")
+            : "OUPS... \ud83e\udd88"}
         </h2>
       )}
 
@@ -31,7 +34,7 @@ const CarteFauneReponse = ({
         <p className="carte-reponse-texte">{explications}</p>
       </div>
 
-      {(estChoix || estVraiFaux || estBonus) ? (
+      {(estChoix || estVraiFaux || estBonus || estAnagramme) ? (
         <div className="carte-actions-bottom">
           <CarteActionButton label="CONTINUER" onClick={() => onReponse(pointsFinal)} />
         </div>

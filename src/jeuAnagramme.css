@@ -1,0 +1,68 @@
+.jeu-anagramme {
+  text-align: center;
+  padding: 10px;
+}
+
+.jeu-anagramme__saisie {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+.jeu-anagramme__case {
+  width: 35px;
+  height: 40px;
+  border-bottom: 3px solid #0288d1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0288d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jeu-anagramme__lettres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.jeu-anagramme__lettre {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e1f5fe;
+  color: #01579b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.jeu-anagramme__reset {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.jeu-anagramme__actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.jeu-anagramme__abandon {
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #f44336;
+  cursor: pointer;
+}

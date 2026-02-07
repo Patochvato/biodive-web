@@ -73,6 +73,13 @@
   white-space: pre-line;
 }
 
+.carte-multi-reponse {
+  font-size: 0.85rem;
+  color: #0277bd;
+  margin: 0 0 10px 0;
+  font-style: italic;
+}
+
 .carte-btn {
   width: 100%;
   padding: 12px;
@@ -90,6 +97,12 @@
   text-align: left;
   font-size: 0.95rem;
   color: #0277bd;
+}
+
+.carte-btn-choix.is-selected {
+  background-color: #bbdefb;
+  border-color: #0277bd;
+  color: #01579b;
 }
 
 .carte-btn-vrai {
@@ -187,6 +200,7 @@
 .carte-action-icone {
   width: 100px;
   height: 100px;
+  align-self: center;
   margin-bottom: 10px;
 }
 
