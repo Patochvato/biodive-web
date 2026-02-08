@@ -285,24 +285,24 @@
       "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale.",
       "REPONSE": "hippocampe.",
       "EXPLICATIONS": "Une fois les oeufs pondus, le mâle les féconde avec son sperme. L'incubation dure environ 2 à 3 semaines, Il mettra au monde entre 5 et 1 800 « bébés » hippocampe.",
-      "@images": "",
+      "@images": "f29.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "biologie",
       "POINTS": "40"
     },
     {
       "ID": "faune_30",
-      "QUESTION": "Le calmar vit en pleine eau, à faible profondeur, près des récifs coralliens. Son corps translucide est bordé d'une nageoire latérale ondulante. Véritable caméléon, il devient blanc, noir, bleu, violet, rouge ou jaune.",
-      "REPONSE": " ",
+      "QUESTION": "Le calmar vit en pleine eau, son corps translucide est bordé d'une nageoire latérale ondulante.\n Véritable caméléon, il devient blanc, noir, bleu, violet, rouge ou jaune.",
+      "REPONSE": "VRAI",
       "EXPLICATIONS": "👉  Il chasse en bande en encerclant les proies (petits poissons et crustacés). Peu méfiant, à la première alerte il s'enfuie en libérant une encre de camouflage.",
       "@images": "f30.jpg",
-      "TYPE": "BONUS",
+      "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
       "POINTS": "20"
     },
     {
       "ID": "faune_31",
-      "QUESTION": "\nA Les coraux durs, renferment des polypes vivant dans leurs squelettes calcaires.\nB Ces animaux se nourrissent de petits organismes générés par des algues\nC Les coraux durs sont plus résistants que les coraux mouss.",
+      "QUESTION": "\nA Les coraux durs renferment des polypes vivant dans leurs squelettes calcaires\nB Ces animaux se nourrissent de petits organismes générés par des algues\nC Les coraux durs sont plus résistants que les coraux mous.",
       "REPONSE": "A,B",
       "EXPLICATIONS": "👉 Effleurer certains coraux déclenche des cellules urticantes qui provoquent une vive douleur semblable à une brûlure \n(ex : corail de feu).",
       "@images": "f31.jpg",
@@ -322,21 +322,21 @@
     },
     {
       "ID": "faune_33",
-      "QUESTION": "Le dauphin à long bec se caractérise par son rostre. Il se nourrit de petits poissons et de calmars qu'il chasse à de grandes profondeurs (+ de 100 mètres). Il vit en groupe et communique avec ses congénères par des sons complexes pour avertir d'un danger ou de la présence de nourriture.",
-      "REPONSE": "",
-      "EXPLICATIONS": "👉 Les dauphins se saluent en employant un vocabulaire spécifique, comme s'il s'agissait de noms propres.",
+      "QUESTION": "Le dauphin à long bec caractérisé par son rostre.\nA se nourrit de petits poissons et de calmars qu'\nB chasse à de grandes profondeurs (+ de 100 mètres)\nB est solitaire",
+      "REPONSE": "A,C",
+      "EXPLICATIONS": "👉Il vit en groupe et communique avec ses congénères par des sons complexes pour avertir d'un danger ou de la présence de nourriture",
       "@images": "f33.jpg",
-      "TYPE": "BONUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "20"
     },
     {
       "ID": "faune_34",
-      "QUESTION": "Tubulaire ou en barrique, d'aspect velours ou épineux, de couleur verte, jaune ou rouge, les éponges sont des animaux qui n'ont ni oeil, ni bouche, ni systèmes nerveux, respiratoire et digestif. L'éponge est un véritable filtre.",
-      "REPONSE": "",
+      "QUESTION": "Tubulaire ou en barrique, d'aspect velours ou épineux, de couleur verte, jaune ou rouge, je n'ai ni oeil, ni bouche, ni systèmes nerveux, respiratoire et digestif.",
+      "REPONSE": "éponge",
       "EXPLICATIONS": "👉 Elle se nourrit des éléments nutritifs (plancton et oxygène) contenus dans l'eau qu'elle pompe 24/24h. Elle peut en ingurgiter 80 litres par jour.",
       "@images": "f34.jpg",
-      "TYPE": "BONUS",
+      "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
       "POINTS": "40"
     },
@@ -355,7 +355,7 @@
       "QUESTION": "Comment se nomment les pauses successives que les plongeurs sont amenés à faire lors d'une remontée,\nA phase d'oxygénation,\nB palier de décompression,\nC période de régénération,\nD étape de récupération.",
       "REPONSE": "B",
       "EXPLICATIONS": "Appelé aussi palier de désaturation, ces paliers permettent d'éviter la formation de bulles d'azote dans le corps qui peuvent entraîner un accident de décompression.",
-      "@images": "",
+      "@images": "Fichier 11.svg",
       "TYPE": "CHOIX",
       "CATEGORIE": "plongée",
       "POINTS": "20"
@@ -372,11 +372,11 @@
     },
     {
       "ID": "faune_38",
-      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine de Ste Rose, je suis également l'un des plus anciens équipements de plongée, je protège aussi le fromage.",
-      "REPONSE": "Une cloche.",
+      "QUESTION": "Une légende dit que depuis 1870 je repose au fond de la Marine de Ste Rose, je suis un vestige du passé, et certains plongeurs disent m'avoir entendu.",
+      "REPONSE": "",
       "EXPLICATIONS": "Vers 1870, lors de la construction de l'église de Sainte Rose, deux cloches avaient été commandées. On raconte que, l'une d'elles serait tombée d'un canot de débarquement dans la Marine. Mystère",
-      "@images": "",
-      "TYPE": "QUI SUIS-JE",
+      "@images": "f38.jpg",
+      "TYPE": "BONUS",
       "CATEGORIE": "légende",
       "POINTS": "40"
     },
@@ -392,8 +392,8 @@
     },
     {
       "ID": "faune_40",
-      "QUESTION": "La roche Kaisari s'appelle ainsi car : \nA Georges Kaisari, un pêcheur de Sainte-Rose l'a découverte ,\nB sous l'eau, sa silhouette ressemble à Jules Késarus, empereur romain ,\nC un poisson endémique le Kaisari verticus s'y reproduit ,\nD un bateau, le Kaisari s'y est échoué en 1901.",
-      "REPONSE": "D",
+      "QUESTION": "La roche Kaisari s'appelle ainsi car : \nA Georges Kaisari, un pêcheur de Sainte-Rose l'a découverte,\nB un poisson endémique le Kaisari verticus s'y reproduit ,\nC un bateau, le Kaisari s'y est échoué en 1901.",
+      "REPONSE": "C",
       "EXPLICATIONS": "Ce bateau a fait naufrage le 13 janvier 1901. Son nom signifie empereur ou impératrice en indo-européen.",
       "@images": "",
       "TYPE": "CHOIX",
@@ -405,7 +405,7 @@
       "QUESTION": "L'Anse des Cascades un des sites de plongée.C'est un lieu de ponte pour les calmars qui viennent en octobre déposer leurs oeufs dans les nombreuses cavités.",
       "REPONSE": "",
       "EXPLICATIONS": " Les plongeurs découvrent une grande diversité de coraux dont le tabulaire aux branches tourmentées. L'ensemble est majestueux. Les jeunes pousses pointent verticalement et prennent une forme horizontale en grandissant.",
-      "@images": "f41.jpg",
+      "@images": "site1.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
       "POINTS": "20"
@@ -415,7 +415,7 @@
       "QUESTION": "La Marine. C'est un lieu idéal pour le photographe débutant. Celui-ci immortalisera une multitude de nudibranches et l'antennaire débonnaire qui attend immobile ses proies, perché sur ses nageoires pectorales et ventrales semblables à des pattes coudées. Dérangé, il marche avec ses mêmes nageoires. Parfois il utilise une nage par réaction en aspirant de l'eau qu'il rejette par de petites ouvertures branchiales en forme de siphon.",
       "REPONSE": "",
       "EXPLICATIONS": "Le Petit Tombant est un site de plongée situé à la sortie du port. Il est réputé pour sa grande diversité de coraux et d'espèces marines.",
-      "@images": "f42.jpg",
+      "@images": "site2.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
       "POINTS": "60"
@@ -425,7 +425,7 @@
       "QUESTION": "Le 13/41. Certains auront la chance de rencontrer un banc de thons listao, appelé aussi bonite à la Réunion, plus rarement une tortue solitaire. Ils découvriront un ou plusieurs ovula ovum, coquillage d'un blanc immaculé. Un manteau noir parsemé de points blancs ou jaunes recouvre la totalité de la coquille en joignant ses deux parties au sommet du dos arrondi.",
       "REPONSE": "",
       "EXPLICATIONS": "Le 13/41 comme son nom l'indique est un tombant entre 13 et 41. Ces deux profondeurs sont accessibles en plongée.",
-      "@images": "",
+      "@images": "site3.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
       "POINTS": "20"
@@ -474,7 +474,7 @@
       "ID": "faune_48",
       "QUESTION": "Dans ce fouillis un intrus s'est glissé\nA un bonnet de prêtre poussiéreux\nB des candélabres rococo\nC un bénitier défraîchi\nD un oratoire abandonné.",
       "REPONSE": "D",
-      "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière. L'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants des océans.",
+      "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière.\nL'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants des océans.",
       "@images": "",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
@@ -603,7 +603,7 @@
     {
       "ID": "faune_61",
       "QUESTION": "Je fais partie des pélagiques vivant le plus souvent en banc.j'ai colonisé tous les océans du monde et la plupart des mers",
-      "REPONSE": "calmar",
+      "REPONSE": "CALMAR",
       "EXPLICATIONS": "Il n'y a aucune différence entre le calamar (aussi appelé calmar), les encornets, les chipirons et les supions. Tout cela est uniquement une question de taille et de région ",
       "@images": "f61.jpg",
       "TYPE": "ANAGRAMME",
@@ -612,11 +612,11 @@
     },
     {
       "ID": "faune_62",
-      "QUESTION": "En 4 étapes, comment passer du mot GIN à une espèce de poisson noir et blanc ?\nVous ajoutez une lettre à chaque étape dont voici le synonyme,\n1 bénéfice, 2 semence,\n3 plat, 4 poisson.",
+      "QUESTION": "Je suis très reconnaissable par mes rayures horizontales noires et blanches et mes nageoires jaune vif ponctuées de pois noirs.",
       "REPONSE": "GATERIN",
-      "EXPLICATIONS": "Départ : GIN, 1: GAIN, 2: GRAIN, 3: GRATIN, 4: GATERIN\nPlectorhinchus est un genre de poissons de la famille des Haemulidae. Ils sont appelés « diagrammes ».",
+      "EXPLICATIONS": "Plectorhinchus est un genre de poissons de la famille des Haemulidae. Ils sont appelés « diagrammes ».",
       "@images": "f62.jpg",
-      "TYPE": "MOT EN ESCALIER",
+      "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -655,18 +655,18 @@
       "QUESTION": "Quand les poissons respirent, ils font des bulles.",
       "REPONSE": "FAUX",
       "EXPLICATIONS": "Les poissons utilisent le dioxygène (O2) dissous dans l'eau pour respirer et rejette du dioxyde de carbone (CO2).Les échanges respiratoires entre les gaz (contenus dans l'eau) et le sang se réalisent au niveau des branchies.",
-      "@images": "",
+      "@images": "f66.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
       "POINTS": "20"
     },
     {
       "ID": "faune_67",
-      "QUESTION": "Bavards, les poissons ne prennent la parole que dans certaines situations, défendre leur territoire, se reproduire, signaler un danger, ou se localiser dans un banc. ",
-      "REPONSE": "",
+      "QUESTION": "Les poissons prennent la parole dans certaines situations\nA défendre leur territoire\nB se reproduire\nC signaler un danger\nD se localiser dans un banc ",
+      "REPONSE": "A,B,C,D",
       "EXPLICATIONS": "Pas moins de six types de cris ont été recensés chez la demoiselle, un record ! Eric Parmentier université de Liège dans Sciences et Vie n° 1134 (mars 2012)",
       "@images": "f67.jpg",
-      "TYPE": "BONUS",
+      "TYPE": "CHOIX",
       "CATEGORIE": "comportement",
       "POINTS": "40"
     },
@@ -685,18 +685,18 @@
       "QUESTION": "Trouver l'intrus\nA Le clown\nB La trompette\nC La flûte\nD Le violoniste",
       "REPONSE": "D",
       "EXPLICATIONS": "le violoniste est un crabe donc un invertébré, les trois autres sont des poissons.",
-      "@images": "f65.jpg",
+      "@images": "f69.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
     {
       "ID": "faune_70",
-      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe avec un grand nombre de juvéniles à l'embouchure des rivières avant de les remonter. Hélas, je termine  souvent en cari !",
-      "REPONSE": "Un bichique, ou bisik (en créole).",
-      "EXPLICATIONS": "Le bisik est en voie d'extinction, car trop péché, braconné. Cet alvin a peu de chance de devenir l'adulte cabot bouche ronde qui lui aussi est en train de disparaitre des rivières réunionnaises.",
+      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe l'embouchure des rivières avant de les remonter. Hélas, je termine  souvent en cari !",
+      "REPONSE": "bichique",
+      "EXPLICATIONS": "Le bisik (cabot bouche ronde) est en voie d'extinction, car trop péché, braconné. Cet alvin a peu de chance de devenir l'adulte cabot bouche ronde qui lui aussi est en train de disparaitre des rivières réunionnaises.",
       "@images": "",
-      "TYPE": "QUI SUIS-JE",
+      "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
       "POINTS": "40"
     },
@@ -805,7 +805,7 @@
       "QUESTION": "A la Réunion, alticus monochrus ou cabot sauteur vit hors de l'eau sur des rochers. Laquelle de ces affirmations est fausse,\nA il voit à 360°,\nB il peut vivre plus de 6 minutes hors de l'eau,\nC il n'aime pas vraiment l'eau,\nD il a des poumons.",
       "REPONSE": "D",
       "EXPLICATIONS": "C'est un poisson, appelé blennie à dents de peigne des Mascareignes",
-      "@images": "Alticus Monochrus.jpg",
+      "@images": "f81.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "biologie",
       "POINTS": "20"
@@ -818,6 +818,46 @@
       "@images": "f82.png",
       "TYPE": "DEVINETTE",
       "CATEGORIE": "humour",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_83",
+      "QUESTION": "A découvrir. Ces nouveaux reliefs ont attiré une multitude de poissons dont une plantureuse murène qui en a fait son habitat. Son corps est recouvert d'un mucus qui lui permet de se déplacer facilement dans les failles étroites. Pour mieux se camoufler, elle se pare de couleurs, de pois, d'étoiles et de rayures. Au fond de sa gorge se cache une redoutable seconde mâchoire, qui entraîne inexorablement ses proies vers le tube digestif. Alors attention à sa morsure qui, en plus, est toxique.",
+      "REPONSE": "",
+      "EXPLICATIONS": "",
+      "@images": "site6.jpg",
+      "TYPE": "BONUS",
+      "CATEGORIE": "site",
+      "POINTS": "20"
+    },
+    {
+      "ID": "faune_84",
+      "QUESTION": "Qui est-il, ce mystérieux personnage qui se balance sur le sable, malmené par la houle\nrecouvert d'un manteau de corail",
+      "REPONSE": "",
+      "EXPLICATIONS": "C'est le gardien trésor de la plage de la Marine, il regarde défiler les plongeurs, les pêcheurs, les tempêtes, les cyclones, et il est toujours là pour accueillir les visiteurs.",
+      "@images": "site4.jpg",
+      "TYPE": "BONUS",
+      "CATEGORIE": "site",
+      "POINTS": "20"
+    },
+    {
+      "ID": "faune_85",
+      "QUESTION": "Les poissons-perroquets contribuent à la formation du sable corallien ",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": " En raclant le corail pour se nourrir d'algues, ils ingèrent des éléments calcaires qu'ils évacuent ensuite sous forme de sable",
+      "@images": "f36.jpg",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "faune",
+      "POINTS": "20"
+    },
+    {
+      "ID": "faune_86",
+      "QUESTION": "Les coraux sont des herbivores qui se nourrissent exclusivement d'algues.",
+      "REPONSE": "FAUX",
+      "EXPLICATIONS": "Les coraux sont carnivores ; ils capturent le zooplancton la nuit à l'aide de leurs cellules urticantes (cnidoblastes)",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "faune",
       "POINTS": "40"
     }
   ],
@@ -851,7 +891,7 @@
       "EFFET": "Sans protection vous allez être retardé.",
       "VALEUR": "-9",
       "OBJET_REQUIS": "Couteau",
-      "EXPLICATIONS": "Quand il se sent en danger, le poissons-pierre déploie ses épines dorsales qui se terminent par des piquants acérés qui injectent un venin. La piqure très douloureuse peut provoquer une paralysie et entrainer un accident de plongée. Le venin est thermolabile, la chaleur atténue ses effets."
+      "EXPLICATIONS": "Quand il se sent en danger, le poissons-pierre dresse ses épines dorsales acérés qui injectent un venin. La piqure très douloureuse peut provoquer une paralysie et entrainer un accident de plongée. Le venin est thermolabile, la chaleur atténue ses effets."
     },
     {
       "ID": "action_04",
@@ -948,7 +988,7 @@
     },
     {
       "ID": "action_13",
-      "DESCRIPTION": "Le baliste titan est un poisson qui défend son territoire en période de ponte. Vous en rencontrez un au cours de votre plongée, vous nagez prudemment.",
+      "DESCRIPTION": "Le baliste titan est un poisson qui défend son territoire en période de ponte. Pour l'éviter, vous nagez prudemment.",
       "CATEGORIE": "Faune",
       "@images": "Afaune.jpg",
       "TYPE": "Danger",
@@ -1055,7 +1095,7 @@
       "TYPE": "super bonus",
       "EFFET": "Vous gagnez un Super Bonus.",
       "VALEUR": "bouclier",
-      "EXPLICATIONS": "Un concours de photos sous-marines est organisé régulièrement sur Sainte-Rose. Le règlement fixe le thème et les modalités. Il est accessible au plongeurs et apnéistes qui concourent dans leur catégorie."
+      "EXPLICATIONS": "Un concours de photos sous-marines est organisé sur Sainte-Rose. Le règlement fixe le thème et les modalités. Les photos sont exposées et les gagnants récompensés."
     },
     {
       "ID": "action_24",
@@ -1089,7 +1129,7 @@
     },
     {
       "ID": "action_27",
-      "DESCRIPTION": "Gardez cette carte, alerte requin, vous pourrez poursuivre votre parcours sur mer si vous rencontrer un requin.",
+      "DESCRIPTION": "Vous pourrez poursuivre votre parcours sur mer si vous rencontrer un requin.",
       "CATEGORIE": "super bonus",
       "@images": "Abonus.jpg",
       "TYPE": "BONUS",

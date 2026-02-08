@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ajout Catalogue</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 720px; margin: 0 auto; }
+    label { display: block; margin: 10px 0 4px; }
+    input, textarea, select { width: 100%; padding: 8px; }
+    button { margin-top: 12px; padding: 10px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Ajouter une entrée</h1>
+  <form method="POST">
+    <label>ID</label>
+    <input name="ID" placeholder="faune_36" required />
+
+    <label>QUESTION</label>
+    <textarea name="QUESTION" rows="4" required></textarea>
+
+    <label>REPONSE</label>
+    <input name="REPONSE" required />
+
+    <label>EXPLICATIONS</label>
+    <textarea name="EXPLICATIONS" rows="3" required></textarea>
+
+    <label>@images (optionnel)</label>
+    <input name="@images" placeholder="laisser vide pour l'image par défaut" />
+
+    <label>TYPE</label>
+    <select name="TYPE" required>
+      <option value="CHOIX">CHOIX</option>
+      <option value="ANAGRAMME">ANAGRAMME</option>
+      <option value="VRAI OU FAUX">VRAI OU FAUX</option>
+      <option value="QUESTION">QUESTION</option>
+      <option value="BONUS">BONUS</option>
+    </select>
+
+    <label>CATEGORIE</label>
+    <select name="CATEGORIE" required>
+      <option value="faune">faune</option>
+      <option value="action">action</option>
+      <option value="site">site</option>
+      <option value="bonus">bonus</option>
+      <option value="plongée">plongée</option>
+    </select>
+
+    <label>POINTS</label>
+    <input name="POINTS" placeholder="20" required />
+
+    <button type="submit">Ajouter</button>
+  </form>
+</body>
+</html>

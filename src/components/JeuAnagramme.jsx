@@ -52,6 +52,16 @@ const JeuAnagramme = ({ motATrouver = '', onWin, onAbandon }) => {
     setLettresMelangees(melangerLettres(motNormalise));
   };
 
+  const annulerDerniereLettre = () => {
+    if (proposition.length === 0) return;
+
+    const nouvelleProposition = [...proposition];
+    const lettreRetiree = nouvelleProposition.pop();
+
+    setProposition(nouvelleProposition);
+    setLettresMelangees([...lettresMelangees, lettreRetiree]);
+  };
+
   const handleAbandon = () => {
     if (onAbandon) {
       onAbandon();
@@ -88,6 +98,14 @@ const JeuAnagramme = ({ motATrouver = '', onWin, onAbandon }) => {
       <div className="jeu-anagramme__actions">
         <button type="button" onClick={reset} className="jeu-anagramme__reset" disabled={!motNormalise}>
           Reinitialiser
+        </button>
+        <button
+          type="button"
+          onClick={annulerDerniereLettre}
+          className="jeu-anagramme__reset"
+          disabled={!motNormalise || proposition.length === 0}
+        >
+         Effacer
         </button>
         <button type="button" onClick={handleAbandon} className="jeu-anagramme__abandon" disabled={!motNormalise}>
           Abandonner
