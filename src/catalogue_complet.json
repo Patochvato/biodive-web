@@ -622,8 +622,8 @@
     },
     {
       "ID": "faune_63",
-      "QUESTION": "Mon premier est une note de musique, \nMon second est une note de musique, \nMon troisième sert à attacher, \nMon tout est un personnage de légende",
-      "REPONSE": "Mon tout est une SIRENE.",
+      "QUESTION": "Mon premier est une note de musique\nMon second est une note de musique\nMon troisième sert à attacher\nMon tout est un personnage de légende",
+      "REPONSE": "SIRENE",
       "EXPLICATIONS": "1 Si - 2 Ré - 3 nœud. ",
       "@images": "f63.png",
       "TYPE": "CHARADE",

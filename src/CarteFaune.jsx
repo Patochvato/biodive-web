@@ -20,6 +20,7 @@ const CarteFaune = ({ carte, onReponse }) => {
   const estChoix = carte.TYPE?.toUpperCase() === "CHOIX";
   const estAnagramme = carte.TYPE?.toUpperCase() === "ANAGRAMME";
   const estQuiSuisJe = carte.TYPE?.toUpperCase() === "QUI SUIS-JE";
+  const estCharade = carte.TYPE?.toUpperCase() === "CHARADE";
 
   // Extraction des options pour le TYPE CHOIX
   const partiesQuestion = carte.QUESTION.split('\n');
@@ -138,13 +139,22 @@ const CarteFaune = ({ carte, onReponse }) => {
           ) : !montrerReponse ? (
             // Autres types de cartes - face question
             <>
-              <p className="carte-question">{estChoix ? enTeteQuestion : carte.QUESTION}</p>
+              {/*<p className="carte-question">{estChoix ? enTeteQuestion : carte.QUESTION}</p>*/}
+              {/* On n'affiche le texte ici QUE si ce n'est pas géré par un composant spécial (Charade ou Qui Suis-Je) */}
+              {!estCharade && !estQuiSuisJe && (
+                <p className="carte-question">
+                  {estChoix ? enTeteQuestion : carte.QUESTION}
+                </p>
+              )}
+
               {estChoix && reponsesChoix.length > 1 && (
                 <p className="carte-multi-reponse">Plusieurs reponses possibles</p>
               )}
               
               {estQuiSuisJe ? (
                 <div className="carte-actions-bottom">
+                  {/* On peut ajouter le texte ici si TexteATrous ne l'affiche pas de lui-même */}
+                  <p className="carte-question">{carte.QUESTION}</p> 
                   <TexteATrous
                     reponseAlternative={carte.REPONSE || ''}
                     onWin={() => {
@@ -173,6 +183,19 @@ const CarteFaune = ({ carte, onReponse }) => {
                       setScoreAutomatique(-pointsCarte);
                       setMontrerReponse(true);
                     }}
+                  />
+                </div>
+              ) : estCharade ? (
+                <div className="carte-actions-bottom">
+                  <CharadeInput
+                    question={carte.QUESTION}
+                    reponse={carte.REPONSE}
+                    onWin={() => {
+                      playSound('gagne.mp3', 0.4);
+                      setScoreAutomatique(pointsCarte);
+                      setMontrerReponse(true);
+                    }}
+                    
                   />
                 </div>
               ) : estChoix ? (
@@ -210,6 +233,7 @@ const CarteFaune = ({ carte, onReponse }) => {
               estAnagramme={estAnagramme}
               estQuiSuisJe={estQuiSuisJe}
               onReponse={onReponse}
+              estCharade={estCharade}
             />
           )}
         </div>

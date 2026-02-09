@@ -12,10 +12,11 @@ const CarteFauneReponse = ({
   estBonus,
   estAnagramme,
   estQuiSuisJe,
+  estCharade,
   onReponse
 }) => {
   // Déterminer si c'est un jeu interactif (avec score automatique)
-  const estJeuInteractif = estChoix || estAnagramme || estQuiSuisJe || estVraiFaux;
+  const estJeuInteractif = estChoix || estAnagramme || estQuiSuisJe || estVraiFaux || estCharade;
 
   return (
     <div className="carte-reponse-container">
