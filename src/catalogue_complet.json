@@ -143,7 +143,7 @@
     {
       "ID": "faune_15",
       "QUESTION": "Je suis un échinoderme comme l'étoile de mer ou l'oursin",
-      "REPONSE": "OPHUIRE.",
+      "REPONSE": "OPHIURE.",
       "EXPLICATIONS": "👉 Les ophiures se déplacent rapidement en rampant sur le fond marin à l'aide de leurs bras articulés.",
       "@images": "f15.jpg",
       "TYPE": "ANAGRAMME",
@@ -173,7 +173,7 @@
     {
       "ID": "faune_18",
       "QUESTION": "Je suis un poisson qui vole pour échapper à ses prédateurs.",
-      "REPONSE": "EXOCET.",
+      "REPONSE": "EXOCET",
       "EXPLICATIONS": "L'exocet nage rapidement près de la surface de l'eau, avec ses nageoires près du corps. Quand il sort de l'eau, il les déplie et vole.",
       "@images": "",
       "TYPE": "ANAGRAMME",
@@ -182,7 +182,7 @@
     },
     {
       "ID": "faune_19",
-      "QUESTION": "Trouver l'intrus :\nA Picasso\nB Crayon\nC Danseuse espagnole\nD Anémone ?",
+      "QUESTION": "Trouver l'intrus :\nA Picasso\nB Crayon\nC Danseuse espagnole\nD Anémone",
       "REPONSE": "A",
       "EXPLICATIONS": "Picasso (baliste) est un poisson les autres sont des invertébrés : L'anémone (corail) , crayon (oursin), danseuse espagnole (nudibranche).",
       "@images": "",
@@ -322,7 +322,7 @@
     },
     {
       "ID": "faune_33",
-      "QUESTION": "Le dauphin à long bec caractérisé par son rostre.\nA se nourrit de petits poissons et de calmars qu'\nB chasse à de grandes profondeurs (+ de 100 mètres)\nB est solitaire",
+      "QUESTION": "Le dauphin à long bec caractérisé par son rostre\nA se nourrit de petits poissons et de calmars\nB chasse à de grandes profondeurs (+ de 100 mètres)\nB est solitaire",
       "REPONSE": "A,C",
       "EXPLICATIONS": "👉Il vit en groupe et communique avec ses congénères par des sons complexes pour avertir d'un danger ou de la présence de nourriture",
       "@images": "f33.jpg",
@@ -382,7 +382,7 @@
     },
     {
       "ID": "faune_39",
-      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs, et mes yeux sont proches de ceux des humains.",
+      "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs.",
       "REPONSE": "zourite.",
       "EXPLICATIONS": "Le poulpe, la pieuvre, le zourite.Trois mots pour désigner le même animal. Pieuvre se trouve plutôt dans la littérature (Victor Hugo), zourite est l'appellation créole. Poulpe est surtout l'appellation commerciale et gastronomique, du poulpe commun.",
       "@images": "f39.jpg",
@@ -454,7 +454,7 @@
       "ID": "faune_46",
       "QUESTION": "La pêche traditionnelle à la « gaulette » a des conséquences sur l'écosystème océanique.",
       "REPONSE": "VRAI",
-      "EXPLICATIONS": "Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus.\n Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
+      "EXPLICATIONS": "Quand le fil de pêche se cassent, il s'enroule autour des branches de corail et provoque la dégénérescence de leurs tissus. Le plastique qui entoure le leste est encore plus nocif car il est ingéré par les organismes vivants (tortues, poissons, etc...).",
       "@images": "f46.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "environnement",
@@ -518,12 +518,12 @@
       "@images": "f52.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_53",
       "QUESTION": "Sédentaire, je peux rester plusieurs années au même endroit, prince du mimétisme avec mes incrustations on me confond avec du corail et ma forme m'a donné mon nom, si on me trouve c'est parce que mes yeux sont semblables à des miroirs.",
-      "REPONSE": "Un poisson-feuille.",
+      "REPONSE": "Un poisson-feuille",
       "EXPLICATIONS": "De la famille des Scorpaenidae. Les rayons de sa nageoire dorsale sont venimeux. Sa bouche en position terminale est de grande dimension.",
       "@images": "f53.jpg",
       "TYPE": "QUI SUIS-JE",
@@ -562,8 +562,8 @@
     },
     {
       "ID": "faune_57",
-      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication impliquant une intervention médicale pour détresse respiratoire et troubles cardio-vasculaires.",
-      "REPONSE": "Un poisson coffre.",
+      "QUESTION": "Je possède une toxine sur la peau : l'ostracitoxine. Seuls les experts sont capables de me cuisiner sans risque de provoquer une intoxication.",
+      "REPONSE": "Un poisson coffre",
       "EXPLICATIONS": "Lorsqu'ils sont stressés, ils émettent un poison inoffensif pour l'homme mais efficace contre leurs prédateurs",
       "@images": "f57.jpg",
       "TYPE": "QUI SUIS-JE",
@@ -573,7 +573,7 @@
     {
       "ID": "faune_58",
       "QUESTION": "Pour dormir je ne ferme pas les yeux, par contre je m'enveloppe dans un cocon de mucus.\nSouhaitez-vous que je répète la phrase ?",
-      "REPONSE": "Un poissons perroquet.",
+      "REPONSE": "Un poisson perroquet.",
       "EXPLICATIONS": "il existe de nombreuses espèces de poissons perroquets. Ils se nourrissent principalement d'algues et de petits invertébrés qu'ils raclent sur les roches et les coraux avec leurs dents fusionnées en un bec solide.",
       "@images": "f58.jpg",
       "TYPE": "DEVINETTE",
@@ -633,7 +633,7 @@
     {
       "ID": "faune_64",
       "QUESTION": "Coquillage dont le motif pourrait décorer des assiettes faites dans une matière qui porte le même nom que ce coquillage.",
-      "REPONSE": "Une porcelaine.",
+      "REPONSE": "Une porcelaine",
       "EXPLICATIONS": "",
       "@images": "f64.jpg",
       "TYPE": "QUI SUIS-JE",
@@ -788,7 +788,7 @@
       "@images": "f79.png",
       "TYPE": "CHOIX",
       "CATEGORIE": "biologie",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_80",
@@ -832,7 +832,7 @@
     },
     {
       "ID": "faune_84",
-      "QUESTION": "Qui est-il, ce mystérieux personnage qui se balance sur le sable, malmené par la houle\nrecouvert d'un manteau de corail",
+      "QUESTION": "Qui est-il, ce mystérieux personnage qui se balance sur le sable, malmené par la houle recouvert d'un manteau de corail",
       "REPONSE": "",
       "EXPLICATIONS": "C'est le gardien trésor de la plage de la Marine, il regarde défiler les plongeurs, les pêcheurs, les tempêtes, les cyclones, et il est toujours là pour accueillir les visiteurs.",
       "@images": "site4.jpg",
@@ -1069,7 +1069,7 @@
     },
     {
       "ID": "action_21",
-      "DESCRIPTION": "Cette carte, vous évitera de retourner au club de plongée si vous êtes pris dans un courant marin.",
+      "DESCRIPTION": "Vous serez protégé si vous êtes pris dans un courant marin.",
       "CATEGORIE": "super bonus",
       "@images": "Abonus.jpg",
       "TYPE": "super bonus",
@@ -1167,7 +1167,7 @@
       "EFFET": "Vous êtes pris dans le courant, sans protection reculez de 9 cases",
       "VALEUR": "-9",
       "OBJET_REQUIS": "bouclier",
-      "EXPLICATIONS": "Bonne chance"
+      "EXPLICATIONS": "Sur la cote de Sainte-Rose, les roches volcaniques affleurent à marée basse. Elles sont invisibles à marée haute."
     },
     {
       "ID": "action_31",

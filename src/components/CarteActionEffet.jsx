@@ -11,7 +11,7 @@ const CarteActionEffet = ({ estSuperBonus, estProtege, aBouclier, objetRequis, e
           border: estSuperBonus ? '2px solid #ffd700' : '1px dashed #ef6c00'
         }}
       >
-        <strong>{estProtege ? "S\u00c9CURIT\u00c9 :" : ""}</strong>
+        {/*<strong>{estProtege ? "S\u00c9CURIT\u00c9 :" : ""}</strong>*/}
         <p>
           {estProtege ? `Gr\u00e2ce \u00e0 votre ${aBouclier ? 'Bouclier' : objetRequis}, vous \u00e9vitez le danger !` : effet}
         </p>

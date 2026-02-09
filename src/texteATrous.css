@@ -1,0 +1,64 @@
+.texte-a-trous {
+  text-align: center;
+  padding: 10px;
+}
+
+.texte-a-trous__saisie {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+.texte-a-trous__case {
+  width: 35px;
+  height: 40px;
+  border-bottom: 3px solid #0288d1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0288d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texte-a-trous__case--space {
+  width: 10px;
+  border: none;
+}
+
+.texte-a-trous__lettres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.texte-a-trous__lettre {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e1f5fe;
+  color: #01579b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.texte-a-trous__actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.texte-a-trous__abandon {
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #f44336;
+  cursor: pointer;
+}

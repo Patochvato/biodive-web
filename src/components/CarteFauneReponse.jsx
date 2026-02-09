@@ -1,6 +1,5 @@
 import React from 'react';
 import CarteActionButton from './CarteActionButton';
-import CarteOuiNonButtons from './CarteOuiNonButtons';
 import '../cartes.css';
 
 const CarteFauneReponse = ({
@@ -12,42 +11,55 @@ const CarteFauneReponse = ({
   estVraiFaux,
   estBonus,
   estAnagramme,
+  estQuiSuisJe,
   onReponse
 }) => {
-  const pointsFinal = scoreAutomatique !== null ? scoreAutomatique : pointsCarte;
+  // Déterminer si c'est un jeu interactif (avec score automatique)
+  const estJeuInteractif = estChoix || estAnagramme || estQuiSuisJe || estVraiFaux;
 
   return (
     <div className="carte-reponse-container">
-      {scoreAutomatique !== null && (
-        <h2
-          className="carte-result-title"
-          style={{ color: scoreAutomatique > 0 ? '#2e7d32' : '#c62828' }}
-        >
-          {scoreAutomatique > 0
-            ? (estAnagramme ? "BRAVO ! \u2728" : "EXCELLENT ! \u2728")
-            : "OUPS... \ud83e\udd88"}
-        </h2>
-      )}
-
       <div className="carte-reponse-box">
-        <strong className="carte-reponse-title"> {reponse}</strong>
-        <p className="carte-reponse-texte">{explications}</p>
+        <div className="carte-reponse-title">
+          {reponse}
+        </div>
+        
+        {explications && (
+          <div className="carte-reponse-texte">{explications}</div>
+        )}
       </div>
 
-      {(estChoix || estVraiFaux || estBonus || estAnagramme) ? (
-        <div className="carte-actions-bottom">
-          <CarteActionButton label="CONTINUER" onClick={() => onReponse(pointsFinal)} />
-        </div>
-      ) : (
-        <div className="carte-actions-bottom carte-reponse-footer">
-          <p className="carte-reponse-question">Avez-vous trouve ?</p>
-          <CarteOuiNonButtons
-            points={pointsCarte}
-            onOui={() => onReponse(pointsCarte)}
-            onNon={() => onReponse(-pointsCarte)}
+      <div className="carte-reponse-footer">
+        {estBonus ? (
+          <CarteActionButton
+            label="RÉCUPÉRER"
+            onClick={() => onReponse(pointsCarte)}
           />
-        </div>
-      )}
+        ) : estJeuInteractif ? (
+          <CarteActionButton
+            label="CONTINUER"
+            onClick={() => onReponse(scoreAutomatique || 0)}
+          />
+        ) : (
+          <>
+            <p className="carte-reponse-question">Avez-vous trouvé ?</p>
+            <div className="carte-reponse-actions">
+              <button 
+                className="carte-btn-validation carte-btn-oui" 
+                onClick={() => onReponse(pointsCarte)}
+              >
+                OUI ({pointsCarte > 0 ? '+' : ''}{pointsCarte})
+              </button>
+              <button 
+                className="carte-btn-validation carte-btn-non" 
+                onClick={() => onReponse(-pointsCarte)}
+              >
+                NON (-{pointsCarte})
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

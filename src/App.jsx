@@ -195,7 +195,17 @@ const preparerMiniJeu = useCallback(() => {
     { solution: ["ANCRE","NACRE"], melange: "NCARE" },
     { solution: ["CORAIL"], melange: "LIAROC" },
     { solution: ["REQUIN"], melange: "NUIREQ" },
-    { solution: ["MEDUSE"], melange: "USEDEM" }
+    { solution: ["MEDUSE"], melange: "USEDEM" },
+    { solution: ["BALEINE"], melange: "ELENIBA" },
+    { solution: ["TORTUE"], melange: "UORTTE" },
+    { solution: ["MANTA"], melange: "TAMAN" },
+    { solution: ["POULPE"], melange: "LUPOPE" },
+    { solution: ["LAGON"], melange: "NOGAL" },
+    { solution: ["ABYSSE"], melange: "SABYSE" },
+    { solution: ["PLANCTON"], melange: "TOLNCPAN" },
+    { solution: ["CRABE"], melange: "BECRA" },
+    { solution: ["DOUVIN"], melange: "NIDOUV" },
+    { solution: ["RIVAGE"], melange: "GERAVI" }
   ];
   
   const choisi = dictionnaire[Math.floor(Math.random() * dictionnaire.length)];

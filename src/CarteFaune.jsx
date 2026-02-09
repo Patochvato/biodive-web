@@ -6,6 +6,8 @@ import CarteFauneReponse from './components/CarteFauneReponse';
 import CarteHeader from './components/CarteHeader';
 import CarteVraiFauxButtons from './components/CarteVraiFauxButtons';
 import JeuAnagramme from './components/JeuAnagramme';
+import TexteATrous from './components/TexteATrous';
+import CharadeInput from './components/CharadeInput';
 import './cartes.css';
 
 const CarteFaune = ({ carte, onReponse }) => {
@@ -17,6 +19,7 @@ const CarteFaune = ({ carte, onReponse }) => {
   const estVraiFaux = carte.TYPE?.toUpperCase().includes("VRAI OU FAUX");
   const estChoix = carte.TYPE?.toUpperCase() === "CHOIX";
   const estAnagramme = carte.TYPE?.toUpperCase() === "ANAGRAMME";
+  const estQuiSuisJe = carte.TYPE?.toUpperCase() === "QUI SUIS-JE";
 
   // Extraction des options pour le TYPE CHOIX
   const partiesQuestion = carte.QUESTION.split('\n');
@@ -36,8 +39,13 @@ const CarteFaune = ({ carte, onReponse }) => {
   const motAnagramme = carte.REPONSE || '';
   
   useEffect(() => {
-    if (estBonus) playSound('gagne.mp3', 0.4);
-  }, [estBonus]);
+    if (estBonus) {
+      playSound('gagne.mp3', 0.4);
+      // Pour les BONUS, pas de verso - on passe directement au score
+      setScoreAutomatique(pointsCarte);
+      setMontrerReponse(true);
+    }
+  }, [estBonus, pointsCarte]);
 
   useEffect(() => {
     setMontrerReponse(false);
@@ -96,7 +104,7 @@ const CarteFaune = ({ carte, onReponse }) => {
       style={{ border: estBonus ? '4px solid #ffd54f' : '2px solid #0288d1' }}
     >
       <CarteHeader
-        title={estBonus ? "🎁 BONUS" : (montrerReponse ? "RÉPONSE" : `${carte.CATEGORIE} - ${carte.TYPE} `)}
+        title={estBonus ? `🎁 BONUS - ${carte.CATEGORIE}` : (montrerReponse ? "RÉPONSE" : `${carte.CATEGORIE} - ${carte.TYPE} `)}
         pointsText={`${pointsCarte} pts`}
         headerStyle={{
           backgroundColor: obtenirCouleurHeader(),
@@ -113,14 +121,45 @@ const CarteFaune = ({ carte, onReponse }) => {
         />
 
         <div className="carte-body">
-          {!montrerReponse ? (
+          {estBonus ? (
+            // Affichage spécial pour les BONUS
+            <>
+              <p className="carte-question">{carte.QUESTION}</p>
+              {carte.EXPLICATIONS && (
+                <p className="carte-explications">{carte.EXPLICATIONS}</p>
+              )}
+              <div className="carte-actions-bottom">
+                <CarteActionButton
+                  label="RÉCUPÉRER"
+                  onClick={() => onReponse(pointsCarte)}
+                />
+              </div>
+            </>
+          ) : !montrerReponse ? (
+            // Autres types de cartes - face question
             <>
               <p className="carte-question">{estChoix ? enTeteQuestion : carte.QUESTION}</p>
               {estChoix && reponsesChoix.length > 1 && (
                 <p className="carte-multi-reponse">Plusieurs reponses possibles</p>
               )}
               
-              {estAnagramme ? (
+              {estQuiSuisJe ? (
+                <div className="carte-actions-bottom">
+                  <TexteATrous
+                    reponseAlternative={carte.REPONSE || ''}
+                    onWin={() => {
+                      playSound('gagne.mp3', 0.4);
+                      setScoreAutomatique(pointsCarte);
+                      setMontrerReponse(true);
+                    }}
+                    onAbandon={() => {
+                      playSound('perdu.mp3', 0.4);
+                      setScoreAutomatique(-pointsCarte);
+                      setMontrerReponse(true);
+                    }}
+                  />
+                </div>
+              ) : estAnagramme ? (
                 <div className="carte-actions-bottom">
                   <JeuAnagramme
                     motATrouver={motAnagramme}
@@ -152,14 +191,14 @@ const CarteFaune = ({ carte, onReponse }) => {
               ) : (
                 <div className="carte-actions-bottom">
                   <CarteActionButton
-                    label={estBonus ? "RÉCUPÉRER" : "VOIR LA RÉPONSE"}
+                    label="VOIR LA RÉPONSE"
                     onClick={() => setMontrerReponse(true)}
                   />
                 </div>
               )}
             </>
           ) : (
-            /* --- VERSO : SOLUTION --- */
+            // Face réponse pour les non-BONUS
             <CarteFauneReponse
               scoreAutomatique={scoreAutomatique}
               pointsCarte={pointsCarte}
@@ -169,6 +208,7 @@ const CarteFaune = ({ carte, onReponse }) => {
               estVraiFaux={estVraiFaux}
               estBonus={estBonus}
               estAnagramme={estAnagramme}
+              estQuiSuisJe={estQuiSuisJe}
               onReponse={onReponse}
             />
           )}
