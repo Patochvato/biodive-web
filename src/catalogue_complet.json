@@ -5,7 +5,7 @@
       "QUESTION": "Les poissons clowns vivent en groupe. Le plus gros poisson est la femelle dominante. Quand elle disparait, le plus gros mâle change de sexe.",
       "REPONSE": "VRAI",
       "EXPLICATIONS": "De nombreux poissons sont hermaphrodites. Au début de leur vie ils sont mâles puis deviennent femelles une fois adulte.",
-      "@images": "",
+      "@images": "f1.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "biologie",
       "POINTS": "20"
@@ -92,7 +92,7 @@
     },
     {
       "ID": "faune_10",
-      "QUESTION": "La tortue imbriquée est sur la liste rouge des espèces menacées d'extinction. Combien en reste-t-il dans le monde,\nA 50 000,\nB 10 000,\nC 6 000,\nD moins de 3 000.",
+      "QUESTION": "La tortue verte (Chelonia mydas) est sur la liste rouge des espèces menacées d'extinction. Combien en reste-t-il dans le monde,\nA 50 000,\nB 10 000,\nC 6 000,\nD moins de 3 000.",
       "REPONSE": "C",
       "EXPLICATIONS": "6000 c'est peu. La Liste rouge de l'Union Internationale pour la Conservation de la Nature constitue l'inventaire mondial le plus complet de l'état de conservation global des espèces végétales et animales.",
       "@images": "",
@@ -143,7 +143,7 @@
     {
       "ID": "faune_15",
       "QUESTION": "Je suis un échinoderme comme l'étoile de mer ou l'oursin",
-      "REPONSE": "OPHIURE.",
+      "REPONSE": "OPHIURE",
       "EXPLICATIONS": "👉 Les ophiures se déplacent rapidement en rampant sur le fond marin à l'aide de leurs bras articulés.",
       "@images": "f15.jpg",
       "TYPE": "ANAGRAMME",
@@ -233,7 +233,7 @@
     {
       "ID": "faune_24",
       "QUESTION": "C'est un groupe de plongeurs.",
-      "REPONSE": "PALANQUEE.",
+      "REPONSE": "PALANQUEE",
       "EXPLICATIONS": "👉 Elle symbolise l'esprit de solidarité qui prévaut dans l'activité plongée.",
       "@images": "f24.jpg",
       "TYPE": "ANAGRAMME",
@@ -283,7 +283,7 @@
     {
       "ID": "faune_29",
       "QUESTION": "Je féconde des oeufs pondus par la femelle dans ma poche ventrale.",
-      "REPONSE": "hippocampe.",
+      "REPONSE": "hippocampe",
       "EXPLICATIONS": "Une fois les oeufs pondus, le mâle les féconde avec son sperme. L'incubation dure environ 2 à 3 semaines, Il mettra au monde entre 5 et 1 800 « bébés » hippocampe.",
       "@images": "f29.jpg",
       "TYPE": "ANAGRAMME",
@@ -322,8 +322,8 @@
     },
     {
       "ID": "faune_33",
-      "QUESTION": "Le dauphin à long bec caractérisé par son rostre\nA se nourrit de petits poissons et de calmars\nB chasse à de grandes profondeurs (+ de 100 mètres)\nB est solitaire",
-      "REPONSE": "A,C",
+      "QUESTION": "Le dauphin à long bec caractérisé par son rostre\nA se nourrit de petits poissons et de calmars\nB chasse à de grandes profondeurs (+ de 100 mètres)\nC est solitaire",
+      "REPONSE": "A,B",
       "EXPLICATIONS": "👉Il vit en groupe et communique avec ses congénères par des sons complexes pour avertir d'un danger ou de la présence de nourriture",
       "@images": "f33.jpg",
       "TYPE": "CHOIX",
@@ -383,7 +383,7 @@
     {
       "ID": "faune_39",
       "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs.",
-      "REPONSE": "zourite.",
+      "REPONSE": "zourite",
       "EXPLICATIONS": "Le poulpe, la pieuvre, le zourite.Trois mots pour désigner le même animal. Pieuvre se trouve plutôt dans la littérature (Victor Hugo), zourite est l'appellation créole. Poulpe est surtout l'appellation commerciale et gastronomique, du poulpe commun.",
       "@images": "f39.jpg",
       "TYPE": "ANAGRAMME",
@@ -503,7 +503,7 @@
     {
       "ID": "faune_51",
       "QUESTION": "Bien que je n'opère pas, j'ai deux scalpels très coupants comme des lames de rasoir et qui plutôt que soigner provoquent des infections.",
-      "REPONSE": "chirurgien.",
+      "REPONSE": "chirurgien",
       "EXPLICATIONS": "Les poissons-chirurgiens appartiennent à la famille des Acanthuridae qui regroupe environ 60 espèces réparties dans les eaux tropicales du monde entier.",
       "@images": "f51.jpg",
       "TYPE": "ANAGRAMME",
@@ -512,8 +512,8 @@
     },
     {
       "ID": "faune_52",
-      "QUESTION": "Mon premier est un accélérateur de voilier,\nMon second est une émission bruyante,\nSans mon troisième les lunettes tomberaient ,\nMon tout est un ver marin.",
-      "REPONSE": "spirobranche.",
+      "QUESTION": "Mon premier est un accélérateur de voilier\nMon second est une émission bruyante\nSans mon troisième les lunettes tomberaient\nMon tout est un ver marin.",
+      "REPONSE": "spirobranche",
       "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche\nLe Spirobranche-arbre de Noël (Spirobranchus giganteus) est une espèce de vers. Il vit en symbiose avec les coraux durs.",
       "@images": "f52.jpg",
       "TYPE": "CHARADE",
@@ -533,7 +533,7 @@
     {
       "ID": "faune_54",
       "QUESTION": "Allez comprendre pourquoi je suis l'homonyme d'un personnage fabuleux qui symbolise une puissance maléfique, alors que je protège de nombreux animaux (petits poissons, crevettes, mollusques..).",
-      "REPONSE": "gorgone.",
+      "REPONSE": "gorgone",
       "EXPLICATIONS": "Ces coraux ne cultivent pas de zooxanthelles, et n'ont donc pas besoin de soleil pour croître. Elles vivent en eau profonde, entre 30 et 200 mètres.",
       "@images": "f54.jpg",
       "TYPE": "ANAGRAMME",
@@ -582,10 +582,10 @@
     },
     {
       "ID": "faune_59",
-      "QUESTION": "Mon premier est un outil,\nMon second est actif,\nMon troisième est un pronom relatif,\nMon tout qualifie la mer haute.",
-      "REPONSE": "PELAGIQUE.",
-      "EXPLICATIONS": "1 pelle - 2 agit - 3 que\nPélagique : qui vit en pleine mer.\nOn parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou à proximité des rivages de façon sédentaire comme les blennies.",
-      "@images": "",
+      "QUESTION": "Mon premier est un outil\nMon second est actif\nMon troisième est un pronom relatif\nMon tout qualifie la mer haute.",
+      "REPONSE": "PELAGIQUE",
+      "EXPLICATIONS": "1 pelle - 2 agit - 3 que - Pélagique : qui vit en pleine mer.\nOn parle de poisson pélagique comme le thon, l'espadon, la dorade..le contraire est benthique : qui vit de manière fixée comme le corail, la gorgone, ou à proximité des rivages de façon sédentaire comme les blennies.",
+      "@images": "f59.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "pêche",
       "POINTS": "20"
@@ -624,7 +624,7 @@
       "ID": "faune_63",
       "QUESTION": "Mon premier est une note de musique\nMon second est une note de musique\nMon troisième sert à attacher\nMon tout est un personnage de légende",
       "REPONSE": "SIRENE",
-      "EXPLICATIONS": "1 Si - 2 Ré - 3 nœud. ",
+      "EXPLICATIONS": "1 Si - 2 Ré - 3 nœud. Les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais ?",
       "@images": "f63.png",
       "TYPE": "CHARADE",
       "CATEGORIE": "légende",
@@ -713,7 +713,7 @@
     {
       "ID": "faune_72",
       "QUESTION": "Mon premier n'a pas d'habits,\nMon second est nombre,\nMon troisième est une partie d'arbre,\nMon tout est un mollusque marin.",
-      "REPONSE": "Mon tout est un NUDIBRANCHE.",
+      "REPONSE": "NUDIBRANCHE.",
       "EXPLICATIONS": "1 nu - 2 dix - 3 branche\nCes animaux marins sont caractérisés par leur absence de coquille et leurs branchies nues, origine de leur nom.",
       "@images": "f72.jpg",
       "TYPE": "CHARADE",
@@ -733,8 +733,8 @@
     {
       "ID": "faune_74",
       "QUESTION": "Quel est le fruit que les poissons détestent ?",
-      "REPONSE": "pêche.",
-      "EXPLICATIONS": "",
+      "REPONSE": "Pêche",
+      "EXPLICATIONS": "😉 Ils n'aiment pas plus les olives.",
       "@images": "f74.png",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "humour",
@@ -1105,7 +1105,7 @@
       "TYPE": "BONUS",
       "EFFET": "Protection contre la sirène.",
       "VALEUR": "camera",
-      "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme, les parents racontent qu'une sirène attire les marmailles dans les profondeurs disparaissant à tout jamais?"
+      "EXPLICATIONS": "Si personne ne l'a vue, quelques pécheurs à la gaulette l'auraient entendue chanter. Pour dissuader les enfants d'aller se baigner dans le bassin éponyme."
     },
     {
       "ID": "action_25",
