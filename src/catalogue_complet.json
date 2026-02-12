@@ -185,7 +185,7 @@
       "QUESTION": "Trouver l'intrus :\nA Picasso\nB Crayon\nC Danseuse espagnole\nD Anémone",
       "REPONSE": "A",
       "EXPLICATIONS": "Picasso (baliste) est un poisson les autres sont des invertébrés : L'anémone (corail) , crayon (oursin), danseuse espagnole (nudibranche).",
-      "@images": "",
+      "@images": "f19.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -198,14 +198,14 @@
       "@images": "Fichier 11.svg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "plongée",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_21",
       "QUESTION": "D'après les scientifiques en quelle année les déchets plastiques seront plus nombreux que les poissons,\nA en 2030,\nB en 2040,\nC en 2050,\nD en 2060.",
       "REPONSE": "C",
       "EXPLICATIONS": "En 2050. Par an, la France produit 350 millions tonne de plastique. Chaque minute, l'équivalent d'un camion poubelle est déversé dans les mers. Entre 8 et 12 millions de tonnes finissent dans nos océans.",
-      "@images": "",
+      "@images": "f21.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "environnement",
       "POINTS": "40"
@@ -358,7 +358,7 @@
       "@images": "Fichier 11.svg",
       "TYPE": "CHOIX",
       "CATEGORIE": "plongée",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_37",
@@ -368,7 +368,7 @@
       "@images": "f37.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "faune",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_38",
@@ -378,7 +378,7 @@
       "@images": "f38.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "légende",
-      "POINTS": "40"
+      "POINTS": "20"
     },
     {
       "ID": "faune_39",
@@ -388,7 +388,7 @@
       "@images": "f39.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_40",
@@ -398,7 +398,7 @@
       "@images": "",
       "TYPE": "CHOIX",
       "CATEGORIE": "site",
-      "POINTS": "40"
+      "POINTS": "20"
     },
     {
       "ID": "faune_41",
@@ -418,7 +418,7 @@
       "@images": "site2.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
-      "POINTS": "60"
+      "POINTS": "20"
     },
     {
       "ID": "faune_43",
@@ -448,7 +448,7 @@
       "@images": "f45.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
-      "POINTS": "40"
+      "POINTS": "60"
     },
     {
       "ID": "faune_46",
@@ -475,7 +475,7 @@
       "QUESTION": "Dans ce fouillis un intrus s'est glissé\nA un bonnet de prêtre poussiéreux\nB des candélabres rococo\nC un bénitier défraîchi\nD un oratoire abandonné.",
       "REPONSE": "D",
       "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière.\nL'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants des océans.",
-      "@images": "",
+      "@images": "f48.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
@@ -588,7 +588,7 @@
       "@images": "f59.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "pêche",
-      "POINTS": "20"
+      "POINTS": "60"
     },
     {
       "ID": "faune_60",
@@ -642,11 +642,11 @@
     },
     {
       "ID": "faune_65",
-      "QUESTION": "Que font deux crabes lorsqu'ils se rencontrent ?",
-      "REPONSE": "Ils se serrent la pince.",
-      "EXPLICATIONS": "20 points facilement gagnés !",
+      "QUESTION": "Tous les crabes possèdent cinq paires de pattes dont la première est transformée en une paire de pinces.",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Crabe est un nom vernaculaire utilisé en français pour désigner de nombreuses espèces de crustacés décapodes. Ils possèdent une paire de pinces (chélicères) utilisées pour attraper les proies, se défendre ou communiquer.",
       "@images": "f65.jpg",
-      "TYPE": "DEVINETTE",
+      "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "humour",
       "POINTS": "20"
     },
@@ -705,7 +705,7 @@
       "QUESTION": "Un Indien pacifique fait la manche sur les bords du Gange",
       "REPONSE": "Le Gange",
       "EXPLICATIONS": "Le Gange est le seul fleuve, les autres des océans (Indien, Pacifique) ou mer (la Manche). Notre planète est recouverte par 71% de mer, c'est pour cela qu'on la nomme planète bleue.",
-      "@images": "",
+      "@images": "f71.jpg",
       "TYPE": "TROUVER L'INTRUS",
       "CATEGORIE": "géographie",
       "POINTS": "40"
@@ -746,7 +746,7 @@
       "REPONSE": "MARLIN",
       "EXPLICATIONS": "mois : MAI,\n époux : MARI,\nHomme de mer : MARIN,\n poisson : MARLIN",
       "@images": "f75.jpg",
-      "TYPE": "MOT EN ESCALIER",
+      "TYPE": "CHARADE",
       "CATEGORIE": "faune",
       "POINTS": "60"
     },
@@ -768,7 +768,7 @@
       "@images": "f77.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "biologie",
-      "POINTS": "40"
+      "POINTS": "60"
     },
     {
       "ID": "faune_78",
@@ -795,7 +795,7 @@
       "QUESTION": "Comme les oiseaux, reptiles, mammifères, les poissons cessent de grandir à l'âge adulte.",
       "REPONSE": "FAUX",
       "EXPLICATIONS": "Leur croissance s'effectue tout au long de leur vie, plus vite les premières années. Elle est plus importante pendant l'été où les poissons se nourrissent abondamment. Elle ralentit en période de reproduction car les poissons se nourrissent moins.",
-      "@images": "",
+      "@images": "f80.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "biologie",
       "POINTS": "40"
@@ -812,19 +812,19 @@
     },
     {
       "ID": "faune_82",
-      "QUESTION": "Pendant le confinement, les activités sub-aquatiques étaient interdites, pourquoi ?",
-      "REPONSE": "Parce que coraux n'a virus (coronavirus)",
-      "EXPLICATIONS": "Humour : les coraux n'ont pas de virus.",
+      "QUESTION": "Pendant le confinement, les activités sub-aquatiques étaient interdites, pourquoi ?\nA Parce que coraux n'a virus\nB Parce que les plongeurs auraient pu être contaminés\nC Parce que les coraux ont besoin de calme pour se régénérer",
+      "REPONSE": "C",
+      "EXPLICATIONS": "les coraux ne sont pas concernés par le coronavirus. 2020 a été une année difficile pour les plongeurs, mais une bonne année pour les coraux. En effet, les coraux ont pu se régénérer et se développer sans être dérangés par les activités humaines.",
       "@images": "f82.png",
-      "TYPE": "DEVINETTE",
+      "TYPE": "CHOIX",
       "CATEGORIE": "humour",
-      "POINTS": "40"
+      "POINTS": "20"
     },
     {
       "ID": "faune_83",
-      "QUESTION": "A découvrir. Ces nouveaux reliefs ont attiré une multitude de poissons dont une plantureuse murène qui en a fait son habitat. Son corps est recouvert d'un mucus qui lui permet de se déplacer facilement dans les failles étroites. Pour mieux se camoufler, elle se pare de couleurs, de pois, d'étoiles et de rayures. Au fond de sa gorge se cache une redoutable seconde mâchoire, qui entraîne inexorablement ses proies vers le tube digestif. Alors attention à sa morsure qui, en plus, est toxique.",
+      "QUESTION": "A découvrir. Ces nouveaux reliefs ont attiré une multitude de poissons dont une plantureuse murène qui en a fait son habitat. Son corps est recouvert d'un mucus qui lui permet de se déplacer facilement dans les failles étroites. Pour mieux se camoufler, elle se pare de couleurs, de pois, d'étoiles et de rayures. ",
       "REPONSE": "",
-      "EXPLICATIONS": "",
+      "EXPLICATIONS": "Au fond de sa gorge se cache une redoutable seconde mâchoire, qui entraîne inexorablement ses proies vers le tube digestif. Alors attention à sa morsure qui, en plus, est toxique.",
       "@images": "site6.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
