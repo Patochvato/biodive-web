@@ -4,15 +4,28 @@
   <meta charset="UTF-8" />
   <title>Ajout Catalogue</title>
   <style>
-    body { font-family: Arial; padding: 20px; max-width: 720px; margin: 0 auto; }
+    body { font-family: Arial; padding: 20px; max-width: 900px; margin: 0 auto; }
+    .container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .form-section { max-width: 450px; }
+    .recent-section { background: #f5f5f5; padding: 20px; border-radius: 8px; max-height: 600px; overflow-y: auto; }
+    .recent-section h2 { margin-top: 0; }
+    .entry-card { background: white; padding: 12px; margin: 10px 0; border-radius: 4px; border-left: 4px solid #1976d2; }
+    .entry-card .id { font-weight: bold; color: #1976d2; }
+    .entry-card .question { font-size: 0.9em; color: #666; margin: 5px 0; }
+    .entry-card .meta { font-size: 0.85em; color: #999; }
     label { display: block; margin: 10px 0 4px; }
-    input, textarea, select { width: 100%; padding: 8px; }
-    button { margin-top: 12px; padding: 10px 16px; }
+    input, textarea, select { width: 100%; padding: 8px; box-sizing: border-box; }
+    button { margin-top: 12px; padding: 10px 16px; background: #1976d2; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1565c0; }
+    @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <h1>Ajouter une entrée</h1>
-  <form method="POST">
+  <h1>Ajouter une entrée au catalogue</h1>
+  <div class="container">
+    <div class="form-section">
+      <h2>Nouvelle entrée</h2>
+      <form method="POST">
     <label>ID</label>
     <input name="ID" placeholder="faune_36" required />
 
@@ -35,21 +48,53 @@
       <option value="VRAI OU FAUX">VRAI OU FAUX</option>
       <option value="QUESTION">QUESTION</option>
       <option value="BONUS">BONUS</option>
+      <option value="QUI SUIS-JE">QUI SUIS-JE</option>
+      <option value="CHARADE">CHARADE</option>
     </select>
 
     <label>CATEGORIE</label>
     <select name="CATEGORIE" required>
-      <option value="faune">faune</option>
-      <option value="action">action</option>
-      <option value="site">site</option>
-      <option value="bonus">bonus</option>
-      <option value="plongée">plongée</option>
+      <option value="biologie">Biologie</option>
+      <option value="faune">Faune</option>
+      <option value="environnement">Environnement</option>
+      <option value="plongée">Plongée</option>
+      <option value="site">Site</option>
+      <option value="comportement">Comportement</option>
+      <option value="autre">Autre</option>
     </select>
 
     <label>POINTS</label>
     <input name="POINTS" placeholder="20" required />
 
-    <button type="submit">Ajouter</button>
-  </form>
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+    
+    <div class="recent-section">
+      <h2>Dernières entrées (10)</h2>
+      <div id="recent-entries">Chargement...</div>
+    </div>
+  </div>
+
+  <script>
+    async function loadRecent() {
+      try {
+        const res = await fetch('/api/recent');
+        const entries = await res.json();
+        const html = entries.map(e => `
+          <div class="entry-card">
+            <div class="id">${e.ID}</div>
+            <div class="question">${e.QUESTION.substring(0, 80)}${e.QUESTION.length > 80 ? '...' : ''}</div>
+            <div class="meta">${e.TYPE} • ${e.CATEGORIE} • ${e.POINTS} pts</div>
+          </div>
+        `).join('');
+        document.getElementById('recent-entries').innerHTML = html || '<p>Aucune entrée</p>';
+      } catch (err) {
+        document.getElementById('recent-entries').innerHTML = '<p>Erreur de chargement</p>';
+      }
+    }
+    loadRecent();
+    setInterval(loadRecent, 5000); // Recharger toutes les 5 secondes
+  </script>
 </body>
 </html>

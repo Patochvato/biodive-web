@@ -859,6 +859,76 @@
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
       "POINTS": "40"
+    },
+    {
+      "ID": "faune_87",
+      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale. ",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "@images": "",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_88",
+      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_89",
+      "QUESTION": "Question de test",
+      "REPONSE": "Réponse test",
+      "EXPLICATIONS": "Explications test",
+      "@images": "",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "biologie",
+      "POINTS": "20"
+    },
+    {
+      "ID": "faune_90",
+      "QUESTION": "La Réunion fait partie des 10 principaux « hot spots » de biodiversité mondiale",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux[ 9 ], environ 2800 espèces de mollusques[ 10 ], plus de 500 espèces de crustacés[ 11 ], plus de 130 espèces d'échinodermes[ 9 ] et plus de 1 000 espèces de poissons[ 12 ], dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "environnement",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_91",
+      "QUESTION": "Quel poisson est considéré comme l'un des plus emblématiques des récifs coralliens de l'océan Indien ? \nA) Le mérou céleste\nB) L'idole des Maures (Zanclus cornutus)\nC) Le poisson-perroquet bicolore",
+      "REPONSE": "B",
+      "EXPLICATIONS": "Le nom binomial Zanclus cornutus provient du grec zagklion qui signifie faucille, en référence à la forme du poisson, et du latin cornutus qui signifie cornes, en référence aux deux petites cornes que possède l'adulte au dessus de ses yeux",
+      "@images": "",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_92",
+      "QUESTION": "Avec quel type d'organisme les poissons-clowns vivent-ils en symbiose ?\r\nA Les éponges\r\nB Les anémones de mer\r\nC Les coraux mous du genre Sarcophyton",
+      "REPONSE": "B",
+      "EXPLICATIONS": "Dix espèces d'anémones sont en association symbiotique avec des espèces de poisson-clown, protégées de leur venin par un mucus.",
+      "@images": "",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "20"
+    },
+    {
+      "ID": "faune_93",
+      "QUESTION": "Les coraux sont des animaux appartenant à l'embranchement des cnidaires",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Ils font partie du même groupe que les anémones de mer et les méduses",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "biologie",
+      "POINTS": "40"
     }
   ],
   "action": [
@@ -1315,6 +1385,16 @@
       "DESCRIPTION": "C'est un lieu de ponte pour les calmars qui viennent en octobre déposer leurs oeufs dans les nombreuses cavités. Les plongeurs découvrent une grande diversité de coraux dont le tabulaire aux branches tourmentées. L'ensemble est majestueux. Les jeunes pousses pointent verticalement et prennent une forme horizontale en grandissant.",
       "@images": "Acropora_hyacinthus.jpg",
       "POINTS": "100"
+    },
+    {
+      "ID": "faune_87",
+      "QUESTION": "Quel est l'âge approximatif de l'île volcanique de La Réunion ?\r\nA 3 millions d'années\r\nB 10 000 ans\r\nC 5 millions d'années ",
+      "REPONSE": "A",
+      "EXPLICATIONS": "En raison de cette formation récente, les récifs sont principalement des récifs frangeants, c'est-à-dire qu'ils bordent directement la côte sans être séparés par de vastes étendues d'eau. Cela crée des lagons peu profonds (souvent entre 1 et 2 mètres de fond) et étroits (pas plus de 500 m de large)",
+      "@images": "",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "site",
+      "POINTS": "40"
     }
   ],
   "bonus": [
@@ -1353,6 +1433,28 @@
       "NOM": "Un aquarium naturel",
       "DESCRIPTION": "La biodiversité marine de La Réunion fait partie des 10 principaux « hot spots » de biodiversité mondiale. Elle est exceptionnelle. Elle compte plus de 190 espèces de coraux, 1 300 espèces de mollusques, plus de 500 espèces de crustacés, 130 espèces d'échinodermes. Sans oublier les 1 000 espèces de poissons, dont plusieurs sont endémiques.",
       "POINTS": "60"
+    }
+  ],
+  "environnement": [
+    {
+      "ID": "faune_88",
+      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": " Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux[ 9 ], environ 2800 espèces de mollusques[ 10 ], plus de 500 espèces de crustacés[ 11 ], plus de 130 espèces d'échinodermes[ 9 ] et plus de 1 000 espèces de poissons[ 12 ], dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "environnement",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_88",
+      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": " Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux[ 9 ], environ 2800 espèces de mollusques[ 10 ], plus de 500 espèces de crustacés[ 11 ], plus de 130 espèces d'échinodermes[ 9 ] et plus de 1 000 espèces de poissons[ 12 ], dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "@images": "",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "environnement",
+      "POINTS": "40"
     }
   ]
 }
