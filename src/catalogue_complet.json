@@ -252,7 +252,7 @@
     },
     {
       "ID": "faune_26",
-      "QUESTION": "Acanthaster est une grande étoile de mer qui peut atteindre 80 cm de diamètre. C'est un redoutable prédateur du corail. D'après vous, elle mange par an,\nA 6 m2\nB 9 m2\nC 10 m2\nD 13 m2",
+      "QUESTION": "L'acanthaster est une grande étoile de mer qui peut atteindre 80 cm de diamètre. Redoutable prédateur du corail, elle mange par an\nA 6 m2\nB 9 m2\nC 10 m2\nD 13 m2",
       "REPONSE": "A",
       "EXPLICATIONS": "Aussi connue sous le nom de « couronne du Christ », cette étoile de mer carnivore se nourrit de coraux. ",
       "@images": "f26.jpg",
@@ -518,7 +518,7 @@
       "@images": "f52.jpg",
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
-      "POINTS": "40"
+      "POINTS": "60"
     },
     {
       "ID": "faune_53",
@@ -602,7 +602,7 @@
     },
     {
       "ID": "faune_61",
-      "QUESTION": "Je fais partie des pélagiques vivant le plus souvent en banc.j'ai colonisé tous les océans du monde et la plupart des mers",
+      "QUESTION": "Je fais partie des pélagiques vivant le plus souvent en banc. J'ai colonisé tous les océans du monde et la plupart des mers",
       "REPONSE": "CALMAR",
       "EXPLICATIONS": "Il n'y a aucune différence entre le calamar (aussi appelé calmar), les encornets, les chipirons et les supions. Tout cela est uniquement une question de taille et de région ",
       "@images": "f61.jpg",
@@ -758,7 +758,7 @@
       "@images": "f76.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
-      "POINTS": "40"
+      "POINTS": "60"
     },
     {
       "ID": "faune_77",
@@ -775,7 +775,7 @@
       "QUESTION": "Si un requin arrête de nager, il coule.",
       "REPONSE": "VRAI",
       "EXPLICATIONS": "Comme tous les poissons cartilagineux, les requins n'ont pas de vessie natatoire. Ils ont un foie surdimensionné, riche en huile, dont la flottabilité compense en partie leur poids. Ils sont condamnés à nager continuellement, sinon ils coulent.",
-      "@images": "",
+      "@images": "f78.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "biologie",
       "POINTS": "40"
@@ -865,44 +865,44 @@
       "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale. ",
       "REPONSE": "VRAI",
       "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
-      "@images": "",
-      "TYPE": "CHOIX",
+      "@images": "f87.jpg",
+      "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
       "ID": "faune_88",
-      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale",
-      "REPONSE": "VRAI",
-      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
-      "@images": "",
-      "TYPE": "VRAI OU FAUX",
+      "QUESTION": "Par quel mécanisme physique le poulpe et certains calmars se déplacent-ils rapidement en cas de danger ?\nA en nageant à l'aide de leurs tentacules\nB en expulsant de l'eau à grande vitesse par un siphon\nC en se propulsant grâce à des jets d'air",
+      "REPONSE": "B",
+      "EXPLICATIONS": "En contractant leur cavité corporelle, ils créent un jet puisant qui les pousse en sens inverse.",
+      "@images": "f88.jpg",
+      "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
       "ID": "faune_89",
-      "QUESTION": "Question de test",
-      "REPONSE": "Réponse test",
-      "EXPLICATIONS": "Explications test",
-      "@images": "",
+      "QUESTION": "Quel moyen utilise l'oursin pour se nourrir?\nA sa machoire\nB des tentacules collants\nC ses piquants venimeux",
+      "REPONSE": "A",
+      "EXPLICATIONS": "La lanterne d'Aristote est l'appareil masticateur des oursins, constitué de cinq dents disposées en étoile. Elle est située à la face inférieure de l'animal, au centre de laquelle se trouve la bouche.",
+      "@images": "f89.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "biologie",
-      "POINTS": "20"
+      "POINTS": "40"
     },
     {
       "ID": "faune_90",
-      "QUESTION": "La Réunion fait partie des 10 principaux « hot spots » de biodiversité mondiale",
-      "REPONSE": "VRAI",
-      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux[ 9 ], environ 2800 espèces de mollusques[ 10 ], plus de 500 espèces de crustacés[ 11 ], plus de 130 espèces d'échinodermes[ 9 ] et plus de 1 000 espèces de poissons[ 12 ], dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "QUESTION": "je suis la nourriture préférée des anges empereur.",
+      "REPONSE": "Eponge",
+      "EXPLICATIONS": "L'ange empereur (Pomacanthus imperator) qui vit dans les récifs coralliens a un régime spongivore mais il mange aussi d’autres invertébrés fixés et des algues qu’il broute dans les récifs coralliens[",
       "@images": "",
-      "TYPE": "VRAI OU FAUX",
+      "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "environnement",
       "POINTS": "40"
     },
     {
       "ID": "faune_91",
-      "QUESTION": "Quel poisson est considéré comme l'un des plus emblématiques des récifs coralliens de l'océan Indien ? \nA) Le mérou céleste\nB) L'idole des Maures (Zanclus cornutus)\nC) Le poisson-perroquet bicolore",
+      "QUESTION": "Quel poisson est considéré comme l'un des plus emblématiques des récifs coralliens de l'océan Indien ? \nA Le mérou céleste\nB L'idole des Maures (Zanclus cornutus)\nC Le poisson-perroquet bicolore",
       "REPONSE": "B",
       "EXPLICATIONS": "Le nom binomial Zanclus cornutus provient du grec zagklion qui signifie faucille, en référence à la forme du poisson, et du latin cornutus qui signifie cornes, en référence aux deux petites cornes que possède l'adulte au dessus de ses yeux",
       "@images": "",
@@ -912,20 +912,20 @@
     },
     {
       "ID": "faune_92",
-      "QUESTION": "Avec quel type d'organisme les poissons-clowns vivent-ils en symbiose ?\r\nA Les éponges\r\nB Les anémones de mer\r\nC Les coraux mous du genre Sarcophyton",
+      "QUESTION": "Avec quel type d'organisme les poissons-clowns vivent-ils en symbiose ?\nA Les éponges\nB Les anémones de mer\nC Les coraux mous du genre Sarcophyton",
       "REPONSE": "B",
       "EXPLICATIONS": "Dix espèces d'anémones sont en association symbiotique avec des espèces de poisson-clown, protégées de leur venin par un mucus.",
-      "@images": "",
+      "@images": "f92.jpg",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "20"
     },
     {
       "ID": "faune_93",
-      "QUESTION": "Les coraux sont des animaux appartenant à l'embranchement des cnidaires",
+      "QUESTION": "Les coraux sont des animaux appartenant à l'embranchement des cnidaires comme les anémones de mer et les méduses.",
       "REPONSE": "VRAI",
-      "EXPLICATIONS": "Ils font partie du même groupe que les anémones de mer et les méduses",
-      "@images": "",
+      "EXPLICATIONS": "Les Cnidaires sont un embranchement d'animaux aquatiques, possédant une symétrie radiale et des nématocystes (organites capables de lancer un harpon urticant pour attraper des proies). Cet embranchement regroupe notamment les anémones de mer, les méduses et les coraux.",
+      "@images": "f93.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "biologie",
       "POINTS": "40"
