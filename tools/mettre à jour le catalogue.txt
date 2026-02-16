@@ -1,2 +1,11 @@
 mettre à jour le catalogue
 node .\tools\catalogue-form-server.js  
+Caractère spécial	Résultat échappé
+Guillemet (")	\"
+Barre oblique inverse (\)	\\
+Barre oblique (/)	\/
+Backspace	\b
+Flux de formulaire	\f
+Nouvelle ligne	\n
+Retour chariot	\r
+Tabulation horizontale	\t

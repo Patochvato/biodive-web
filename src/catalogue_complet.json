@@ -24,7 +24,7 @@
       "ID": "faune_03",
       "QUESTION": "Quel est l'intrus ?\nA La baleine à bosse\nB Le cachalot\nC Le requin baleine\nD Le dauphin",
       "REPONSE": "C",
-      "EXPLICATIONS": "La baleine,le cachalot et le dauphin appartiennent à la famille des cétacés. le requin baleine est un poisson cartilagineux.",
+      "EXPLICATIONS": "le requin baleine est un poisson cartilagineux. La baleine, le cachalot et le dauphin appartiennent à la famille des cétacés. ",
       "@images": "",
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
@@ -274,7 +274,7 @@
       "ID": "faune_28",
       "QUESTION": "Lors de l'éruption de mars 1977 à Piton Sainte Rose, la lave a rencontré la mer. Au contact de l'eau la lave forme des boules caractéristiques.",
       "REPONSE": "",
-      "EXPLICATIONS": "Un pillow lava ou une lave en coussin.\n👉 La lave en coussin est formée par le refroidissement rapide de la lave au contact de l'eau. ",
+      "EXPLICATIONS": "Des pillow lava ou lave en coussin.\r 👉 La lave en coussin est formée par le refroidissement rapide de la lave au contact de l'eau. ",
       "@images": "f28.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
@@ -384,7 +384,7 @@
       "ID": "faune_39",
       "QUESTION": "Huit bras, trois coeurs, je me faufile partout. Je suis capable d'imiter des poissons afin de faire fuire mes prédateurs.",
       "REPONSE": "zourite",
-      "EXPLICATIONS": "Le poulpe, la pieuvre, le zourite.Trois mots pour désigner le même animal. Pieuvre se trouve plutôt dans la littérature (Victor Hugo), zourite est l'appellation créole. Poulpe est surtout l'appellation commerciale et gastronomique, du poulpe commun.",
+      "EXPLICATIONS": "Le poulpe, la pieuvre, le zourite. Trois mots pour désigner le même animal. Pieuvre se trouve plutôt dans la littérature (Victor Hugo), zourite est l'appellation créole. Poulpe est surtout l'appellation commerciale et gastronomique, du poulpe commun.",
       "@images": "f39.jpg",
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "faune",
@@ -402,7 +402,7 @@
     },
     {
       "ID": "faune_41",
-      "QUESTION": "L'Anse des Cascades un des sites de plongée.C'est un lieu de ponte pour les calmars qui viennent en octobre déposer leurs oeufs dans les nombreuses cavités.",
+      "QUESTION": "L'Anse des Cascades un des sites de plongée de Sainte Rose. C'est un lieu de ponte pour les calmars qui viennent en octobre déposer leurs oeufs dans les nombreuses cavités.",
       "REPONSE": "",
       "EXPLICATIONS": " Les plongeurs découvrent une grande diversité de coraux dont le tabulaire aux branches tourmentées. L'ensemble est majestueux. Les jeunes pousses pointent verticalement et prennent une forme horizontale en grandissant.",
       "@images": "site1.jpg",
@@ -412,7 +412,7 @@
     },
     {
       "ID": "faune_42",
-      "QUESTION": "La Marine. C'est un lieu idéal pour le photographe débutant. Celui-ci immortalisera une multitude de nudibranches et l'antennaire débonnaire qui attend immobile ses proies, perché sur ses nageoires pectorales et ventrales semblables à des pattes coudées. Dérangé, il marche avec ses mêmes nageoires. Parfois il utilise une nage par réaction en aspirant de l'eau qu'il rejette par de petites ouvertures branchiales en forme de siphon.",
+      "QUESTION": "La Marine. le photographe débutant pourra immortaliser l'antennaire débonnaire qui attend immobile ses proies, perché sur ses nageoires pectorales et ventrales semblables à des pattes coudées. Dérangé, il marche avec ses mêmes nageoires. Parfois il utilise une nage par réaction en aspirant de l'eau qu'il rejette par de petites ouvertures branchiales en forme de siphon.",
       "REPONSE": "",
       "EXPLICATIONS": "Le Petit Tombant est un site de plongée situé à la sortie du port. Il est réputé pour sa grande diversité de coraux et d'espèces marines.",
       "@images": "site2.jpg",
@@ -422,9 +422,9 @@
     },
     {
       "ID": "faune_43",
-      "QUESTION": "Le 13/41. Certains auront la chance de rencontrer un banc de thons listao, appelé aussi bonite à la Réunion, plus rarement une tortue solitaire. Ils découvriront un ou plusieurs ovula ovum, coquillage d'un blanc immaculé. Un manteau noir parsemé de points blancs ou jaunes recouvre la totalité de la coquille en joignant ses deux parties au sommet du dos arrondi.",
+      "QUESTION": "Le 13/41. Certains auront la chance de rencontrer un banc de thons listao, appelé bonite, parfois une tortue solitaire. Ils découvriront un ou plusieurs ovula ovum, coquillage d'un blanc immaculé. Un manteau noir parsemé de points blancs ou jaunes recouvre la totalité de la coquille en joignant ses deux parties au sommet du dos arrondi.",
       "REPONSE": "",
-      "EXPLICATIONS": "Le 13/41 comme son nom l'indique est un tombant entre 13 et 41. Ces deux profondeurs sont accessibles en plongée.",
+      "EXPLICATIONS": "Le 13/41 comme son nom l'indique est un tombant entre 13 et 41 mètres.\nCes deux profondeurs sont accessibles en plongée.",
       "@images": "site3.jpg",
       "TYPE": "BONUS",
       "CATEGORIE": "site",
@@ -654,7 +654,7 @@
       "ID": "faune_66",
       "QUESTION": "Quand les poissons respirent, ils font des bulles.",
       "REPONSE": "FAUX",
-      "EXPLICATIONS": "Les poissons utilisent le dioxygène (O2) dissous dans l'eau pour respirer et rejette du dioxyde de carbone (CO2).Les échanges respiratoires entre les gaz (contenus dans l'eau) et le sang se réalisent au niveau des branchies.",
+      "EXPLICATIONS": "Les poissons utilisent le dioxygène (O2) dissous dans l'eau pour respirer et rejette du dioxyde de carbone (CO2). Les échanges respiratoires entre les gaz (contenus dans l'eau) et le sang se réalisent au niveau des branchies.",
       "@images": "f66.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
@@ -692,7 +692,7 @@
     },
     {
       "ID": "faune_70",
-      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer. A la pleine lune, je me regroupe l'embouchure des rivières avant de les remonter. Hélas, je termine  souvent en cari !",
+      "QUESTION": "Pondu en rivière puis emporté par le courant, je me développe en mer.\n A la pleine lune, je me regroupe l'embouchure des rivières avant de les remonter.\n Hélas, je termine  souvent en cari !",
       "REPONSE": "bichique",
       "EXPLICATIONS": "Le bisik (cabot bouche ronde) est en voie d'extinction, car trop péché, braconné. Cet alvin a peu de chance de devenir l'adulte cabot bouche ronde qui lui aussi est en train de disparaitre des rivières réunionnaises.",
       "@images": "",
@@ -822,7 +822,7 @@
     },
     {
       "ID": "faune_83",
-      "QUESTION": "A découvrir. Ces nouveaux reliefs ont attiré une multitude de poissons dont une plantureuse murène qui en a fait son habitat. Son corps est recouvert d'un mucus qui lui permet de se déplacer facilement dans les failles étroites. Pour mieux se camoufler, elle se pare de couleurs, de pois, d'étoiles et de rayures. ",
+      "QUESTION": "La coulée 77. Ces nouveaux reliefs ont attiré une multitude de poissons dont une plantureuse murène qui en a fait son habitat. Son corps est recouvert d'un mucus qui lui permet de se déplacer facilement dans les failles étroites. ",
       "REPONSE": "",
       "EXPLICATIONS": "Au fond de sa gorge se cache une redoutable seconde mâchoire, qui entraîne inexorablement ses proies vers le tube digestif. Alors attention à sa morsure qui, en plus, est toxique.",
       "@images": "site6.jpg",
@@ -855,16 +855,16 @@
       "QUESTION": "Les coraux sont des herbivores qui se nourrissent exclusivement d'algues.",
       "REPONSE": "FAUX",
       "EXPLICATIONS": "Les coraux sont carnivores ; ils capturent le zooplancton la nuit à l'aide de leurs cellules urticantes (cnidoblastes)",
-      "@images": "",
+      "@images": "f86.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
       "ID": "faune_87",
-      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale. ",
+      "QUESTION": "Bien que les récifs réunionnais soient de petite taille (environ 12 km² au total), ils font partie des 10 « hot spots » de biodiversité mondiale.",
       "REPONSE": "VRAI",
-      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, dans une moindre mesure, de l’île.",
+      "EXPLICATIONS": "Les recherches scientifiques récentes font état à la Réunion de plus de 190 espèces de coraux, environ 2800 espèces de mollusques, plus de 500 espèces de crustacés, plus de 130 espèces d'échinodermes et plus de 1 000 espèces de poissons, dont quelques espèces endémiques de la région et, parfois de l’île.",
       "@images": "f87.jpg",
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "faune",
@@ -895,7 +895,7 @@
       "QUESTION": "je suis la nourriture préférée des anges empereur.",
       "REPONSE": "Eponge",
       "EXPLICATIONS": "L'ange empereur (Pomacanthus imperator) qui vit dans les récifs coralliens a un régime spongivore mais il mange aussi d’autres invertébrés fixés et des algues qu’il broute dans les récifs coralliens[",
-      "@images": "",
+      "@images": "f90.jpg",
       "TYPE": "QUI SUIS-JE",
       "CATEGORIE": "environnement",
       "POINTS": "40"
@@ -929,6 +929,46 @@
       "TYPE": "VRAI OU FAUX",
       "CATEGORIE": "biologie",
       "POINTS": "40"
+    },
+    {
+      "ID": "faune_94",
+      "QUESTION": "\n Mon premier est un crochet\n mon second peut-être de loup\n mon troisième ne sera pas repris",
+      "REPONSE": "Espadon",
+      "EXPLICATIONS": "L'espadon (Xiphias gladius) est une espèce de poissons pélagiques des mers tropicales et tempérées. Son rostre plutôt aplati représente le tiers de sa longueur totale.",
+      "@images": "",
+      "TYPE": "CHARADE",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_95",
+      "QUESTION": "Mon premier est un animal que vous trouvez souvent dans une ferme.\rMon deuxième est un pronom démonstratif.\rMon troisième est une matière utilisée pour fabriquer des pulls.\rMon tout est un coquillage.",
+      "REPONSE": "Porcelaine",
+      "EXPLICATIONS": "Porc–ce–laine (porcelaine).\nIl existe plus de 200 espèces distinctes ont été placées dans ce genre Cypraea.",
+      "@images": "",
+      "TYPE": "CHARADE",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_96",
+      "QUESTION": "Le bénitier géant ou Tridacna gigas est\nA le plus gros mollusque bivalve connu\nB une espèce protégée\nC possède des écailles\nD ne se ferme presque jamais totalement ",
+      "REPONSE": "A,B,D",
+      "EXPLICATIONS": "Il se distingue néanmoins par plusieurs traits : la grande coquille cannelée asymétrique en vue latérale, a 4 ou 5 côtes bien prononcées et sans écailles élancées, la fermeture est très mal ajustée, le manteau charnu est extrêmement variable, parfois très coloré, dépassant parfois largement de la coquille.",
+      "@images": "f96.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_97",
+      "QUESTION": "Idole des Maures (Zanclus cornutus) se différencie du cochet (Heniochus) par\n A ses rayures\n B son museau\n C sa nageoire dorsale\n D sa nageoire caudale",
+      "REPONSE": "B,C,D",
+      "EXPLICATIONS": "Le zancle a un museau plus allongé orné d'une selle orange, une caudale noire et ne possède pas de partie membraneuse arrondie à l'arrière de sa nageoire dorsale.",
+      "@images": "f97.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "60"
     }
   ],
   "action": [
@@ -975,7 +1015,7 @@
     },
     {
       "ID": "action_05",
-      "DESCRIPTION": "La sirène fait entendre son chant envoutant, vous devez vous rapprocher de la côte. Elle adore se faire prendre en photo",
+      "DESCRIPTION": "La sirène fait entendre son chant envoutant, vous vous rapprocher de la côte. Elle adore se faire prendre en photo",
       "CATEGORIE": "Plongée",
       "@images": "plongeur.jpg",
       "TYPE": "Danger",

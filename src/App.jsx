@@ -204,7 +204,7 @@ const preparerMiniJeu = useCallback(() => {
     { solution: ["ABYSSE"], melange: "SABYSE" },
     { solution: ["PLANCTON"], melange: "TOLNCPAN" },
     { solution: ["CRABE"], melange: "BECRA" },
-    { solution: ["DOUVIN"], melange: "NIDOUV" },
+    { solution: ["MURENE"], melange: "ENRUME" },
     { solution: ["RIVAGE"], melange: "GERAVI" }
   ];
   
