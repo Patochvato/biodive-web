@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import { playSound } from './audioManager';
+import AlbumPhoto from './components/AlbumPhoto';
 
-const EcranVictoire = ({ score, objets, onRejouer, onQuitter }) => {
+const EcranVictoire = ({ score, objets, onRejouer, onQuitter, catalogue }) => {
+  const [voirAlbum, setVoirAlbum] = useState(false); // État pour basculer
+
   // Déclenchement du son à l'apparition de l'écran
   useEffect(() => {
     // On joue le son final
@@ -120,7 +123,21 @@ const EcranVictoire = ({ score, objets, onRejouer, onQuitter }) => {
       opacity: 0.9
     }
   };
-
+  if (voirAlbum) {
+    return (
+      <div style={styles.overlay}>
+        <div style={{...styles.carte, maxWidth: '600px', maxHeight: '80vh', overflowY: 'auto'}}>
+          <AlbumPhoto catalogue={catalogue} />
+          <button 
+            style={{...styles.boutonRejouer, backgroundColor: '#0277bd', marginTop: '20px'}}
+            onClick={() => setVoirAlbum(false)}
+          >
+            RETOUR
+          </button>
+        </div>
+      </div>
+    );
+  }
   return (
     <div style={styles.overlay}>
       <div style={styles.carte}>
@@ -139,6 +156,13 @@ const EcranVictoire = ({ score, objets, onRejouer, onQuitter }) => {
          🎒 Objets : {objets} / 4 
       </div>
     </div>
+        <button 
+          style={{...styles.boutonQuitter, backgroundColor: '#0288d1', marginBottom: '20px'}} 
+          onClick={() => setVoirAlbum(true)}
+        >
+          🖼️ VOIR L'ALBUM
+        </button>
+        
         <button 
           style={styles.boutonRejouer} 
           onClick={() => {

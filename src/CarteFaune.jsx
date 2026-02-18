@@ -227,6 +227,7 @@ const CarteFaune = ({ carte, onReponse }) => {
               pointsCarte={pointsCarte}
               reponse={carte.REPONSE}
               explications={carte.EXPLICATIONS}
+              nomScientifique={carte.NOM_SCIENTIFIQUE}
               estChoix={estChoix}
               estVraiFaux={estVraiFaux}
               estBonus={estBonus}

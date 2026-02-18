@@ -7,6 +7,7 @@ const CarteFauneReponse = ({
   pointsCarte,
   reponse,
   explications,
+  nomScientifique,
   estChoix,
   estVraiFaux,
   estBonus,
@@ -27,6 +28,12 @@ const CarteFauneReponse = ({
         
         {explications && (
           <div className="carte-reponse-texte">{explications}</div>
+        )}
+        
+        {nomScientifique && (
+          <div className="carte-nom-scientifique">
+            <em>{nomScientifique}</em>
+          </div>
         )}
       </div>
 

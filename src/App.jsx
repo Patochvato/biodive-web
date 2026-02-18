@@ -132,7 +132,8 @@ function App() {
   const [miniJeuOuvert, setMiniJeuOuvert] = useState(false);
   const [motATrouver, setMotATrouver] = useState({ melange: "", solution: "" });
   const [reponseUser, setReponseUser] = useState("");
-  const [tempsRestant, setTempsRestant] = useState(0); // Pour un futur timer
+  const [tempsRestant, setTempsRestant] = useState(0);
+  const [catalogue, setCatalogue] = useState([]); 
   const timersRef = useRef({ intervals: [], timeouts: [] });
 
   const registerTimeout = useCallback((fn, delay) => {
@@ -531,6 +532,7 @@ return (
     objets={nbObjetsRecuperesUnique} // <--- Utilise la nouvelle variable ici
     onRejouer={retournerALAccueil} 
     onQuitter={retournerALAccueil}
+    catalogue={catalogue_complet} // <--- Passe le catalogue complet ici
   />
 )}
 

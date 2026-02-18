@@ -1,0 +1,110 @@
+:root {
+  --primary-blue: #0288d1;
+  --dark-blue: #01579b;
+  --white: #ffffff;
+}
+
+/* Conteneur de la grille */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+  gap: 12px;
+  padding: 10px 0;
+}
+
+/* Perspective pour l'effet 3D */
+.vignette-perspective {
+  perspective: 1000px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Le support qui tourne */
+.vignette-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Rotation au clic */
+.vignette-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Faces commune aux deux côtés */
+.vignette-front, .vignette-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Face Recto (Image) */
+.vignette-front {
+  background-color: #eee;
+}
+
+.vignette-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Face Verso (Texte) */
+.vignette-back {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  transform: rotateY(180deg);
+  padding: 8px;
+}
+
+.nom-commun {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.nom-scientifique {
+  font-size: 0.75rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.label-info {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+.separateur {
+  width: 40%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+
+.nom-commun {
+  font-size: 0.95rem; /* Un peu plus grand pour la lisibilité */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+.nom-scientifique {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #e0f2f1; /* Un blanc bleuté très léger */
+}
