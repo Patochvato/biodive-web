@@ -1,60 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../album.css';
-
-// Sous-composant pour la carte individuelle
-const VignetteEspece = ({ espece }) => {
-  const [flipped, setFlipped] = useState(false);
-
-  // Fonction pour gérer le clic avec retour automatique
-  const gererClic = () => {
-    // On retourne la carte (passe au verso)
-    setFlipped(!flipped);
-
-    // Si on vient de l'afficher (elle passe au verso), 
-    // on programme son retour automatique au recto après 3 secondes
-    if (!flipped) {
-      setTimeout(() => {
-        setFlipped(false);
-      }, 3000);
-    }
-  };
-
-  // On utilise directement la clé NOM de ton JSON
-  const nomAAfficher = espece.NOM || "Espèce inconnue";
-
-  return (
-    <div className="vignette-perspective" onClick={gererClic}>
-      <div className={`vignette-inner ${flipped ? 'flipped' : ''}`}>
-        
-        {/* RECTO : IMAGE */}
-        <div className="vignette-front">
-          <img 
-            src={`/images/${espece["@images"] || 'biodive.png'}`} 
-            alt={nomAAfficher} 
-            className="vignette-image"
-            onError={(e) => e.target.src = "/images/biodive.png"}
-          />
-        </div>
-
-        {/* VERSO : TEXTE (NOM DU POISSON) */}
-        <div className="vignette-back">
-          <span className="label-info">Espèce</span>
-          {/* On affiche le NOM, pas la réponse ! */}
-          <div className="nom-commun">{nomAAfficher}</div>
-          
-          {espece.NOM_SCIENTIFIQUE && (
-            <>
-              <div style={{ width: '40%', height: '1px', background: 'rgba(255,255,255,0.3)', margin: '8px 0' }}></div>
-              <span className="label-info">Scientifique</span>
-              <div className="nom-scientifique">{espece.NOM_SCIENTIFIQUE}</div>
-            </>
-          )}
-        </div>
-
-      </div>
-    </div>
-  );
-};
+import VignetteEspece from './VignetteEspece';
 
 // Composant principal
 const AlbumPhoto = ({ catalogue }) => {
@@ -64,12 +10,13 @@ const AlbumPhoto = ({ catalogue }) => {
   // Filtrage pour ne garder que la catégorie faune
   const fauneUniquement = sourceFaune.filter(item => 
     item.CATEGORIE?.toLowerCase() === 'faune' && 
-    item.TYPE !== 'BONUS'
+    item.TYPE !== 'BONUS' &&
+    item["@images"] && item["@images"] !== 'biodive.png'
   );
 
   return (
     <div className="album-container">
-      <p style={{ fontSize: '0.9rem', color: '#0288d1', marginBottom: '10px', textAlign: 'center' }}>
+      <p style={{ fontSize: '1rem', color: '#0288d1', marginBottom: '10px', textAlign: 'center' }}>
         {fauneUniquement.length} espèces dans la collection
       </p>
 

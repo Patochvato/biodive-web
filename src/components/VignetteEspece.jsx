@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './album.css';
+import '../album.css';
 import { playSound } from '../audioManager';
 
 
@@ -7,8 +7,7 @@ const VignetteEspece = ({ espece }) => {
   const [flipped, setFlipped] = useState(false);
   const gererClic = () => {
     // 1. Jouer le son de "flip"
-    // Utilise un son court comme 'click.mp3' ou 'swipe.mp3'
-    playSound('/public/sounds/bris.mp3', 0.3); 
+    playSound('bris.mp3', 0.3); 
 
     // 2. Vibration légère (optionnel, très sympa sur mobile)
     if (navigator.vibrate) navigator.vibrate(10);
@@ -26,7 +25,7 @@ const VignetteEspece = ({ espece }) => {
   const nomAAfficher = espece.NOM || "Nom manquant";
 
   return (
-    <div className="vignette-perspective" onClick={() => setFlipped(!flipped)}>
+    <div className="vignette-perspective" onClick={gererClic}>
       <div className={`vignette-inner ${flipped ? 'flipped' : ''}`}>
         
         {/* RECTO : IMAGE */}
@@ -35,12 +34,13 @@ const VignetteEspece = ({ espece }) => {
             src={`/images/${espece["@images"] || 'biodive.png'}`} 
             alt={nomAAfficher} 
             className="vignette-image"
+            onError={(e) => e.target.src = "/images/biodive.png"}
           />
         </div>
 
         {/* VERSO : NOM DIRECT DU JSON */}
         <div className="vignette-back">
-          <span className="label-info">Espèce</span>
+          {/*<span className="label-info">Espèce</span>*/}
           <div className="nom-commun">
             {nomAAfficher} 
           </div>

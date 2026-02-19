@@ -60,7 +60,7 @@ const EcranVictoire = ({ score, objets, onRejouer, onQuitter, catalogue }) => {
     carte: {
       backgroundColor: 'white',
       borderRadius: '30px',
-      padding: '40px 20px',
+      padding: '20px 20px',
       width: '100%',
       maxWidth: '400px',
       textAlign: 'center',

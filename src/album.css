@@ -4,6 +4,16 @@
   --white: #ffffff;
 }
 
+/* Conteneur principal de l'album */
+.album-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+
 /* Conteneur de la grille */
 .album-grid {
   display: grid;
@@ -90,7 +100,7 @@
 }
 .separateur {
   width: 40%;
-  height: 1px;
+  height: 2px;
   background: rgba(255, 255, 255, 0.3);
   margin: 10px 0;
 }
