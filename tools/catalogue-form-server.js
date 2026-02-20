@@ -54,6 +54,7 @@ const server = http.createServer((req, res) => {
         QUESTION: params.get('QUESTION') || '',
         REPONSE: params.get('REPONSE') || '',
         EXPLICATIONS: params.get('EXPLICATIONS') || '',
+        NOM: params.get('NOM') || '',
         NOM_SCIENTIFIQUE: params.get('NOM_SCIENTIFIQUE') || '',
         '@images': params.get('@images') || '',
         TYPE: params.get('TYPE') || '',
@@ -131,6 +132,7 @@ const server = http.createServer((req, res) => {
             <p><strong>Question :</strong> ${entry.QUESTION}</p>
             <p><strong>Réponse :</strong> ${entry.REPONSE}</p>
             <p><strong>Explications :</strong> ${entry.EXPLICATIONS}</p>
+            <p><strong>Nom :</strong> ${entry.NOM}</p>
             <p><strong>Nom scientifique :</strong> ${entry.NOM_SCIENTIFIQUE || '(vide)'}</p>
             <p><strong>Type :</strong> ${entry.TYPE}</p>
             <p><strong>Catégorie :</strong> ${entry.CATEGORIE}</p>

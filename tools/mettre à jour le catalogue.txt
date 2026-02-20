@@ -1,5 +1,5 @@
 mettre à jour le catalogue
-node .\tools\catalogue-form-server.js  
+node .\catalogue-form-server.js  
 Caractère spécial	Résultat échappé
 Guillemet (")	\"
 Barre oblique inverse (\)	\\

@@ -1163,6 +1163,41 @@
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "60"
+    },
+    {
+      "ID": "faune_98",
+      "QUESTION": "je suis une étoile de mer\\nA je peux avoir jusqu'à 7 bras\\B j'aime beaucoup la lumière\\C je me nourrie de bivalves",
+      "REPONSE": "A,C",
+      "EXPLICATIONS": "De teinte rouge couverte de plaques de couleur crème, rugueuses, arrondies au sommet, dont la taille diminue vers le bout des bras. Ces plaques laissent normalement une zone pentagonale nue sur le disque central",
+      "NOM": "étoile de mer",
+      "NOM_SCIENTIFIQUE": "Fromia nodosa",
+      "@images": "f98.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_99",
+      "QUESTION": "je suis une plante qui sert de nourriture aux poissons.",
+      "REPONSE": "FAUX",
+      "EXPLICATIONS": "Eponge de couleur rouge vif, dont la surface forme des éminences coniques qui ont au sommet un oscule de taille moyenne. Epaisseur 1 cm environ, friable et facile à prélever.",
+      "NOM_SCIENTIFIQUE": "Scopalina rubra",
+      "@images": "f99.jpg",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "biologie",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_100",
+      "QUESTION": "Mon premier est le contraire de bas\nMon second est courte pour le myope\nMon troisième est une note de musique\nMon troisième coule de la source\nMon quatrième mesure la résistance\nMon tout est un gastéropode ",
+      "REPONSE": "ovula ovum",
+      "EXPLICATIONS": "Elles sont principalement carnivores et se nourrissent de coraux durs ou moux. Elles utilisent leur radula comme une râpe en arrachant les tissus en surface de leur proie.",
+      "NOM": "porcelaine blanche",
+      "NOM_SCIENTIFIQUE": "Ovula ovum",
+      "@images": "f100.jpg",
+      "TYPE": "CHARADE",
+      "CATEGORIE": "faune",
+      "POINTS": "60"
     }
   ],
   "action": [
