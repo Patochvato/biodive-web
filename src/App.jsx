@@ -2,14 +2,30 @@ import React, { useState, useRef, useCallback, useMemo } from 'react';
 import BarreInventaire from './BarreInventaire';
 import DePlacement from './DePlacement';
 import catalogue_complet from './catalogue_complet.json';
-// Importez vos composants de cartes ici
 import CarteFaune from './CarteFaune'; 
 import CarteAction from './CarteAction';
-import BarreProgression from './BarreProgression';
 import EcranVictoire from './EcranVictoire';
 import EcranAccueil from './EcranAccueil';
 import { playSound } from './audioManager';
 import MiniJeuEpave from './components/MiniJeuEpave';
+import AnimationPoints from './components/AnimationPoints';
+import BarreProgressionPlongeur from './components/BarreProgressionPlongeur';
+import ClubPlongee from './components/ClubPlongee';
+import MessageBonus from './components/MessageBonus';
+import { FACES_DE_DEPART, CONFIG_JEU } from './constants/gameConstants';
+import {
+  calculerPointsAvecBonus,
+  obtenirObjetTrouve,
+  genererMessageBonus,
+  mettreAJourInventaire,
+  compterObjetsUniques,
+  mettreAJourInventaireDepart
+} from './utils/inventaireUtils';
+import {
+  choisirMotAleatoire,
+  verifierReponse,
+  choisirObjetAleatoire
+} from './utils/miniJeuUtils';
 
 const styles = {
   container: {
@@ -17,109 +33,40 @@ const styles = {
     width: '100vw',
     position: 'relative',
     overflow: 'hidden',
-    backgroundImage: `url('/images/fond2.svg')`, // Ton superbe SVG
+    backgroundImage: `url('/images/fond2.svg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.1)', // Légère teinte pour le contraste
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
-
   header: {
     width: '100%',
-  textAlign: 'center',
-  backgroundColor: '#0288d1',
-  color: 'white',
-  padding: '6px 0', // Hauteur réduite
-  boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-  },  
-  progressContainer: {
-    width: '85%',
-    height: '30px', // Plus haute pour plus de visibilité
-    backgroundColor: 'rgba(157, 221, 255, 0.32)', // Bleu très clair transparent
-    borderRadius: '20px',
-    marginTop: '20px',
-    position: 'relative',
-    border: '2px solid #0288d1',
-    boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.2)',
-    overflow: 'visible' // Pour que l'icône puisse dépasser un peu
-  },
-  progressBar: {
-    height: '100%',
-    backgroundColor: '#4caf50',
-    borderRadius: '18px',
-    transition: 'width 0.8s ease-out', // Animation fluide du déplacement
-    backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent)',
-    backgroundSize: '30px 30px', // Effet de rayures stylisées
-  },
-  plongeurIcon: {
-    position: 'absolute',
-    top: '-10px', // Positionné légèrement au-dessus
-    left: '0', // Sera géré en ligne
-    fontSize: '24px',
-    transition: 'left 0.8s ease-out',
-    filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))'
+    textAlign: 'center',
+    backgroundColor: '#0288d1',
+    color: 'white',
+    padding: '6px 0',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
   },
   main: {
-  flex: 1,
-  width: '100%',
-  maxWidth: '500px',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'flex-start', 
-  padding: '10px 15px', // On augmente le padding du haut à 40px pour "abaisser" le contenu
-  boxSizing: 'border-box'
-}
-};
-
-const EffetBulles = () => {
-  // On génère 3 bulles avec des délais différents
-  return (
-    <div style={{ position: 'absolute', top: '-15px', left: '10px' }}>
-      {[1, 2, 3].map((i) => (
-        <span key={i} style={{
-          position: 'absolute',
-          width: '8px',
-          height: '8px',
-          borderRadius: '50%',
-          border: '1px solid white',
-          backgroundColor: 'rgba(255, 255, 255, 0.4)',
-          animation: `monterBulles ${1 + i * 0.5}s infinite ease-out`,
-          left: `${i * 8}px`
-        }}></span>
-      ))}
-    </div>
-  );
-};
-const AnimationPoints = ({ points }) => {
-  if (points === 0) return null;
-  const estPositif = points > 0;
-  
-  return (
-    <div style={{
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      fontSize: '4rem', // Légèrement plus grand pour l'impact
-      fontWeight: '900',
-      color: estPositif ? '#4caf50' : '#f44336',
-      textShadow: '0 0 20px rgba(255,255,255,0.8), 2px 2px 5px rgba(0,0,0,0.5)',
-      zIndex: 5000,
-      pointerEvents: 'none',
-      animation: 'fastFloatUp 0.8s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67)'
-    }}>
-      {estPositif ? `+${points}` : points}
-    </div>
-  );
+    flex: 1,
+    width: '100%',
+    maxWidth: '500px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: '10px 15px',
+    boxSizing: 'border-box'
+  }
 };
 
 function App() {
-  const [ecranAccueil, setEcranAccueil] = useState(true); // Nouveau : commence sur l'accueil
+  // États principaux
+  const [ecranAccueil, setEcranAccueil] = useState(true);
   const [position, setPosition] = useState(0);
-  const [mode, setMode] = useState('DEPLACEMENT'); 
+  const [mode, setMode] = useState('DEPLACEMENT');
   const [estAuClub, setEstAuClub] = useState(true);
   const [inventaire, setInventaire] = useState({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
   const [carteActuelle, setCarteActuelle] = useState(null);
@@ -127,13 +74,18 @@ function App() {
   const [dernierDeDepart, setDernierDeDepart] = useState(null);
   const [messageBonus, setMessageBonus] = useState("");
   const [cartesUtilisees, setCartesUtilisees] = useState([]);
+  
+  // États d'animation
   const [animationScore, setAnimationScore] = useState(null);
   const [flashScore, setFlashScore] = useState(false);
+  
+  // États du mini-jeu
   const [miniJeuOuvert, setMiniJeuOuvert] = useState(false);
   const [motATrouver, setMotATrouver] = useState({ melange: "", solution: "" });
   const [reponseUser, setReponseUser] = useState("");
   const [tempsRestant, setTempsRestant] = useState(0);
-  const [catalogue, setCatalogue] = useState([]); 
+  
+  // Gestion des timers
   const timersRef = useRef({ intervals: [], timeouts: [] });
 
   const registerTimeout = useCallback((fn, delay) => {
@@ -160,482 +112,297 @@ function App() {
     registerTimeout(() => setMessageBonus(""), duration);
   }, [registerTimeout]);
 
-
-  const imagesFacesDe = {
-  "PLONGEUR": "face_plongeur.png", // Remplace par tes vrais noms de fichiers
-  "POIGNARD": "face_poignard.png",
-  "CAMERA": "face_camera.png",
-  "PHOTO": "face_photo.png",
-  "BINGO": "face_bingo.png"
-}; 
+  // Lancer le dé de départ
   const tenterLeDepart = useCallback(() => {
     playSound('dice.mp3', 0.4);
-    const faces = ["PLONGEUR", "POIGNARD", "CAMERA", "PHOTO", "PLONGEUR", "BINGO"];
-    const tirage = faces[Math.floor(Math.random() * faces.length)];
+    
+    const tirage = FACES_DE_DEPART[Math.floor(Math.random() * FACES_DE_DEPART.length)];
     setDernierDeDepart(tirage);
 
-    // Mise à jour de l'inventaire selon le tirage
-    if (tirage === "POIGNARD") setInventaire(prev => ({ ...prev, couteau: prev.couteau + 1 }));
-    if (tirage === "CAMERA") setInventaire(prev => ({ ...prev, camera: prev.camera + 1 }));
-    if (tirage === "PHOTO") setInventaire(prev => ({ ...prev, photo: prev.photo + 1 }));
-    if (tirage === "BINGO") setInventaire(prev => ({ ...prev, bouclier: prev.bouclier + 1 }));
+    // Mise à jour de l'inventaire
+    setInventaire(prev => mettreAJourInventaireDepart(prev, tirage));
 
-    // Si c'est un départ validé (Plongeur ou Bingo)
+    // Si départ validé
     if (tirage === "PLONGEUR" || tirage === "BINGO") {
-      // On laisse 1.5s au joueur pour voir le résultat avant de changer d'écran
       registerTimeout(() => {
         setEstAuClub(false);
-        setDernierDeDepart(null); // On réinitialise pour la prochaine fois
+        setDernierDeDepart(null);
       }, 1500);
     }
   }, [registerTimeout]);
 
-const preparerMiniJeu = useCallback(() => {
-  const dictionnaire = [
-    { solution: ["PALMES"], melange: "MLAPES" }, // On utilise les noms complets
-    { solution: ["ANCRE","NACRE"], melange: "NCARE" },
-    { solution: ["CORAIL"], melange: "LIAROC" },
-    { solution: ["REQUIN"], melange: "NUIREQ" },
-    { solution: ["MEDUSE"], melange: "USEDEM" },
-    { solution: ["BALEINE"], melange: "ELENIBA" },
-    { solution: ["TORTUE"], melange: "UORTTE" },
-    { solution: ["MANTA"], melange: "TAMAN" },
-    { solution: ["POULPE"], melange: "LUPOPE" },
-    { solution: ["LAGON"], melange: "NOGAL" },
-    { solution: ["ABYSSE"], melange: "SABYSE" },
-    { solution: ["PLANCTON"], melange: "TOLNCPAN" },
-    { solution: ["CRABE"], melange: "BECRA" },
-    { solution: ["MURENE"], melange: "ENRUME" },
-    { solution: ["RIVAGE"], melange: "GERAVI" }
-  ];
-  
-  const choisi = dictionnaire[Math.floor(Math.random() * dictionnaire.length)];
-  setReponseUser("");
-  setMotATrouver(choisi); // Plus besoin du spread ici si les noms correspondent
-  setTempsRestant(20); // Par exemple, 15 secondes pour répondre
-  setMiniJeuOuvert(true);
-}, []);
+  // Préparer le mini-jeu
+  const preparerMiniJeu = useCallback(() => {
+    const choisi = choisirMotAleatoire();
+    setReponseUser("");
+    setMotATrouver(choisi);
+    setTempsRestant(CONFIG_JEU.TEMPS_MINI_JEU);
+    setMiniJeuOuvert(true);
+  }, []);
 
-const verifierMiniJeu = useCallback(() => {
-  if (!motATrouver || !motATrouver.solution) {
-    console.error('[mini] verifierMiniJeu: motATrouver invalide', motATrouver);
-    afficherMessageBonus("Erreur interne du mini‑jeu");
-    setMiniJeuOuvert(false);
-    return;
-  }
+  // Vérifier la réponse du mini-jeu
+  const verifierMiniJeu = useCallback(() => {
+    const resultat = verifierReponse(reponseUser, motATrouver);
 
-  const solutionsBrutes = Array.isArray(motATrouver.solution)
-    ? motATrouver.solution
-    : [motATrouver.solution];
-  const solutions = solutionsBrutes
-    .map((valeur) => String(valeur).trim().toUpperCase())
-    .filter(Boolean);
-
-  if (solutions.length === 0) {
-    console.error('[mini] verifierMiniJeu: solutions vides', motATrouver);
-    afficherMessageBonus("Erreur interne du mini‑jeu");
-    setMiniJeuOuvert(false);
-    return;
-  }
-  if (reponseUser.trim() === "") {
-    afficherMessageBonus("Veuillez entrer une réponse", 2000);
-    return;
-  }
-
-  const reponseNormalisee = reponseUser.trim().toUpperCase();
-
-  if (solutions.includes(reponseNormalisee)) {
-    // Gain d'un objet aléatoire
-    const objets = ["camera", "couteau", "photo", "bouclier"];
-    const gain = objets[Math.floor(Math.random() * objets.length)];
-    
-    setInventaire(prev => ({ ...prev, [gain]: prev[gain] + 1 }));
-    afficherMessageBonus(`✨ BRAVO ! Vous avez trouvé : ${gain.toUpperCase()} !`);
-    setMiniJeuOuvert(false);
-  } else {
-    afficherMessageBonus(`❌ Dommage ! Le mot était ${solutions.join(' / ')}`);
-    setMiniJeuOuvert(false);
-  }
-}, [afficherMessageBonus, reponseUser, motATrouver]);  
-// Logique du compte à rebours
-// 1. GESTION DU SON (Se déclenche UNIQUEMENT quand on ouvre/ferme le jeu)
-React.useEffect(() => {
-  let sonChrono = null;
-
-  if (miniJeuOuvert) {
-    sonChrono = new Audio('/sons/attente.mp3');
-    sonChrono.volume = 0.3;
-    sonChrono.loop = true; // Pour que le son continue si le chrono est long
-    sonChrono.play().catch(e => console.log("Erreur audio attente:", e));
-  }
-
-  return () => {
-    if (sonChrono) {
-      sonChrono.pause();
-      sonChrono.currentTime = 0;
+    if (resultat.erreur === "invalid_data" || resultat.erreur === "empty_solutions") {
+      afficherMessageBonus("Erreur interne du mini‑jeu");
+      setMiniJeuOuvert(false);
+      return;
     }
-  };
-}, [miniJeuOuvert]); // <--- On ne surveille QUE l'ouverture/fermeture
 
-// 2. GESTION DU CHRONO
-React.useEffect(() => {
-  let intervalle;
+    if (resultat.erreur === "empty_response") {
+      afficherMessageBonus("Veuillez entrer une réponse", 2000);
+      return;
+    }
 
-  if (miniJeuOuvert && tempsRestant > 0) {
-    intervalle = registerInterval(() => {
-      setTempsRestant((prev) => prev - 1);
-    }, 1000);
-  } 
-  else if (tempsRestant === 0 && miniJeuOuvert) {
-    afficherMessageBonus("⌛ TEMPS ÉCOULÉ ! Le coffre s'est refermé...");
-    registerTimeout(() => { setMiniJeuOuvert(false); }, 1000);
-  }
+    if (resultat.valide) {
+      const gain = choisirObjetAleatoire();
+      setInventaire(prev => ({ ...prev, [gain]: prev[gain] + 1 }));
+      afficherMessageBonus(`✨ BRAVO ! Vous avez trouvé : ${gain.toUpperCase()} !`);
+      setMiniJeuOuvert(false);
+    } else {
+      afficherMessageBonus(`❌ Dommage ! Le mot était ${resultat.solutions.join(' / ')}`);
+      setMiniJeuOuvert(false);
+    }
+  }, [afficherMessageBonus, reponseUser, motATrouver]);
 
-  return () => {
-    if (intervalle) clearInterval(intervalle);
-  };
-}, [afficherMessageBonus, miniJeuOuvert, registerInterval, registerTimeout, tempsRestant]);
+  // Gestion du chrono du mini-jeu
+  React.useEffect(() => {
+    let intervalle;
 
-// 3. NETTOYAGE GLOBAL (Ton code existant est parfait ici)
-React.useEffect(() => {
-  return () => {
-    clearAllTimers();
-  };
-}, [clearAllTimers]);
+    if (miniJeuOuvert && tempsRestant > 0) {
+      intervalle = registerInterval(() => {
+        setTempsRestant((prev) => prev - 1);
+      }, 1000);
+    } else if (tempsRestant === 0 && miniJeuOuvert) {
+      afficherMessageBonus("⌛ TEMPS ÉCOULÉ ! Le coffre s'est refermé...");
+      registerTimeout(() => setMiniJeuOuvert(false), 1000);
+    }
 
-const finirTour = (points = 0, objetUtilise = null) => {
-  let pointsFinal = parseInt(points, 10) || 0;
+    return () => {
+      if (intervalle) clearInterval(intervalle);
+    };
+  }, [afficherMessageBonus, miniJeuOuvert, registerInterval, registerTimeout, tempsRestant]);
 
-  // --- ÉTAPE A : CALCUL DES POINTS ---
-  if (pointsFinal > 0) {
+  // Gestion du son du mini-jeu
+  React.useEffect(() => {
+    let sonChrono = null;
+
+    if (miniJeuOuvert) {
+      sonChrono = new Audio('/sons/attente.mp3');
+      sonChrono.volume = 0.3;
+      sonChrono.loop = true;
+      sonChrono.play().catch(e => console.log("Erreur audio attente:", e));
+    }
+
+    return () => {
+      if (sonChrono) {
+        sonChrono.pause();
+        sonChrono.currentTime = 0;
+      }
+    };
+  }, [miniJeuOuvert]);
+
+  // Nettoyage global des timers
+  React.useEffect(() => {
+    return () => {
+      clearAllTimers();
+    };
+  }, [clearAllTimers]);
+
+  // Gestion de la fin de tour
+  const finirTour = useCallback((points = 0, objetUtilise = null) => {
+    // Calcul des points avec bonus
+    const pointsFinal = calculerPointsAvecBonus(points, carteActuelle, inventaire);
+
+    // Animation des points
+    if (pointsFinal > 0) {
       playSound('bling.mp3', 0.3);
-    if (carteActuelle?.CATEGORIE === "BIOLOGIE" && inventaire.photo > 0) {
-      pointsFinal += 10;
     }
-    if (inventaire.camera > 0) {
-      pointsFinal = Math.round(pointsFinal * 1.2);
+    
+    if (pointsFinal !== 0) {
+      setAnimationScore(pointsFinal);
+      setFlashScore(true);
+      registerTimeout(() => {
+        setAnimationScore(null);
+        setFlashScore(false);
+      }, 800);
     }
-  }
-  // --- NOUVEAU : DÉCLENCHER L'ANIMATION ---
-  if (pointsFinal !== 0) {
-    setAnimationScore(pointsFinal);
-    setFlashScore(true);
-    registerTimeout(() => {
-      setAnimationScore(null);
-      setFlashScore(false);
-    }, 800); // Disparaît après 0.8s
-  }
-  // --- ÉTAPE B : APPLICATION DES POINTS / POSITION ---
-  if (pointsFinal >= -9 && pointsFinal <= 9) {
-    setPosition(prev => Math.min(100, Math.max(0, prev + pointsFinal)));
-  } else {
-    setScore(prev => prev + pointsFinal);
-  }
 
-  // --- ÉTAPE C : MISE À JOUR UNIQUE DE L'INVENTAIRE ---
-  const objetTrouve = carteActuelle?.VALEUR ? String(carteActuelle.VALEUR).toUpperCase() : "";
-  let messageObjetTrouve = "";
-  let messageObjetUtilise = "";
+    // Application des points/position
+    if (pointsFinal >= -9 && pointsFinal <= 9) {
+      setPosition(prev => Math.min(100, Math.max(0, prev + pointsFinal)));
+    } else {
+      setScore(prev => prev + pointsFinal);
+    }
 
-  if (objetUtilise) {
-    playSound('bris.mp3', 0.5);
-    const nomAffiche = objetUtilise === "photo" ? "Appareil Photo" : 
-                       objetUtilise.charAt(0).toUpperCase() + objetUtilise.slice(1);
-    messageObjetUtilise = `⚠️ Votre ${nomAffiche} a été utilisé !`;
-  }
-
-  if (objetTrouve.includes("CAMERA")) {
-    messageObjetTrouve = "✨ Super ! Vous avez trouvé la CAMÉRA vidéo !";
-  } 
-  else if (objetTrouve.includes("PHOTO")) {
-    messageObjetTrouve = "✨ Super ! Vous avez trouvé l'APPAREIL PHOTO !";
-  }
-  else if (objetTrouve.includes("BOUCLIER")) {
-    messageObjetTrouve = "✨ Super ! Vous avez trouvé le BOUCLIER !";
-  } 
-  else if (objetTrouve.includes("COUTEAU")) {
-    messageObjetTrouve = "✨ Super ! Vous avez trouvé le COUTEAU !";
-  }
-
-  setInventaire(prev => {
-    let nouvelInventaire = { ...prev };
-
+    // Gestion des objets trouvés/utilisés
+    const objetTrouve = obtenirObjetTrouve(carteActuelle?.VALEUR);
+    const messageFinal = genererMessageBonus(objetTrouve, objetUtilise);
+    
     if (objetUtilise) {
-      nouvelInventaire[objetUtilise] = Math.max(0, nouvelInventaire[objetUtilise] - 1);
+      playSound('bris.mp3', 0.5);
     }
 
-    if (objetTrouve.includes("CAMERA")) {
-      nouvelInventaire.camera += 1;
-    } 
-    else if (objetTrouve.includes("PHOTO")) {
-      nouvelInventaire.photo += 1;
-    }
-    else if (objetTrouve.includes("BOUCLIER")) {
-      nouvelInventaire.bouclier += 1;
-    } 
-    else if (objetTrouve.includes("COUTEAU")) {
-      nouvelInventaire.couteau += 1;
+    setInventaire(prev => mettreAJourInventaire(prev, objetTrouve, objetUtilise));
+
+    if (messageFinal) {
+      afficherMessageBonus(messageFinal);
     }
 
-    return nouvelInventaire;
-  });
+    // Nettoyage
+    if (carteActuelle) {
+      setCartesUtilisees(prev => [...prev, carteActuelle.ID]);
+    }
+    setMode('DEPLACEMENT');
+    setCarteActuelle(null);
+  }, [carteActuelle, inventaire, registerTimeout, afficherMessageBonus]);
 
-  const messageFinal = messageObjetTrouve || messageObjetUtilise;
-  if (messageFinal) {
-    afficherMessageBonus(messageFinal);
-  }
-
-  // --- ÉTAPE D : NETTOYAGE ---
-  if (carteActuelle) {
-    setCartesUtilisees(prev => [...prev, carteActuelle.ID]);
-  }
-  setMode('DEPLACEMENT');
-  setCarteActuelle(null);
-};
-
-const toutesLesCartes = useMemo(() => [
+  // Mémoïsation du catalogue complet et calculs
+  const toutesLesCartes = useMemo(() => [
     ...(catalogue_complet.faune || []),
     ...(catalogue_complet.action || [])
-  ], [catalogue_complet]);
-const nbObjetsRecuperesUnique = Object.keys(inventaire).filter(cle => inventaire[cle] > 0).length;
-const bonusCollection = nbObjetsRecuperesUnique >= 4 ? 100 : 0; // 4 car tu as Caméra, Couteau, Photo, Bouclier
+  ], []);
 
+  const nbObjetsRecuperesUnique = useMemo(() => 
+    compterObjetsUniques(inventaire), 
+    [inventaire]
+  );
+
+  const bonusCollection = useMemo(() => 
+    nbObjetsRecuperesUnique >= 4 ? CONFIG_JEU.BONUS_COLLECTION_COMPLETE : 0,
+    [nbObjetsRecuperesUnique]
+  );
+
+  // Réinitialiser le jeu
+  const reinitialiserJeu = useCallback(() => {
+    clearAllTimers();
+    setEcranAccueil(true);
+    setMode('DEPLACEMENT');
+    setScore(0);
+    setPosition(0);
+    setEstAuClub(true);
+    setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
+    setCartesUtilisees([]);
+    setDernierDeDepart(null);
+    setMessageBonus("");
+    setAnimationScore(null);
+    setFlashScore(false);
+    setMiniJeuOuvert(false);
+    setMotATrouver({ melange: "", solution: "" });
+    setReponseUser("");
+    setTempsRestant(0);
+  }, [clearAllTimers]);
+
+  // Affichage de l'écran d'accueil
   if (ecranAccueil) {
     return <EcranAccueil onDemarrer={() => setEcranAccueil(false)} />;
   }
-  const quitterLeJeu = () => {
-    clearAllTimers();
-    setEcranAccueil(true);
-    setMode('DEPLACEMENT'); 
-    setScore(0);
-    setPosition(0);
-    setEstAuClub(true); // <--- REPASSER PAR LA CASE DÉPART
-    setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
-    setCartesUtilisees([]);
-    setDernierDeDepart(null);
-    setMessageBonus("");
-    setAnimationScore(null);
-    setFlashScore(false);
-    setMiniJeuOuvert(false);
-    setMotATrouver({ melange: "", solution: "" });
-    setReponseUser("");
-    setTempsRestant(0);
-  };
 
-  const retournerALAccueil = () => {
-    clearAllTimers();
-    setEcranAccueil(true);
-    setMode('DEPLACEMENT'); 
-    setScore(0);
-    setPosition(0);
-    setEstAuClub(true); // <--- REPASSER PAR LA CASE DÉPART
-    setInventaire({ camera: 0, couteau: 0, photo: 0, bouclier: 0 });
-    setCartesUtilisees([]);
-    setDernierDeDepart(null);
-    setMessageBonus("");
-    setAnimationScore(null);
-    setFlashScore(false);
-    setMiniJeuOuvert(false);
-    setMotATrouver({ melange: "", solution: "" });
-    setReponseUser("");
-    setTempsRestant(0);
-  };
-
-return (
+  // Rendu principal du jeu
+  return (
     <div style={styles.container}>
-     {/* Affichage de l'animation de points si elle existe */}
-    {animationScore !== null && <AnimationPoints points={animationScore} />} 
+      {/* Animation de points */}
+      {animationScore !== null && <AnimationPoints points={animationScore} />}
+      
+      {/* En-tête avec score */}
       <header style={styles.header}>
-  <h1 style={styles.headerTitle}>
-    BIO DIVE 🐠 
-    <span style={{ 
-      fontSize: '1.2rem', 
-      marginLeft: '15px', 
-      display: 'inline-block',
-      transition: 'all 0.2s ease',
-      // Le flash : grossit et devient jaune si activé
-      transform: flashScore ? 'scale(1.4)' : 'scale(1)',
-      color: flashScore ? '#ffd700' : 'white',
-      textShadow: flashScore ? '0 0 10px rgba(255, 215, 0, 0.8)' : 'none',
-      fontWeight: '900'
-    }}>
-      Score : {score}
-    </span>
-  </h1>
-</header>
+        <h1 style={styles.headerTitle}>
+          BIO DIVE 🐠
+          <span
+            style={{
+              fontSize: '1.2rem',
+              marginLeft: '15px',
+              display: 'inline-block',
+              transition: 'all 0.2s ease',
+              transform: flashScore ? 'scale(1.4)' : 'scale(1)',
+              color: flashScore ? '#ffd700' : 'white',
+              textShadow: flashScore ? '0 0 10px rgba(255, 215, 0, 0.8)' : 'none',
+              fontWeight: '900'
+            }}
+          >
+            Score : {score}
+          </span>
+        </h1>
+      </header>
 
-      {/* ZONE DE NAVIGATION : Barre de progression stylisée */}
-<div style={styles.progressContainer}>
-  {/* La barre colorée */}
-  <div style={{ 
-    ...styles.progressBar, 
-    width: `${position}%` 
-  }} />
+      {/* Barre de progression */}
+      <BarreProgressionPlongeur position={position} />
 
-  {/* L'icône du plongeur qui suit la barre */}
-  <div style={{ 
-    ...styles.plongeurIcon, 
-    left: `calc(${position}% - 15px)`,
-  animation: 'bounce 2s infinite ease-in-out' // Le plongeur flotte doucement
-}}>
-  {/* On n'affiche les bulles que si le plongeur n'est pas à 0 ou 100 */}
-  {position > 0 && position < 100 && <EffetBulles />}
-  🤿
-</div>
-
-  {/* Petits repères de distance */}
-  <div style={{
-    position: 'absolute',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '0 10px',
-    top: '35px',
-    fontSize: '0.7rem',
-    color: '#0288d1',
-    fontWeight: 'bold'
-  }}>
-    <span>Surface</span>
-    <span>50%</span>
-    <span>Arrivée</span>
-  </div>
-</div>
-      
+      {/* Inventaire */}
       <BarreInventaire inventaire={inventaire} />
-      
-{messageBonus && (
-  <div style={{
-    position: 'fixed',
-    top: '20%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    backgroundColor: '#ffd700',
-    color: '#000',
-    padding: '15px 15px',
-    borderRadius: '30px',
-    fontWeight: 'bold',
-    zIndex: 3000,
-    boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-    border: '2px solid white',
-    animation: 'bounce 0.5s ease'
-  }}>
-    {messageBonus}
-  </div>
-)}
 
+      {/* Message bonus */}
+      <MessageBonus message={messageBonus} />
 
-  <main style={styles.main}>
-  {/* On affiche l'écran de victoire uniquement si le mode est 'VICTOIRE' */}
-{mode === 'VICTOIRE' && (
-  <EcranVictoire 
-    score={score + bonusCollection} 
-    objets={nbObjetsRecuperesUnique} // <--- Utilise la nouvelle variable ici
-    onRejouer={retournerALAccueil} 
-    onQuitter={retournerALAccueil}
-    catalogue={catalogue_complet} // <--- Passe le catalogue complet ici
-  />
-)}
+      <main style={styles.main}>
+        {/* Écran de victoire */}
+        {mode === 'VICTOIRE' && (
+          <EcranVictoire
+            score={score + bonusCollection}
+            objets={nbObjetsRecuperesUnique}
+            onRejouer={reinitialiserJeu}
+            onQuitter={reinitialiserJeu}
+            catalogue={catalogue_complet}
+          />
+        )}
 
-  {/* 2. CAS : DÉPART (Club) */}
-  {estAuClub ? (
-  <div style={{ 
-    width: '100%',           // Prend toute la largeur disponible dans le main
-    maxWidth: '380px',       // S'aligne sur la largeur visuelle de tes cartes
-    backgroundColor: 'white', 
-    padding: '30px 20px',    // Un peu plus d'espace interne
-    borderRadius: '20px', 
-    boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
-    textAlign: 'center'
-  }}>
-    <h2 style={{ color: '#0288d1', marginBottom: '20px' }}>🏠 Club de Plongée</h2>
-      
-      <div style={{ 
-  margin: '20px auto', width: '150px', height: '150px', 
-  border: '3px solid #0288d1', borderRadius: '20px',
-  display: 'flex', alignItems: 'center', justifyContent: 'center',
-  backgroundColor: 'white', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-}}>
-  {dernierDeDepart ? (
-    /* Affiche la face spécifique tirée */
-    <img 
-      src={`/images/${imagesFacesDe[dernierDeDepart]}`} 
-      alt={dernierDeDepart}
-      style={{ 
-        width: '100%', height: '100%', objectFit: 'contain', 
-        padding: '10px', animation: 'popIn 0.3s ease-out' 
-      }} 
-    />
-  ) : (
-    /* Image du dé entier par défaut avant le lancer */
-    <img 
-      src="/images/dedepart.png" 
-      alt="Lancer le dé" 
-      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '15px', opacity: 0.6 }} 
-    />
-  )}
-</div>
+        {/* Club de plongée (départ) */}
+        {estAuClub ? (
+          <ClubPlongee 
+            dernierDe={dernierDeDepart} 
+            onLancerDe={tenterLeDepart}
+          />
+        ) : mode === 'DEPLACEMENT' ? (
+          /* Déplacement */
+          <DePlacement
+            catalogue={toutesLesCartes.filter(c => !cartesUtilisees.includes(c.ID))}
+            onLancer={(valeurDe, carte) => {
+              playSound('dice.mp3', 0.4);
 
-      <p style={{ marginBottom: '15px' }}>
-        {dernierDeDepart 
-          ? (dernierDeDepart === "PLONGEUR" || dernierDeDepart === "BINGO" 
-              ? "C'est parti ! 🤿" 
-              : "Équipement trouvé ! Rejouez pour partir.")
-          : "Tentez de tirer PLONGEUR pour démarrer !"}
-      </p>
+              const nouvellePos = Math.min(CONFIG_JEU.POSITION_VICTOIRE, position + valeurDe);
+              setPosition(nouvellePos);
 
-      <button onClick={tenterLeDepart} style={{ padding: '12px 25px', backgroundColor: '#4caf50', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
-        LANCER LE DÉ DE DÉPART
-      </button>
+              if (nouvellePos >= CONFIG_JEU.POSITION_VICTOIRE) {
+                setMode('VICTOIRE');
+              } else if (carte) {
+                setCarteActuelle(carte);
+                setMode('QUESTION');
+              }
+            }}
+            onFouiller={preparerMiniJeu}
+          />
+        ) : mode === 'QUESTION' && carteActuelle ? (
+          /* Question (Faune ou Action) */
+          carteActuelle.ID.includes("faune") ? (
+            <CarteFaune carte={carteActuelle} onReponse={finirTour} />
+          ) : (
+            <CarteAction 
+              carte={carteActuelle} 
+              inventaire={inventaire} 
+              onContinuer={finirTour} 
+            />
+          )
+        ) : (
+          /* État de secours */
+          <div style={{ textAlign: 'center' }}>
+            <p>Chargement de l'aventure...</p>
+            <button onClick={() => setMode('DEPLACEMENT')}>Réinitialiser</button>
+          </div>
+        )}
+      </main>
+
+      {/* Mini-jeu épave */}
+      <MiniJeuEpave
+        ouvert={miniJeuOuvert}
+        tempsRestant={tempsRestant}
+        motATrouver={motATrouver}
+        reponseUser={reponseUser}
+        onReponseChange={setReponseUser}
+        onValider={verifierMiniJeu}
+        onAnnuler={() => setMiniJeuOuvert(false)}
+      />
     </div>
-  ) : mode === 'DEPLACEMENT' ? (
-    /* 3. CAS : DÉPLACEMENT */
-    <DePlacement 
-  catalogue={toutesLesCartes.filter(c => !cartesUtilisees.includes(c.ID))}
-  onLancer={(valeurDe, carte) => {
-    playSound('dice.mp3', 0.4);
-    
-    const nouvellePos = Math.min(100, position + valeurDe);
-    setPosition(nouvellePos);
-
-    if (nouvellePos >= 100) {
-      // Si on arrive au bout, on finit le jeu directement
-      setMode('VICTOIRE');
-    } else if (carte) {
-      // Sinon, on continue l'exploration
-      setCarteActuelle(carte);
-      setMode('QUESTION');
-        }
-      }} 
-  onFouiller={preparerMiniJeu}    
-    />
-  ) : mode === 'QUESTION' && carteActuelle ? (
-    /* 4. CAS : QUESTION */
-    carteActuelle.ID.includes("faune") ? (
-      <CarteFaune carte={carteActuelle} onReponse={finirTour} />
-    ) : (
-      <CarteAction carte={carteActuelle} inventaire={inventaire} onContinuer={finirTour} />
-    )
-  ) : (
-    /* 5. SÉCURITÉ */
-    <div style={{ textAlign: 'center' }}>
-      <p>Chargement de l'aventure...</p>
-      <button onClick={() => setMode('DEPLACEMENT')}>Réinitialiser</button>
-    </div>
-  )}
-</main>
-{/* 3. LE MINI-JEU (Juste avant la fin de la DIV container) */}
-    <MiniJeuEpave
-      ouvert={miniJeuOuvert}
-      tempsRestant={tempsRestant}
-      motATrouver={motATrouver}
-      reponseUser={reponseUser}
-      onReponseChange={setReponseUser}
-      onValider={verifierMiniJeu}
-      onAnnuler={() => setMiniJeuOuvert(false)}
-    />
-    </div>
-    
-  
   );
 }
 

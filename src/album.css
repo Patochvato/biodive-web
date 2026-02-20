@@ -73,7 +73,7 @@
 
 /* Face Verso (Texte) */
 .vignette-back {
-  background-color: var(--primary-blue);
+  background-color: rgb(102, 167, 174);
   color: var(--white);
   transform: rotateY(180deg);
   padding: 8px;
