@@ -1181,10 +1181,11 @@
       "QUESTION": "je suis une plante qui sert de nourriture aux poissons.",
       "REPONSE": "FAUX",
       "EXPLICATIONS": "Eponge de couleur rouge vif, dont la surface forme des éminences coniques qui ont au sommet un oscule de taille moyenne. Epaisseur 1 cm environ, friable et facile à prélever.",
+      "NOM": "éponge rouge",
       "NOM_SCIENTIFIQUE": "Scopalina rubra",
       "@images": "f99.jpg",
       "TYPE": "VRAI OU FAUX",
-      "CATEGORIE": "biologie",
+      "CATEGORIE": "faune",
       "POINTS": "40"
     },
     {
