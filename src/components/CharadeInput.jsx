@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const CharadeInput = ({ question, reponse, onWin }) => {
+const CharadeInput = ({ question, reponse, onWin, onAbandon }) => {
   const [saisie, setSaisie] = useState("");
   const inputRef = useRef(null); // Création de la référence pour l'input
 
@@ -57,6 +57,23 @@ const CharadeInput = ({ question, reponse, onWin }) => {
       <div style={{ marginTop: '8px', fontSize: '0.9rem', color: '#666' }}>
         {solutionNettoyee.length} lettres attendues
       </div>
+
+      {/* Bouton d'abandon */}
+      {onAbandon && (
+        <button
+          onClick={onAbandon}
+          style={{
+            marginTop: '15px',
+            fontSize: '0.8rem',
+            border: 'none',
+            background: 'transparent',
+            color: '#f44336',
+            cursor: 'pointer'
+          }}
+        >
+          Abandonner
+        </button>
+      )}
     </div>
   );
 };

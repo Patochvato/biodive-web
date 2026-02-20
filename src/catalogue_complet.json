@@ -614,7 +614,7 @@
     },
     {
       "ID": "faune_52",
-      "QUESTION": "Mon premier est un accélérateur de voilier\nMon second est une émission bruyante\nSans mon troisième les lunettes tomberaient\nMon tout est un ver marin.",
+      "QUESTION": "Mon premier accélére le voilier\nMon second est une émission bruyante\nSans mon troisième les lunettes tomberaient\nMon tout est un ver marin.",
       "REPONSE": "spirobranche",
       "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche\nLe Spirobranche-arbre de Noël (Spirobranchus giganteus) est une espèce de vers. Il vit en symbiose avec les coraux durs.",
       "NOM": "ver arbre de noël",
@@ -1166,7 +1166,7 @@
     },
     {
       "ID": "faune_98",
-      "QUESTION": "je suis une étoile de mer\\nA je peux avoir jusqu'à 7 bras\\B j'aime beaucoup la lumière\\C je me nourrie de bivalves",
+      "QUESTION": "je suis une étoile de mer\nA je peux avoir jusqu'à 7 bras\nB j'aime beaucoup la lumière\nC je me nourrie de bivalves",
       "REPONSE": "A,C",
       "EXPLICATIONS": "De teinte rouge couverte de plaques de couleur crème, rugueuses, arrondies au sommet, dont la taille diminue vers le bout des bras. Ces plaques laissent normalement une zone pentagonale nue sur le disque central",
       "NOM": "étoile de mer",
@@ -1180,7 +1180,7 @@
       "ID": "faune_99",
       "QUESTION": "je suis une plante qui sert de nourriture aux poissons.",
       "REPONSE": "FAUX",
-      "EXPLICATIONS": "Eponge de couleur rouge vif, dont la surface forme des éminences coniques qui ont au sommet un oscule de taille moyenne. Epaisseur 1 cm environ, friable et facile à prélever.",
+      "EXPLICATIONS": "Eponge est un animal, celle-ci est de couleur rouge vif, dont la surface forme des éminences coniques qui ont au sommet un oscule de taille moyenne.",
       "NOM": "éponge rouge",
       "NOM_SCIENTIFIQUE": "Scopalina rubra",
       "@images": "f99.jpg",

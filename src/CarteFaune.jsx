@@ -195,7 +195,11 @@ const CarteFaune = ({ carte, onReponse }) => {
                       setScoreAutomatique(pointsCarte);
                       setMontrerReponse(true);
                     }}
-                    
+                    onAbandon={() => {
+                      playSound('perd.mp3', 0.4);
+                      setScoreAutomatique(-pointsCarte);
+                      setMontrerReponse(true);
+                    }}
                   />
                 </div>
               ) : estChoix ? (
