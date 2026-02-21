@@ -18,7 +18,7 @@ if (data.faune && Array.isArray(data.faune)) {
     for (const [key, value] of Object.entries(carte)) {
       nouvelleCarte[key] = value;
       
-      // Ajouter "NOM_SCIENTIFIQUE" après "EXPLICATIONS"
+      // Ajouter "NOM" après "EXPLICATIONS"
       if (key === 'EXPLICATIONS') {
         nouvelleCarte['NOM'] = '';
       }
@@ -31,4 +31,4 @@ if (data.faune && Array.isArray(data.faune)) {
 // Écrire le fichier JSON mis à jour avec une indentation de 2 espaces
 fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 
-console.log(`✓ Champ "NOM_SCIENTIFIQUE" ajouté à ${data.faune.length} cartes de faune`);
+console.log(`✓ Champ "NOM" ajouté à ${data.faune.length} cartes de faune`);

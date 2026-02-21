@@ -85,7 +85,7 @@ const EcranAccueil = ({ onDemarrer }) => {
       <h1 style={styles.titre}>BIO DIVE</h1>
       
       <p style={styles.message}>
-        Plonger à la découverte de la biodiversité marine de La Réunion
+        Plonger à la découverte de la biodiversité marine de l'Est de La Réunion
       </p>
       
       <button 
@@ -97,7 +97,7 @@ const EcranAccueil = ({ onDemarrer }) => {
         COMMENCER
       </button>
       <p style={styles.message}>
-        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis !<br /><br />Gagner des cartes bonus<br /><br />Éviter les malus grâce aux objets de protection
+        Gagner des points en répondant à des questions <br /><br />Progresser en relevant des défis !<br /><br />Gagner des bonus protecteurs<br /><br />Éviter les malus grâce aux objets de protection
       </p>
 
       <style>

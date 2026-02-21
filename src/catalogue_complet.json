@@ -328,7 +328,7 @@
       "ID": "faune_28",
       "QUESTION": "Lors de l'éruption de mars 1977 à Piton Sainte Rose, la lave a rencontré la mer. Au contact de l'eau la lave forme des boules caractéristiques.",
       "REPONSE": "",
-      "EXPLICATIONS": "Des pillow lava ou lave en coussin.\r 👉 La lave en coussin est formée par le refroidissement rapide de la lave au contact de l'eau. ",
+      "EXPLICATIONS": "Des pillow lava ou lave en coussin.\n 👉 La lave en coussin est formée par le refroidissement rapide de la lave au contact de l'eau. ",
       "NOM": "",
       "NOM_SCIENTIFIQUE": "",
       "@images": "f28.jpg",
@@ -568,7 +568,7 @@
       "ID": "faune_48",
       "QUESTION": "Dans ce fouillis un intrus s'est glissé\nA un bonnet de prêtre poussiéreux\nB des candélabres rococo\nC un bénitier défraîchi\nD un oratoire abandonné.",
       "REPONSE": "D",
-      "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière.\nL'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants des océans.",
+      "EXPLICATIONS": "Un oratoire est un lieu consacré à la prière.\nL'oursin bonnet de prêtre, le corail candélabre et le bénitier sont des habitants de l'océan.",
       "NOM": "",
       "NOM_SCIENTIFIQUE": "",
       "@images": "f48.jpg",
@@ -616,8 +616,8 @@
       "ID": "faune_52",
       "QUESTION": "Mon premier accélére le voilier\nMon second est une émission bruyante\nSans mon troisième les lunettes tomberaient\nMon tout est un ver marin.",
       "REPONSE": "spirobranche",
-      "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche\nLe Spirobranche-arbre de Noël (Spirobranchus giganteus) est une espèce de vers. Il vit en symbiose avec les coraux durs.",
-      "NOM": "ver arbre de noël",
+      "EXPLICATIONS": "1 Spi - 2 Rot - 3 Branche\nLe Spirobranche multicolore ou sapin de Noël est une espèce de vers. Il vit en symbiose avec les coraux durs.",
+      "NOM": "ver sapin de noël",
       "NOM_SCIENTIFIQUE": "Spirobranchus giganteus",
       "@images": "f52.jpg",
       "TYPE": "CHARADE",
@@ -1130,7 +1130,7 @@
     },
     {
       "ID": "faune_95",
-      "QUESTION": "Mon premier est un animal que vous trouvez souvent dans une ferme.\rMon deuxième est un pronom démonstratif.\rMon troisième est une matière utilisée pour fabriquer des pulls.\rMon tout est un coquillage.",
+      "QUESTION": "Mon premier est un animal que vous trouvez souvent dans une ferme.\nMon deuxième est un pronom démonstratif.\nMon troisième est une matière utilisée pour fabriquer des pulls.\nMon tout est un coquillage.",
       "REPONSE": "Porcelaine",
       "EXPLICATIONS": "Porc–ce–laine (porcelaine).\nIl existe plus de 200 espèces distinctes ont été placées dans ce genre Cypraea.",
       "NOM": "porcelaine carnée",
@@ -1199,6 +1199,30 @@
       "TYPE": "CHARADE",
       "CATEGORIE": "faune",
       "POINTS": "60"
+    },
+    {
+      "ID": "faune_101",
+      "QUESTION": "Je suis une murène \nA tachetée \nB à pois \nC tatouée \nD ponctuée",
+      "REPONSE": "D",
+      "EXPLICATIONS": "La murène ponctuée est une murène de taille moyenne qui peut atteindre une longueur maximale de 120 cm. L'intérieur de sa bouche est totalement blanc.",
+      "NOM": "Murène ponctuée",
+      "NOM_SCIENTIFIQUE": "Gymnothorax meleagris",
+      "@images": "f101.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_102",
+      "QUESTION": "Le poisson pierre est réputé pour être le plus venimeux au monde\nA il peut s'enterrer dans le sable\nB son venin reste au moins un mois dans le corps\nC il a une bouche horizontale  ",
+      "REPONSE": "A,B",
+      "EXPLICATIONS": "Sa bouche s'ouvre à la verticale contrairement au poisson scorpion. Il se confond facilement avec son environnement, il peut même s'enterrer dans le sable.",
+      "NOM": "poisson pierre",
+      "NOM_SCIENTIFIQUE": "Synanceia verrucosa",
+      "@images": "f102.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
     }
   ],
   "action": [
@@ -1261,8 +1285,8 @@
       "@images": "plongeur.jpg",
       "TYPE": "Malus",
       "EFFET": "Vous avez mérité une pénalité.",
-      "VALEUR": "-60",
-      "EXPLICATIONS": "Pour éviter tout risque, un plongeur doit être en bonne forme physique. Sous l'eau, l'organisme est soumis à des pressions, la fatigue est un facteur aggravant."
+      "VALEUR": "-40",
+      "EXPLICATIONS": "Pour éviter tout risque, un plongeur doit être en bonne forme physique. Sous l'eau, l'organisme est soumis à des pressions, la fatigue est un facteur agravant."
     },
     {
       "ID": "action_07",
@@ -1522,14 +1546,14 @@
     },
     {
       "ID": "action_32",
-      "DESCRIPTION": "Pour faire une salade vous couper en rondelle un concombre de mer. Vous ne n'avez pas votre ignorance vous l'avez confondu avec un concombre végétal. Votre préparation est immangeable.",
+      "DESCRIPTION": "Pour faire une salade vous couper en rondelle un concombre de mer. Vous n'avez pas avoué votre ignorance vous l'avez confondu avec un concombre végétal. Votre préparation est immangeable.",
       "CATEGORIE": "Jeu",
       "@images": "biodive.png",
       "TYPE": "Danger",
       "EFFET": "Retourner observer le concombre de mer.",
       "VALEUR": "-3",
       "OBJET_REQUIS": "photo",
-      "EXPLICATIONS": "le concombre de mer est un animal marin invertébré, échinoderme de la classe des holothuries. Il vit sur les fonds marins, enfoui dans le sable ou accroché aux rochers. "
+      "EXPLICATIONS": "Le concombre de mer est un animal marin invertébré, échinoderme de la classe des holothuries. Il vit sur les fonds marins, enfoui dans le sable ou accroché aux rochers. "
     },
     {
       "ID": "action_33",
