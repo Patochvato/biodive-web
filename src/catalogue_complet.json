@@ -1223,6 +1223,42 @@
       "TYPE": "CHOIX",
       "CATEGORIE": "faune",
       "POINTS": "40"
+    },
+    {
+      "ID": "faune_103",
+      "QUESTION": "Mon premier est utile aux oiseaux\nMon second est une allure équine\nMon troisième est l'antépénultième lettre de l'alphabet\nMon tout permet au plongeur de limiter ses paliers de décompression",
+      "REPONSE": "nitrox",
+      "EXPLICATIONS": "Nid-trot-x\nUne plongée au Nitrox est réalisée avec un air enrichi en oxygène (O2) et donc appauvri en azote (N2). l'air que l'on respire à la surface contient 21 % d'oxygène, les nitrox principalement utilisés sont les nitrox 32 et 36.",
+      "NOM": "",
+      "NOM_SCIENTIFIQUE": "",
+      "@images": "Fichier 11.svg",
+      "TYPE": "CHARADE",
+      "CATEGORIE": "plongée",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_104",
+      "QUESTION": "J'ai perdu mon moyen de locomotion, qui suis-je ? ",
+      "REPONSE": "remora",
+      "EXPLICATIONS": "Ces poissons à ventouse sont célèbres pour leur association phorétique (qui se fait transporter) avec les requins et d'autres grands animaux marins. Il appartient à la famille des Echeneidés.",
+      "NOM": "rémora",
+      "NOM_SCIENTIFIQUE": "remora",
+      "@images": "f104.jpg",
+      "TYPE": "QUI SUIS-JE",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_105",
+      "QUESTION": "Mon nom vient d'un mot latin qui, dans l'Antiquité, désignait les mollusques gastéropodes.",
+      "REPONSE": "murex",
+      "EXPLICATIONS": "Chicoreus saulii communement appelé Murex c'est un mollusques gastéropodes de la famille des Muricidae. Il est carnivore.",
+      "NOM": "Murex",
+      "NOM_SCIENTIFIQUE": "Chicoreus saulii",
+      "@images": "f105.jpg",
+      "TYPE": "ANAGRAMME",
+      "CATEGORIE": "biologie",
+      "POINTS": "40"
     }
   ],
   "action": [
