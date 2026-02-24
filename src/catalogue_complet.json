@@ -1259,6 +1259,30 @@
       "TYPE": "ANAGRAMME",
       "CATEGORIE": "biologie",
       "POINTS": "40"
+    },
+    {
+      "ID": "faune_106",
+      "QUESTION": "Le Baliste titan peut infliger de profondes et très douloureuses morsures aux êtres humains, morsures nécessitant parfois des points de suture.",
+      "REPONSE": "VRAI",
+      "EXPLICATIONS": "Il se montre extrêmement agressif envers tout ce qui traverse sa zone de nidification en période de reproduction lorsque la ponte a été déposée dans un nid en forme de cratère. Il n'hésite alors pas à poursuivre ceux qui le dérangent, même sur de longues distances. Mieux vaut dans ce cas faire un grand détour",
+      "NOM": "Baliste titan",
+      "NOM_SCIENTIFIQUE": "Balistoides viridescens",
+      "@images": "f106.jpg",
+      "TYPE": "VRAI OU FAUX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
+    },
+    {
+      "ID": "faune_107",
+      "QUESTION": "Je suis un ver difficile à observer car\nA je suis sensible au vibration\nB Je suis sensible au variation de lumière\nC j'ai des capteurs occulaires  ",
+      "REPONSE": "A,B,C",
+      "EXPLICATIONS": "le moindre déplacement d'eau crée des vibrations immédiatement détectées par la couronne tentaculaire qui se rétracte brusquement dans son tube. Ils sont également sensibles aux variations de lumière qu'ils détectent grâce à leurs capteurs occulaires situés le longs de leurs tentacules. Le tube calcaire est fabriqué par le ver lui-même.",
+      "NOM": "Sabelle",
+      "NOM_SCIENTIFIQUE": "Sabellastarte spectabilis",
+      "@images": "f107.jpg",
+      "TYPE": "CHOIX",
+      "CATEGORIE": "faune",
+      "POINTS": "40"
     }
   ],
   "action": [
