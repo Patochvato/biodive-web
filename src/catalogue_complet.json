@@ -950,9 +950,9 @@
     },
     {
       "ID": "faune_80",
-      "QUESTION": "Comme les oiseaux, reptiles, mammifères, les poissons cessent de grandir à l'âge adulte.",
+      "QUESTION": "Comme les oiseaux, mammifères, les poissons cessent de grandir à l'âge adulte.",
       "REPONSE": "FAUX",
-      "EXPLICATIONS": "Leur croissance s'effectue tout au long de leur vie, plus vite les premières années. Elle est plus importante pendant l'été où les poissons se nourrissent abondamment. Elle ralentit en période de reproduction car les poissons se nourrissent moins.",
+      "EXPLICATIONS": "Leur croissance s'effectue tout au long de leur vie, plus vite les premières années. Elle est plus importante pendant l'été où les poissons se nourrissent abondamment. Elle ralentit en période de reproduction car les poissons se nourrissent moins. Beaucoup de reptiles (comme les crocodiles ou certaines tortues) ont aussi une croissance indéterminée, tout comme les poissons ! ",
       "NOM": "",
       "NOM_SCIENTIFIQUE": "",
       "@images": "f80.jpg",
@@ -1190,7 +1190,7 @@
     },
     {
       "ID": "faune_100",
-      "QUESTION": "Mon premier est le contraire de bas\nMon second est courte pour le myope\nMon troisième est une note de musique\nMon troisième coule de la source\nMon quatrième mesure la résistance\nMon tout est un gastéropode ",
+      "QUESTION": "Mon premier est le contraire de bas\nMon second est courte pour le myope\nMon troisième est une note de musique\nMon quatrième est un motif en forme d'œuf\nMon cinquième mesure la résistance\nMon tout est un gastéropode ",
       "REPONSE": "ovula ovum",
       "EXPLICATIONS": "Elles sont principalement carnivores et se nourrissent de coraux durs ou moux. Elles utilisent leur radula comme une râpe en arrachant les tissus en surface de leur proie.",
       "NOM": "porcelaine blanche",
